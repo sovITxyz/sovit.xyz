@@ -41,8 +41,8 @@ const Footer = () => {
                 ₿
               </div>
               <div>
-                <p className="font-mono font-bold text-white">SovereignTech</p>
-                <p className="text-xs text-gray-500 font-mono">CONSULTING</p>
+                <p className="font-mono font-bold text-white">Sovereign IT Services</p>
+                <p className="text-xs text-gray-500 font-mono">SUPPORT, ADMINISTRATION & CONSULTING</p>
               </div>
             </div>
             <p className="text-gray-400 text-sm mb-4">
@@ -89,7 +89,7 @@ const Footer = () => {
         <div className="pt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-500 text-sm font-mono">
-              © {currentYear} SovereignTech Consulting. All rights reserved.
+              © {currentYear} Sovereign IT Services. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm">
               <a href="#" className="text-gray-500 hover:text-bitcoin transition-colors">
