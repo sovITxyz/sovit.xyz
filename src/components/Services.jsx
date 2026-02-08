@@ -23,16 +23,16 @@ const Services = () => {
 
   const services = [
     {
-      icon: Zap,
-      title: 'Lightning Channel Recovery',
-      description: 'Expert recovery services for Lightning Network channels and funds',
-      tech: 'Lightning Network, LND, CLN'
+      icon: Headset,
+      title: 'Technical Support',
+      description: 'Responsive support for all your sovereign technology needs',
+      tech: 'Remote, On-site, Consulting'
     },
     {
-      icon: FlaskConical,
-      title: 'Technology R&D',
-      description: 'Research and development of emerging open-source technologies',
-      tech: 'Prototyping, Testing, Innovation'
+      icon: HardDrive,
+      title: 'Hardware Imaging',
+      description: 'Secure device imaging with open-source software for laptops and phones',
+      tech: 'PXE Boot, Linux, GrapheneOS'
     },
     {
       icon: Blocks,
@@ -89,16 +89,16 @@ const Services = () => {
       tech: 'Networking, Devices, Security'
     },
     {
-      icon: HardDrive,
-      title: 'Hardware Imaging',
-      description: 'Secure device imaging with open-source software for laptops and phones',
-      tech: 'PXE Boot, Linux, GrapheneOS'
+      icon: FlaskConical,
+      title: 'Technology R&D',
+      description: 'Research and development of emerging open-source technologies',
+      tech: 'Prototyping, Testing, Innovation'
     },
     {
-      icon: Headset,
-      title: 'Technical Support',
-      description: 'Responsive support for all your sovereign technology needs',
-      tech: 'Remote, On-site, Consulting'
+      icon: Zap,
+      title: 'Lightning Channel Recovery',
+      description: 'Expert recovery services for Lightning Network channels and funds',
+      tech: 'Lightning Network, LND, CLN'
     }
   ];
 
