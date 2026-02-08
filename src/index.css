@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Bitcoin Orange & Variations */
+    --bitcoin-orange: #F7931A;
+    --bitcoin-orange-light: #FFA842;
+    --bitcoin-orange-dark: #E67E00;
+    --bitcoin-orange-glow: rgba(247, 147, 26, 0.5);
+    
+    /* Base Colors */
+    --color-black: #000000;
+    --color-white: #FFFFFF;
+    
+    /* Dark Grays */
+    --gray-900: #0A0A0A;
+    --gray-800: #1A1A1A;
+    --gray-700: #2A2A2A;
+    --gray-600: #3A3A3A;
+    --gray-500: #4A4A4A;
+    --gray-400: #6A6A6A;
+    --gray-300: #8A8A8A;
+    
+    /* Technical Accents */
+    --accent-green: #00FF41;
+    --accent-blue: #00D4FF;
+    
+    /* Shadows & Effects */
+    --shadow-orange: 0 0 20px rgba(247, 147, 26, 0.3);
+    --shadow-orange-strong: 0 0 40px rgba(247, 147, 26, 0.5);
+    --glow-orange: 0 0 10px rgba(247, 147, 26, 0.6);
+    
+    /* Borders */
+    --border-primary: 1px solid rgba(247, 147, 26, 0.3);
+    --border-secondary: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-gray-900 text-white antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    overflow-x: hidden;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Courier New', 'Courier', monospace;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  /* Bitcoin Orange Utilities */
+  .text-bitcoin {
+    color: var(--bitcoin-orange);
+  }
+  
+  .bg-bitcoin {
+    background-color: var(--bitcoin-orange);
+  }
+  
+  .border-bitcoin {
+    border-color: var(--bitcoin-orange);
+  }
+  
+  /* Gradients */
+  .gradient-orange {
+    background: linear-gradient(135deg, var(--bitcoin-orange-dark) 0%, var(--bitcoin-orange) 50%, var(--bitcoin-orange-light) 100%);
+  }
+  
+  .gradient-orange-radial {
+    background: radial-gradient(circle at center, var(--bitcoin-orange) 0%, transparent 70%);
+  }
+  
+  .gradient-dark {
+    background: linear-gradient(180deg, var(--gray-900) 0%, var(--gray-800) 100%);
+  }
+  
+  /* Glassmorphism */
+  .glass {
+    background: rgba(26, 26, 26, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .glass-strong {
+    background: rgba(26, 26, 26, 0.9);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(247, 147, 26, 0.2);
+  }
+  
+  /* Shadows & Glows */
+  .shadow-bitcoin {
+    box-shadow: var(--shadow-orange);
+  }
+  
+  .shadow-bitcoin-strong {
+    box-shadow: var(--shadow-orange-strong);
+  }
+  
+  .glow-bitcoin {
+    box-shadow: var(--glow-orange);
+  }
+  
+  /* Grid Patterns */
+  .grid-pattern {
+    background-image: 
+      linear-gradient(rgba(247, 147, 26, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(247, 147, 26, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+  
+  .grid-pattern-large {
+    background-image: 
+      linear-gradient(rgba(247, 147, 26, 0.05) 2px, transparent 2px),
+      linear-gradient(90deg, rgba(247, 147, 26, 0.05) 2px, transparent 2px);
+    background-size: 100px 100px;
+  }
+  
+  /* Technical Borders */
+  .border-technical {
+    position: relative;
+  }
+  
+  .border-technical::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--bitcoin-orange);
+  }
+  
+  /* Smooth Scroll */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: var(--gray-900);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: var(--bitcoin-orange);
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--bitcoin-orange-light);
+  }
+}
+
+/* Animation keyframes */
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 10px rgba(247, 147, 26, 0.3); }
+  50% { box-shadow: 0 0 30px rgba(247, 147, 26, 0.6); }
+}
+
+.animate-blink {
+  animation: blink 1s infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 2s ease-in-out infinite;
+}
