@@ -13,6 +13,9 @@
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="https://sovit.xyz" />
 
+		<!-- Tor Onion-Location -->
+		<meta http-equiv="onion-location" content="http://sovit7eqfkczjlcuwi5wqfjff4pv2fp7w5v26desexg2yc5oj36lriqd.onion" />
+
 		<!-- Twitter Card -->
 		<meta name="twitter:card" content="summary" />
 		<meta name="twitter:title" content="SovIT - Sovereign IT Services | Bitcoin-Native Solutions" />
@@ -20,6 +23,497 @@
 	</head>
 	<body>
 		<div id="root"></div>
+		<noscript>
+			<style>
+				/* ===== No-JS Static Fallback Styles ===== */
+				:root {
+					--btc: #F7931A;
+					--btc-light: #FFA842;
+					--bg-dark: #0A0A0A;
+					--bg-mid: #1A1A1A;
+					--bg-card: #1A1A1A;
+					--text: #FFFFFF;
+					--text-dim: #8A8A8A;
+					--text-muted: #6A6A6A;
+					--green: #00FF41;
+					--blue: #00D4FF;
+					--border-dim: rgba(247,147,26,0.3);
+				}
+				body {
+					margin: 0;
+					padding: 0;
+					background: var(--bg-dark);
+					color: var(--text);
+					font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+					-webkit-font-smoothing: antialiased;
+					overflow-x: hidden;
+				}
+				h1, h2, h3, h4 {
+					font-family: 'Courier New', 'Courier', monospace;
+					font-weight: 700;
+				}
+				a { color: var(--btc); text-decoration: none; }
+				a:hover { color: var(--btc-light); }
+				.njs-wrap { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+
+				/* Header */
+				.njs-header {
+					position: sticky; top: 0; z-index: 50;
+					background: rgba(10,10,10,0.95);
+					border-bottom: 1px solid var(--border-dim);
+					padding: 1rem 0;
+				}
+				.njs-header-inner {
+					display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;
+				}
+				.njs-logo { display: flex; align-items: center; gap: 0.5rem; }
+				.njs-logo-icon {
+					width: 2rem; height: 2rem; background: var(--btc); border-radius: 4px;
+					display: flex; align-items: center; justify-content: center;
+					font-family: monospace; font-weight: bold; color: #000; font-size: 1.1rem;
+				}
+				.njs-logo-text { font-family: monospace; font-size: 1.25rem; font-weight: bold; }
+				.njs-nav { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+				.njs-nav a { font-family: monospace; font-size: 0.875rem; color: var(--text-dim); }
+				.njs-nav a:hover { color: var(--btc); }
+
+				/* Hero */
+				.njs-hero {
+					min-height: 80vh; display: flex; align-items: center; justify-content: center;
+					text-align: center; padding: 4rem 0;
+					background: linear-gradient(180deg, rgba(10,10,10,1) 0%, rgba(26,26,26,1) 100%);
+					border-bottom: 1px solid var(--border-dim);
+				}
+				.njs-hero h1 { font-size: clamp(2.5rem, 6vw, 5rem); margin: 0 0 0.5rem; }
+				.njs-hero-sub { font-size: clamp(1.5rem, 3vw, 2.5rem); margin: 0 0 1.5rem; }
+				.njs-hero p { font-size: 1.25rem; color: var(--text-dim); max-width: 700px; margin: 0 auto 2rem; }
+				.njs-terminal {
+					max-width: 600px; margin: 0 auto 2rem;
+					background: var(--bg-card); border: 1px solid var(--border-dim); border-radius: 8px;
+					padding: 1.25rem; text-align: left;
+				}
+				.njs-terminal-dots { display: flex; gap: 6px; margin-bottom: 0.75rem; }
+				.njs-terminal-dots span { width: 12px; height: 12px; border-radius: 50%; }
+				.njs-terminal-text { font-family: monospace; color: var(--green); font-size: 0.9rem; }
+				.njs-btn {
+					display: inline-block; background: var(--btc); color: #000;
+					font-family: monospace; font-weight: bold; font-size: 1.1rem;
+					padding: 1rem 2rem; border-radius: 8px;
+					box-shadow: 0 0 20px rgba(247,147,26,0.3);
+				}
+				.njs-btn:hover { background: var(--btc-light); color: #000; }
+
+				/* Sections */
+				.njs-section { padding: 5rem 0; }
+				.njs-section-dark { background: var(--bg-dark); }
+				.njs-section-mid { background: var(--bg-mid); }
+				.njs-section-title { text-align: center; margin-bottom: 3rem; }
+				.njs-section-title h2 { font-size: clamp(2rem, 4vw, 3.5rem); margin: 0 0 0.75rem; }
+				.njs-section-title p { font-family: monospace; color: var(--text-muted); font-size: 1rem; }
+
+				/* Services Grid */
+				.njs-grid {
+					display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+					gap: 1.5rem;
+				}
+				.njs-card {
+					background: var(--bg-card); border: 1px solid rgba(255,255,255,0.1);
+					border-radius: 8px; padding: 1.5rem;
+				}
+				.njs-card:hover { box-shadow: 0 0 20px rgba(247,147,26,0.2); }
+				.njs-card h3 { font-size: 1.15rem; margin: 0 0 0.5rem; }
+				.njs-card p { color: var(--text-dim); font-size: 0.9rem; margin: 0 0 0.75rem; }
+				.njs-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+				.njs-tag {
+					font-family: monospace; font-size: 0.75rem;
+					background: rgba(26,26,26,0.9); color: var(--btc);
+					padding: 0.25rem 0.5rem; border-radius: 4px;
+					border: 1px solid var(--border-dim);
+				}
+				.njs-portfolio { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.5rem; }
+				.njs-portfolio a {
+					font-family: monospace; font-size: 0.75rem;
+					background: rgba(247,147,26,0.1); color: var(--btc);
+					padding: 0.25rem 0.5rem; border-radius: 4px;
+					border: 1px solid rgba(247,147,26,0.5);
+				}
+				.njs-portfolio a:hover { background: rgba(247,147,26,0.2); }
+
+				/* Values Grid */
+				.njs-values-grid {
+					display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+					gap: 1.5rem; max-width: 900px; margin: 0 auto;
+				}
+				.njs-value-card {
+					background: rgba(26,26,26,0.9); border: 1px solid rgba(247,147,26,0.2);
+					border-radius: 8px; padding: 2rem; position: relative; overflow: hidden;
+				}
+				.njs-value-card::before {
+					content: ''; position: absolute; top: 0; left: 0;
+					width: 100%; height: 3px;
+					background: linear-gradient(135deg, #E67E00, #F7931A, #FFA842);
+				}
+				.njs-value-card h3 { font-size: 1.3rem; margin: 0 0 0.75rem; }
+				.njs-value-card p { color: var(--text-dim); font-size: 0.9rem; margin: 0 0 1rem; line-height: 1.6; }
+				.njs-badge {
+					font-family: monospace; font-size: 0.75rem;
+					background: rgba(247,147,26,0.1); color: var(--btc);
+					padding: 0.25rem 0.75rem; border-radius: 999px;
+					border: 1px solid var(--border-dim); display: inline-block;
+				}
+
+				/* About */
+				.njs-about-card {
+					max-width: 800px; margin: 0 auto;
+					background: var(--bg-card); border: 1px solid rgba(255,255,255,0.1);
+					border-left: 4px solid var(--btc);
+					border-radius: 8px; padding: 2.5rem;
+				}
+				.njs-about-card h3 { font-size: 1.5rem; margin: 0 0 1.5rem; }
+				.njs-about-card p { color: var(--text-dim); line-height: 1.8; margin: 0 0 1.25rem; }
+				.njs-about-portfolio { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); }
+				.njs-about-portfolio h4 { font-family: monospace; font-size: 0.875rem; margin: 0 0 0.75rem; }
+
+				/* Contact */
+				.njs-contact-grid {
+					display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;
+					max-width: 900px; margin: 0 auto;
+				}
+				@media (max-width: 768px) { .njs-contact-grid { grid-template-columns: 1fr; } }
+				.njs-benefits { list-style: none; padding: 0; margin: 0; }
+				.njs-benefits li {
+					color: var(--text-dim); padding: 0.5rem 0;
+					padding-left: 1.5rem; position: relative;
+				}
+				.njs-benefits li::before { content: '\2713'; color: var(--btc); position: absolute; left: 0; }
+				.njs-contact-box {
+					background: var(--bg-card); border: 1px solid rgba(255,255,255,0.1);
+					border-radius: 8px; padding: 1.25rem; display: flex; align-items: center; gap: 1rem;
+					margin-top: 1rem;
+				}
+				.njs-contact-icon {
+					width: 3rem; height: 3rem; background: rgba(247,147,26,0.1);
+					border: 1px solid var(--btc); border-radius: 8px;
+					display: flex; align-items: center; justify-content: center;
+					color: var(--btc); font-size: 1.25rem; flex-shrink: 0;
+				}
+				.njs-contact-label { font-family: monospace; font-size: 0.8rem; color: var(--text-muted); }
+				.njs-contact-value { font-weight: 600; }
+				.njs-mailto {
+					display: block; text-align: center; background: var(--btc); color: #000;
+					font-family: monospace; font-weight: bold; font-size: 1.1rem;
+					padding: 1rem; border-radius: 8px; margin-top: 1.5rem;
+					box-shadow: 0 0 20px rgba(247,147,26,0.3);
+				}
+				.njs-mailto:hover { background: var(--btc-light); color: #000; }
+
+				/* Footer */
+				.njs-footer {
+					background: #000; border-top: 1px solid var(--border-dim);
+					padding: 3rem 0 2rem;
+				}
+				.njs-footer-grid {
+					display: grid; grid-template-columns: 2fr 1fr 1fr 1fr;
+					gap: 2rem; margin-bottom: 2rem;
+				}
+				@media (max-width: 768px) { .njs-footer-grid { grid-template-columns: 1fr 1fr; } }
+				.njs-footer-brand p { color: var(--text-dim); font-size: 0.875rem; margin: 0.5rem 0; }
+				.njs-footer-col h4 { font-family: monospace; font-size: 0.875rem; margin: 0 0 1rem; }
+				.njs-footer-col ul { list-style: none; padding: 0; margin: 0; }
+				.njs-footer-col li { margin-bottom: 0.5rem; }
+				.njs-footer-col a { color: var(--text-muted); font-size: 0.875rem; }
+				.njs-footer-col a:hover { color: var(--btc); }
+				.njs-footer-bottom {
+					border-top: 1px solid rgba(255,255,255,0.05); padding-top: 1.5rem;
+					display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+				}
+				.njs-footer-bottom p { font-family: monospace; font-size: 0.8rem; color: var(--text-muted); margin: 0; }
+				.njs-footer-links { display: flex; gap: 1.5rem; }
+				.njs-footer-links a { color: var(--text-muted); font-size: 0.8rem; }
+				.njs-code-deco {
+					font-family: monospace; font-size: 0.75rem; color: rgba(255,255,255,0.15);
+					text-align: center; margin-top: 1.5rem;
+				}
+				.njs-code-deco .kw { color: var(--btc); }
+				.njs-code-deco .str { color: var(--green); }
+				.njs-code-deco .fn { color: var(--blue); }
+			</style>
+
+			<!-- ===== HEADER ===== -->
+			<header class="njs-header">
+				<div class="njs-wrap njs-header-inner">
+					<div class="njs-logo">
+						<div class="njs-logo-icon">&#x20bf;</div>
+						<div class="njs-logo-text"><span style="color:#fff">Sov</span><span style="color:#F7931A">IT</span></div>
+					</div>
+					<nav class="njs-nav">
+						<a href="#home">Home</a>
+						<a href="#services">Services</a>
+						<a href="#values">Values</a>
+						<a href="#about">About</a>
+						<a href="#contact">Contact</a>
+					</nav>
+				</div>
+			</header>
+
+			<!-- ===== HERO ===== -->
+			<section id="home" class="njs-hero">
+				<div class="njs-wrap">
+					<h1><span style="color:#fff">Sov</span><span style="color:#F7931A">IT</span></h1>
+					<div class="njs-hero-sub">Sovereign IT Services</div>
+					<p>
+						Empowering individuals and organizations with
+						<span style="color:#F7931A;font-weight:600">data ownership</span>,
+						<span style="color:#F7931A;font-weight:600">security</span>,
+						<span style="color:#F7931A;font-weight:600">efficiency</span>, and
+						<span style="color:#F7931A;font-weight:600">technological independence</span>
+					</p>
+					<div class="njs-terminal">
+						<div class="njs-terminal-dots">
+							<span style="background:#ef4444"></span>
+							<span style="background:#eab308"></span>
+							<span style="background:#22c55e"></span>
+						</div>
+						<div class="njs-terminal-text">&gt; Sovereignty through technology_</div>
+					</div>
+					<a href="#contact" class="njs-btn">Start Your Consultation &#x203A;</a>
+				</div>
+			</section>
+
+			<!-- ===== SERVICES ===== -->
+			<section id="services" class="njs-section njs-section-dark">
+				<div class="njs-wrap">
+					<div class="njs-section-title">
+						<h2><span style="color:#fff">Our </span><span style="color:#F7931A">Services</span></h2>
+						<p>// Comprehensive technology solutions for the sovereign enterprise</p>
+					</div>
+					<div class="njs-grid">
+						<div class="njs-card">
+							<h3>Technical Support</h3>
+							<p>Responsive support for all your sovereign technology needs</p>
+							<div class="njs-tags"><span class="njs-tag">Remote</span><span class="njs-tag">On-site</span><span class="njs-tag">Consulting</span></div>
+						</div>
+						<div class="njs-card">
+							<h3>Hardware Imaging</h3>
+							<p>Secure device imaging with open-source software for laptops and phones</p>
+							<div class="njs-tags"><span class="njs-tag">PXE Boot</span><span class="njs-tag">Linux</span><span class="njs-tag">GrapheneOS</span></div>
+						</div>
+						<div class="njs-card">
+							<h3>Open Source System Integration</h3>
+							<p>Seamless integration of open-source tools into your workflow</p>
+							<div class="njs-tags"><span class="njs-tag">Linux</span><span class="njs-tag">FOSS</span><span class="njs-tag">APIs</span></div>
+						</div>
+						<div class="njs-card">
+							<h3>System Administration</h3>
+							<p>Reliable management and maintenance of your server infrastructure</p>
+							<div class="njs-tags"><span class="njs-tag">Linux</span><span class="njs-tag">Ansible</span><span class="njs-tag">Automation</span></div>
+						</div>
+						<div class="njs-card">
+							<h3>Cloud Administration</h3>
+							<p>Sovereign cloud deployment, monitoring, and management</p>
+							<div class="njs-tags"><span class="njs-tag">Kubernetes</span><span class="njs-tag">Docker</span><span class="njs-tag">Self-hosted</span></div>
+						</div>
+						<div class="njs-card">
+							<h3>OpSec &amp; Bitcoin Operations</h3>
+							<p>Operational security hardening and secure Bitcoin infrastructure</p>
+							<div class="njs-tags"><span class="njs-tag">Node Ops</span><span class="njs-tag">Cold Storage</span><span class="njs-tag">OpSec</span></div>
+						</div>
+						<div class="njs-card">
+							<h3>Open Source Website Creation</h3>
+							<p>Modern, performant websites built entirely on open-source stacks</p>
+							<div class="njs-tags"><span class="njs-tag">React</span><span class="njs-tag">Hugo</span><span class="njs-tag">Static Sites</span></div>
+							<div class="njs-portfolio">
+								<a href="https://gcs.sv" target="_blank" rel="noopener noreferrer">gcs.sv</a>
+								<a href="https://whatarush.org" target="_blank" rel="noopener noreferrer">whatarush.org</a>
+								<a href="https://sovit.xyz" target="_blank" rel="noopener noreferrer">SovIT.xyz</a>
+								<a href="https://bitcoinbarbell.com" target="_blank" rel="noopener noreferrer">bitcoinbarbell.com</a>
+							</div>
+						</div>
+						<div class="njs-card">
+							<h3>ERP, ITSM &amp; Collaboration</h3>
+							<p>Business management, asset tracking, and team collaboration platforms</p>
+							<div class="njs-tags"><span class="njs-tag">ERPNext</span><span class="njs-tag">GLPI</span><span class="njs-tag">Nextcloud</span></div>
+						</div>
+						<div class="njs-card">
+							<h3>Home Cloud &amp; Sovereign AI</h3>
+							<p>Self-hosted cloud and local AI deployment for full data sovereignty</p>
+							<div class="njs-tags"><span class="njs-tag">Ollama</span><span class="njs-tag">Nextcloud</span><span class="njs-tag">Home Lab</span></div>
+						</div>
+						<div class="njs-card">
+							<h3>Sovereign Hardware Recommendations</h3>
+							<p>Curated hardware guidance for networking, computing, phones, and security</p>
+							<div class="njs-tags"><span class="njs-tag">Networking</span><span class="njs-tag">Devices</span><span class="njs-tag">Security</span></div>
+						</div>
+						<div class="njs-card">
+							<h3>Technology R&amp;D</h3>
+							<p>Research and development of emerging open-source technologies</p>
+							<div class="njs-tags"><span class="njs-tag">Prototyping</span><span class="njs-tag">Testing</span><span class="njs-tag">Innovation</span></div>
+						</div>
+						<div class="njs-card">
+							<h3>Lightning Channel Recovery</h3>
+							<p>Expert recovery services for Lightning Network channels and funds</p>
+							<div class="njs-tags"><span class="njs-tag">Lightning Network</span><span class="njs-tag">LND</span><span class="njs-tag">CLN</span></div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- ===== VALUES ===== -->
+			<section id="values" class="njs-section njs-section-mid">
+				<div class="njs-wrap">
+					<div class="njs-section-title">
+						<h2><span style="color:#fff">Core </span><span style="color:#F7931A">Values</span></h2>
+						<p>// The principles that guide everything we build</p>
+					</div>
+					<div class="njs-values-grid">
+						<div class="njs-value-card">
+							<h3>Data Ownership</h3>
+							<p>Your data belongs to you. We build systems that ensure complete control and sovereignty over your digital assets.</p>
+							<span class="njs-badge">OWNERSHIP</span>
+						</div>
+						<div class="njs-value-card">
+							<h3>Security</h3>
+							<p>Enterprise-grade security built on proven cryptographic principles and zero-trust architecture.</p>
+							<span class="njs-badge">SECURITY</span>
+						</div>
+						<div class="njs-value-card">
+							<h3>Open-Source Principles</h3>
+							<p>Transparency, auditability, and freedom from vendor lock-in through open-source technologies.</p>
+							<span class="njs-badge">FREEDOM</span>
+						</div>
+						<div class="njs-value-card">
+							<h3>Sovereignty</h3>
+							<p>True technological independence. Build systems that serve you, not external interests.</p>
+							<span class="njs-badge">SOVEREIGNTY</span>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- ===== ABOUT ===== -->
+			<section id="about" class="njs-section njs-section-dark">
+				<div class="njs-wrap">
+					<div class="njs-section-title">
+						<h2><span style="color:#fff">About </span><span style="color:#F7931A">Me</span></h2>
+						<p>// the person behind the terminal</p>
+					</div>
+					<div class="njs-about-card">
+						<h3><span style="color:#F7931A">&gt;</span> Cameron</h3>
+						<p>Cameron began gaming on PCs at a very young age and built his first computer at just 11 years old. At 13, he received a netbook for Christmas and began experimenting with Kali Linux and an Alfa AWUS036NHA adapter, exploring wireless security and learning how WEP networks could be tested and cracked.</p>
+						<p>In high school, Cameron became the go-to person for computer help, repairing and imaging systems for family members, friends from church, classmates, and even teachers. These experiences helped him develop strong technical and troubleshooting skills.</p>
+						<p>He later worked as an IT professional at Health First, gaining valuable experience in enterprise IT environments. Today, Cameron has left Health First to focus on his own projects and pursue his passion for finding efficient technical solutions, deploying and implementing open-source solutions, and serving others through sovereign, open-source technologies.</p>
+						<div class="njs-about-portfolio">
+							<h4>2026 Portfolio</h4>
+							<div class="njs-portfolio">
+								<a href="https://gcs.sv" target="_blank" rel="noopener noreferrer">gcs.sv</a>
+								<a href="https://whatarush.org" target="_blank" rel="noopener noreferrer">whatarush.org</a>
+								<a href="https://sovit.xyz" target="_blank" rel="noopener noreferrer">SovIT.xyz</a>
+								<a href="https://bitcoinbarbell.com" target="_blank" rel="noopener noreferrer">bitcoinbarbell.com</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- ===== CONTACT ===== -->
+			<section id="contact" class="njs-section njs-section-mid">
+				<div class="njs-wrap">
+					<div class="njs-section-title">
+						<h2><span style="color:#fff">Start Your </span><span style="color:#F7931A">Consultation</span></h2>
+						<p>// Ready to achieve technological sovereignty?</p>
+					</div>
+					<div class="njs-contact-grid">
+						<div>
+							<div class="njs-card" style="border-left:4px solid #F7931A">
+								<h3><span style="color:#F7931A">&gt;</span> Why Work With Us?</h3>
+								<ul class="njs-benefits">
+									<li>Complete data ownership and control</li>
+									<li>No vendor lock-in, ever</li>
+									<li>Enterprise-grade security by default</li>
+									<li>Open-source transparency</li>
+									<li>Bitcoin-native operations</li>
+								</ul>
+							</div>
+							<div class="njs-contact-box">
+								<div class="njs-contact-icon">&#x2709;</div>
+								<div>
+									<div class="njs-contact-label">Email</div>
+									<div class="njs-contact-value"><a href="mailto:services@sovit.xyz">services@sovit.xyz</a></div>
+								</div>
+							</div>
+							<div class="njs-contact-box">
+								<div class="njs-contact-icon">&#x1F4AC;</div>
+								<div>
+									<div class="njs-contact-label">Chat</div>
+									<div class="njs-contact-value">Available 24/7</div>
+								</div>
+							</div>
+						</div>
+						<div>
+							<div class="njs-card" style="border-left:4px solid #F7931A; padding:2rem">
+								<h3 style="margin-bottom:1rem">Get In Touch</h3>
+								<p style="margin-bottom:1.5rem">Send us an email to start your consultation. We'll get back to you as soon as possible.</p>
+								<a href="mailto:services@sovit.xyz?subject=Consultation%20Request" class="njs-mailto">&#x2709; Email services@sovit.xyz</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- ===== FOOTER ===== -->
+			<footer class="njs-footer">
+				<div class="njs-wrap">
+					<div class="njs-footer-grid">
+						<div class="njs-footer-brand">
+							<div class="njs-logo" style="margin-bottom:0.75rem">
+								<div class="njs-logo-icon">&#x20bf;</div>
+								<div>
+									<div style="font-family:monospace;font-weight:bold">Sovereign IT Services</div>
+									<div style="font-family:monospace;font-size:0.7rem;color:#4A4A4A">SUPPORT, ADMINISTRATION &amp; CONSULTING</div>
+								</div>
+							</div>
+							<p>Building sovereign technology solutions for a decentralized future.</p>
+						</div>
+						<div class="njs-footer-col">
+							<h4><span style="color:#F7931A">&gt;</span> Services</h4>
+							<ul>
+								<li><a href="#services">Cloud Solutions</a></li>
+								<li><a href="#services">Open-Source</a></li>
+								<li><a href="#services">Bitcoin Ops</a></li>
+								<li><a href="#services">Security</a></li>
+							</ul>
+						</div>
+						<div class="njs-footer-col">
+							<h4><span style="color:#F7931A">&gt;</span> Company</h4>
+							<ul>
+								<li><a href="#about">About</a></li>
+								<li><a href="#values">Values</a></li>
+								<li><a href="#contact">Contact</a></li>
+							</ul>
+						</div>
+						<div class="njs-footer-col">
+							<h4><span style="color:#F7931A">&gt;</span> Resources</h4>
+							<ul>
+								<li><a href="#">Documentation</a></li>
+								<li><a href="#">Blog</a></li>
+								<li><a href="#">FAQ</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="njs-footer-bottom">
+						<p>&copy; 2026 Sovereign IT Services. All rights reserved.</p>
+						<div class="njs-footer-links">
+							<a href="#">Privacy Policy</a>
+							<a href="#">Terms of Service</a>
+							<a href="#">Security</a>
+						</div>
+					</div>
+					<div class="njs-code-deco">
+						<span class="kw">while</span>(true) { <span class="fn">build</span>(<span class="str">"sovereign systems"</span>); }
+					</div>
+				</div>
+			</footer>
+		</noscript>
 		<script type="module" src="/src/main.jsx"></script>
 	</body>
 </html>
