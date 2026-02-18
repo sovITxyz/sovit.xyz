@@ -43,13 +43,16 @@ const About = () => {
 
           <div className="space-y-6 text-gray-300 leading-relaxed">
             <p>
-              Cameron began gaming on PCs at a very young age and built his first computer at just 11 years old. At 13, he received a netbook for Christmas and began experimenting with Kali Linux and an Alfa AWUS036NHA adapter, exploring wireless security and learning how WEP networks could be tested and cracked.
+              Cameron began gaming on PCs at a very young age. In elementary school, he made videos and simple animations in Microsoft Movie Maker with his brother. By 6th grade, at age 11, he started making websites using Zoomshare templates — simple game sites built by copying and pasting his favorite Flash games from other websites into the template. Around the same time, he got into competitive FPS gaming and built his first computer.
             </p>
             <p>
-              In high school, Cameron became the go-to person for computer help, repairing and imaging systems for family members, friends from church, classmates, and even teachers. These experiences helped him develop strong technical and troubleshooting skills.
+              At 13, he received a netbook from Santa and began experimenting with Kali Linux and an Alfa AWUS036NHA adapter, exploring wireless security and learning how WEP networks could be tested and cracked. Cameron has always been passionate about all aspects of computing.
             </p>
             <p>
-              He later worked as an IT professional at Health First, gaining valuable experience in enterprise IT environments. Today, Cameron has left Health First to focus on his own projects and pursue his passion for finding efficient technical solutions, deploying and implementing open-source solutions, and serving others through sovereign, open-source technologies.
+              In high school, he became the go-to person for computer help — repairing and imaging systems for family members, friends from church, classmates, and even teachers. These experiences helped him develop strong technical and troubleshooting skills.
+            </p>
+            <p>
+              He later built the most powerful workstation/gaming computer possible (2017) and worked as an IT professional at Health First, gaining valuable experience in enterprise IT environments. Today, Cameron has left Health First to focus on his own projects and pursue his passion for finding efficient technical solutions, deploying and implementing open-source solutions, and serving others through sovereign, open-source technologies.
             </p>
           </div>
 
