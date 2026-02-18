@@ -6,7 +6,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { icon: Github, href: '#', label: 'GitHub' },
+    { icon: Github, href: 'https://github.com/sovitxyz', label: 'GitHub' },
     { icon: Twitter, href: '#', label: 'Twitter' },
     { icon: Linkedin, href: '#', label: 'LinkedIn' },
     { icon: Bitcoin, href: '#', label: 'Bitcoin' }

@@ -40,8 +40,9 @@ const Header = () => {
             ₿
           </div>
           <span className="font-mono text-xl font-bold">
-            <span className="text-white">Sov</span>
+            <span className="text-white">sov</span>
             <span className="text-bitcoin">IT</span>
+            <span className="text-white">.xyz</span>
           </span>
         </motion.div>
 

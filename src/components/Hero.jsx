@@ -94,8 +94,9 @@ const Hero = () => {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight"
           >
-            <span className="text-white">Sov</span>
+            <span className="text-white">sov</span>
             <span className="text-bitcoin">IT</span>
+            <span className="text-white">.xyz</span>
             <br />
             <span className="text-white text-3xl md:text-5xl lg:text-6xl">Sovereign IT Services</span>
           </motion.h1>

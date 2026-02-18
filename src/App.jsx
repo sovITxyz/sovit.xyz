@@ -13,10 +13,10 @@ function App() {
   return (
     <>
       <Helmet>
-        <title>SovIT - Sovereign IT Services | Bitcoin-Native Solutions</title>
+        <title>sovIT.xyz - Sovereign IT Services | Bitcoin-Native Solutions</title>
         <meta
           name="description"
-          content="SovIT.xyz - Expert IT consulting focused on data ownership, security, and technological sovereignty. Bitcoin-native infrastructure, open-source solutions, and enterprise-grade systems."
+          content="sovIT.xyz - Expert IT consulting focused on data ownership, security, and technological sovereignty. Bitcoin-native infrastructure, open-source solutions, and enterprise-grade systems."
         />
       </Helmet>
       
