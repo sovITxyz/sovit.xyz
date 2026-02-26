@@ -49,7 +49,7 @@ const Values = () => {
   };
 
   return (
-    <section id="values" className="py-24 bg-gray-800 relative overflow-hidden">
+    <section id="values" className="py-24 bg-gray-900 relative overflow-hidden">
       {/* Geometric Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 border-2 border-bitcoin transform rotate-45"></div>

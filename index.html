@@ -237,6 +237,87 @@
 				.njs-code-deco .kw { color: var(--btc); }
 				.njs-code-deco .str { color: var(--green); }
 				.njs-code-deco .fn { color: var(--blue); }
+
+				/* Category Headers */
+				.njs-category-header {
+					display: flex; align-items: center; gap: 0.75rem;
+					margin: 2.5rem 0 1.25rem; padding: 0;
+				}
+				.njs-category-header:first-child { margin-top: 0; }
+				.njs-category-icon {
+					width: 2.5rem; height: 2.5rem;
+					background: rgba(247,147,26,0.1); border: 1px solid var(--btc);
+					border-radius: 8px; display: flex; align-items: center; justify-content: center;
+					color: var(--btc); font-size: 1rem; flex-shrink: 0;
+				}
+				.njs-category-header h3 {
+					font-size: 1.25rem; margin: 0; white-space: nowrap;
+				}
+				.njs-category-line {
+					flex: 1; height: 1px;
+					background: linear-gradient(to right, var(--border-dim), transparent);
+				}
+
+				/* Bundle Cards */
+				.njs-bundles-grid {
+					display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+					gap: 1.5rem; max-width: 900px; margin: 0 auto;
+				}
+				.njs-bundle-card {
+					background: rgba(26,26,26,0.9); border: 1px solid rgba(247,147,26,0.2);
+					border-radius: 8px; padding: 2rem; position: relative; overflow: hidden;
+					display: flex; flex-direction: column;
+				}
+				.njs-bundle-card::before {
+					content: ''; position: absolute; top: 0; left: 0;
+					width: 100%; height: 3px;
+					background: linear-gradient(135deg, #E67E00, #F7931A, #FFA842);
+				}
+				.njs-bundle-highlighted {
+					border: 2px solid var(--btc);
+					box-shadow: 0 0 20px rgba(247,147,26,0.3);
+				}
+				.njs-bundle-card h3 { font-size: 1.3rem; margin: 0.75rem 0 0.5rem; }
+				.njs-bundle-card > p { color: var(--text-dim); font-size: 0.9rem; margin: 0 0 1.25rem; }
+				.njs-bundle-list { list-style: none; padding: 0; margin: 0 0 1.5rem; flex: 1; }
+				.njs-bundle-list li {
+					color: var(--text-dim); padding: 0.4rem 0; padding-left: 1.5rem; position: relative; font-size: 0.9rem;
+				}
+				.njs-bundle-list li::before { content: '\2713'; color: var(--btc); position: absolute; left: 0; }
+				.njs-bundle-cta {
+					display: block; text-align: center; font-family: monospace; font-weight: bold;
+					padding: 0.75rem; border-radius: 8px; font-size: 0.9rem;
+				}
+				.njs-bundle-cta-primary {
+					background: var(--btc); color: #000;
+					box-shadow: 0 0 20px rgba(247,147,26,0.3);
+				}
+				.njs-bundle-cta-primary:hover { background: var(--btc-light); color: #000; }
+				.njs-bundle-cta-secondary {
+					background: rgba(247,147,26,0.1); color: var(--btc);
+					border: 1px solid rgba(247,147,26,0.5);
+				}
+				.njs-bundle-cta-secondary:hover { background: rgba(247,147,26,0.2); color: var(--btc); }
+
+				/* License Card */
+				.njs-license-card {
+					max-width: 800px; margin: 0 auto;
+					background: var(--bg-card); border: 1px solid rgba(255,255,255,0.1);
+					border-left: 4px solid var(--btc);
+					border-radius: 8px; padding: 2.5rem;
+				}
+				.njs-license-card h3 { font-size: 1.5rem; margin: 0 0 0.25rem; }
+				.njs-license-card .njs-license-sub { font-family: monospace; font-size: 0.8rem; color: var(--text-muted); margin: 0 0 1.5rem; }
+				.njs-license-card p { color: var(--text-dim); line-height: 1.8; margin: 0 0 1rem; }
+				.njs-license-badges { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1.5rem 0; }
+				.njs-gh-link {
+					display: inline-flex; align-items: center; gap: 0.5rem;
+					font-family: monospace; font-size: 0.875rem;
+					background: rgba(247,147,26,0.1); color: var(--btc);
+					padding: 0.5rem 1rem; border-radius: 8px;
+					border: 1px solid rgba(247,147,26,0.5);
+				}
+				.njs-gh-link:hover { background: rgba(247,147,26,0.2); color: var(--btc); }
 			</style>
 
 			<!-- ===== HEADER ===== -->
@@ -287,6 +368,13 @@
 						<h2><span style="color:#fff">Our </span><span style="color:#F7931A">Services</span></h2>
 						<p>// Comprehensive technology solutions for the sovereign enterprise</p>
 					</div>
+
+					<!-- Support & Consulting -->
+					<div class="njs-category-header">
+						<div class="njs-category-icon">&#x1F3A7;</div>
+						<h3><span style="color:#F7931A">// </span>Support &amp; Consulting</h3>
+						<div class="njs-category-line"></div>
+					</div>
 					<div class="njs-grid">
 						<div class="njs-card">
 							<h3>Technical Support</h3>
@@ -299,10 +387,24 @@
 							<div class="njs-tags"><span class="njs-tag">PXE Boot</span><span class="njs-tag">Linux</span><span class="njs-tag">GrapheneOS</span></div>
 						</div>
 						<div class="njs-card">
-							<h3>Open Source System Integration</h3>
-							<p>Seamless integration of open-source tools into your workflow</p>
-							<div class="njs-tags"><span class="njs-tag">Linux</span><span class="njs-tag">FOSS</span><span class="njs-tag">APIs</span></div>
+							<h3>Sovereign Hardware Recommendations</h3>
+							<p>Curated hardware guidance for networking, computing, phones, and security</p>
+							<div class="njs-tags"><span class="njs-tag">Networking</span><span class="njs-tag">Devices</span><span class="njs-tag">Security</span></div>
 						</div>
+						<div class="njs-card">
+							<h3>Advertisement Consulting</h3>
+							<p>Privacy-respecting advertising strategies and sovereign marketing solutions</p>
+							<div class="njs-tags"><span class="njs-tag">Strategy</span><span class="njs-tag">Analytics</span><span class="njs-tag">Privacy</span></div>
+						</div>
+					</div>
+
+					<!-- Infrastructure & Administration -->
+					<div class="njs-category-header">
+						<div class="njs-category-icon">&#x1F5A5;</div>
+						<h3><span style="color:#F7931A">// </span>Infrastructure &amp; Administration</h3>
+						<div class="njs-category-line"></div>
+					</div>
+					<div class="njs-grid">
 						<div class="njs-card">
 							<h3>System Administration</h3>
 							<p>Reliable management and maintenance of your server infrastructure</p>
@@ -314,10 +416,48 @@
 							<div class="njs-tags"><span class="njs-tag">Kubernetes</span><span class="njs-tag">Docker</span><span class="njs-tag">Self-hosted</span></div>
 						</div>
 						<div class="njs-card">
+							<h3>Open Source System Integration</h3>
+							<p>Seamless integration of open-source tools into your workflow</p>
+							<div class="njs-tags"><span class="njs-tag">Linux</span><span class="njs-tag">FOSS</span><span class="njs-tag">APIs</span></div>
+						</div>
+						<div class="njs-card">
+							<h3>ERP, ITSM &amp; Collaboration</h3>
+							<p>Business management, asset tracking, and team collaboration platforms</p>
+							<div class="njs-tags"><span class="njs-tag">ERPNext</span><span class="njs-tag">GLPI</span><span class="njs-tag">Nextcloud</span></div>
+						</div>
+					</div>
+
+					<!-- Security & Bitcoin -->
+					<div class="njs-category-header">
+						<div class="njs-category-icon">&#x1F6E1;</div>
+						<h3><span style="color:#F7931A">// </span>Security &amp; Bitcoin</h3>
+						<div class="njs-category-line"></div>
+					</div>
+					<div class="njs-grid">
+						<div class="njs-card">
 							<h3>OpSec &amp; Bitcoin Operations</h3>
 							<p>Operational security hardening and secure Bitcoin infrastructure</p>
 							<div class="njs-tags"><span class="njs-tag">Node Ops</span><span class="njs-tag">Cold Storage</span><span class="njs-tag">OpSec</span></div>
 						</div>
+						<div class="njs-card">
+							<h3>Web Security Testing</h3>
+							<p>Penetration testing and vulnerability assessments for web applications and APIs</p>
+							<div class="njs-tags"><span class="njs-tag">OWASP</span><span class="njs-tag">Burp Suite</span><span class="njs-tag">Reporting</span></div>
+						</div>
+						<div class="njs-card">
+							<h3>Lightning Channel Recovery</h3>
+							<p>Expert recovery services for Lightning Network channels and funds</p>
+							<div class="njs-tags"><span class="njs-tag">Lightning Network</span><span class="njs-tag">LND</span><span class="njs-tag">CLN</span></div>
+						</div>
+					</div>
+
+					<!-- Development & Innovation -->
+					<div class="njs-category-header">
+						<div class="njs-category-icon">&#x1F4BB;</div>
+						<h3><span style="color:#F7931A">// </span>Development &amp; Innovation</h3>
+						<div class="njs-category-line"></div>
+					</div>
+					<div class="njs-grid">
 						<div class="njs-card">
 							<h3>Open Source Website Creation</h3>
 							<p>Modern, performant websites built entirely on open-source stacks</p>
@@ -330,9 +470,9 @@
 							</div>
 						</div>
 						<div class="njs-card">
-							<h3>ERP, ITSM &amp; Collaboration</h3>
-							<p>Business management, asset tracking, and team collaboration platforms</p>
-							<div class="njs-tags"><span class="njs-tag">ERPNext</span><span class="njs-tag">GLPI</span><span class="njs-tag">Nextcloud</span></div>
+							<h3>Software Development</h3>
+							<p>Custom application development with open-source frameworks and sovereign principles</p>
+							<div class="njs-tags"><span class="njs-tag">Python</span><span class="njs-tag">JavaScript</span><span class="njs-tag">Go</span></div>
 						</div>
 						<div class="njs-card">
 							<h3>Home Cloud &amp; Sovereign AI</h3>
@@ -340,26 +480,68 @@
 							<div class="njs-tags"><span class="njs-tag">Ollama</span><span class="njs-tag">Nextcloud</span><span class="njs-tag">Home Lab</span></div>
 						</div>
 						<div class="njs-card">
-							<h3>Sovereign Hardware Recommendations</h3>
-							<p>Curated hardware guidance for networking, computing, phones, and security</p>
-							<div class="njs-tags"><span class="njs-tag">Networking</span><span class="njs-tag">Devices</span><span class="njs-tag">Security</span></div>
-						</div>
-						<div class="njs-card">
 							<h3>Technology R&amp;D</h3>
 							<p>Research and development of emerging open-source technologies</p>
 							<div class="njs-tags"><span class="njs-tag">Prototyping</span><span class="njs-tag">Testing</span><span class="njs-tag">Innovation</span></div>
-						</div>
-						<div class="njs-card">
-							<h3>Lightning Channel Recovery</h3>
-							<p>Expert recovery services for Lightning Network channels and funds</p>
-							<div class="njs-tags"><span class="njs-tag">Lightning Network</span><span class="njs-tag">LND</span><span class="njs-tag">CLN</span></div>
 						</div>
 					</div>
 				</div>
 			</section>
 
+			<!-- ===== BUNDLES ===== -->
+			<section id="bundles" class="njs-section njs-section-mid">
+				<div class="njs-wrap">
+					<div class="njs-section-title">
+						<h2><span style="color:#fff">Service </span><span style="color:#F7931A">Bundles</span></h2>
+						<p>// Curated packages for individual sovereignty</p>
+					</div>
+					<div class="njs-bundles-grid">
+						<div class="njs-bundle-card">
+							<span class="njs-badge">ESSENTIALS</span>
+							<h3>Sovereign Starter</h3>
+							<p>Begin your journey to technological sovereignty</p>
+							<ul class="njs-bundle-list">
+								<li>Technical Support</li>
+								<li>Hardware Imaging</li>
+								<li>Sovereign Hardware Recs</li>
+								<li>Open Source Integration</li>
+							</ul>
+							<a href="#contact" class="njs-bundle-cta njs-bundle-cta-secondary">Contact for Pricing</a>
+						</div>
+						<div class="njs-bundle-card njs-bundle-highlighted">
+							<span class="njs-badge">RECOMMENDED</span>
+							<h3>Digital Fortress</h3>
+							<p>Complete personal sovereignty with cloud and security</p>
+							<ul class="njs-bundle-list">
+								<li>Everything in Starter</li>
+								<li>Home Cloud &amp; Sovereign AI</li>
+								<li>OpSec &amp; Bitcoin Operations</li>
+								<li>Web Security Testing</li>
+							</ul>
+							<a href="#contact" class="njs-bundle-cta njs-bundle-cta-primary">Contact for Pricing</a>
+						</div>
+						<div class="njs-bundle-card">
+							<span class="njs-badge">COMPLETE</span>
+							<h3>Full Sovereignty</h3>
+							<p>Run your entire digital life on sovereign infrastructure</p>
+							<ul class="njs-bundle-list">
+								<li>Everything in Fortress</li>
+								<li>Cloud Administration</li>
+								<li>Website Creation</li>
+								<li>Software Development</li>
+								<li>ERP, ITSM &amp; Collaboration</li>
+							</ul>
+							<a href="#contact" class="njs-bundle-cta njs-bundle-cta-secondary">Contact for Pricing</a>
+						</div>
+					</div>
+					<div class="njs-code-deco" style="margin-top:2.5rem">
+						<span class="kw">const</span> plan = bundles.<span class="fn">select</span>(<span class="str">"sovereignty_level"</span>);
+					</div>
+				</div>
+			</section>
+
 			<!-- ===== VALUES ===== -->
-			<section id="values" class="njs-section njs-section-mid">
+			<section id="values" class="njs-section njs-section-dark">
 				<div class="njs-wrap">
 					<div class="njs-section-title">
 						<h2><span style="color:#fff">Core </span><span style="color:#F7931A">Values</span></h2>
@@ -386,6 +568,32 @@
 							<p>True technological independence. Build systems that serve you, not external interests.</p>
 							<span class="njs-badge">SOVEREIGNTY</span>
 						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- ===== LICENSING ===== -->
+			<section id="licensing" class="njs-section njs-section-mid">
+				<div class="njs-wrap">
+					<div class="njs-section-title">
+						<h2><span style="color:#fff">Open Source </span><span style="color:#F7931A">Licensing</span></h2>
+						<p>// Our code is free as in freedom</p>
+					</div>
+					<div class="njs-license-card">
+						<h3><span style="color:#F7931A">&gt;</span> AGPL-3.0 License</h3>
+						<p class="njs-license-sub">GNU Affero General Public License v3</p>
+						<p>By default, sovIT.xyz <span style="color:#F7931A;font-weight:600">open-sources everything we create</span> under the AGPL-3.0 license. All non-confidential code, configurations, and tools we build for you are released openly &mdash; giving you full transparency and control.</p>
+						<p>This means you have the <span style="color:#F7931A;font-weight:600">freedom to use, modify, and deploy</span> your own updates to the code we write. You own what you pay for. Any modifications must also remain open-source, ensuring the community benefits and the code stays auditable.</p>
+						<p>Need a different arrangement? <span style="color:#F7931A;font-weight:600">Custom license releases</span> are available for an additional fee &mdash; allowing proprietary use or alternative licensing terms when required.</p>
+						<div class="njs-license-badges">
+							<span class="njs-badge">FREEDOM</span>
+							<span class="njs-badge">TRANSPARENCY</span>
+							<span class="njs-badge">COPYLEFT</span>
+						</div>
+						<a href="https://github.com/sovitxyz" target="_blank" rel="noopener noreferrer" class="njs-gh-link">&#x1F4BB; View Source on GitHub</a>
+					</div>
+					<div class="njs-code-deco" style="margin-top:2.5rem">
+						<span class="kw">return</span> license.<span class="fn">verify</span>(<span class="str">"AGPL-3.0"</span>) === <span class="str">true</span>;
 					</div>
 				</div>
 			</section>

@@ -3,7 +3,9 @@ import { Helmet } from 'react-helmet';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Services from '@/components/Services';
+import Bundles from '@/components/Bundles';
 import Values from '@/components/Values';
+import Licensing from '@/components/Licensing';
 import About from '@/components/About';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
@@ -19,13 +21,15 @@ function App() {
           content="sovIT.xyz - Expert IT consulting focused on data ownership, security, and technological sovereignty. Bitcoin-native infrastructure, open-source solutions, and enterprise-grade systems."
         />
       </Helmet>
-      
+
       <div className="min-h-screen bg-gray-900 text-white">
         <Header />
         <main>
           <Hero />
           <Services />
+          <Bundles />
           <Values />
+          <Licensing />
           <About />
           <Contact />
         </main>
