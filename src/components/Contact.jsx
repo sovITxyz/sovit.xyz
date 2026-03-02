@@ -1,6 +1,8 @@
 import React, { useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { Mail, MessageSquare, Send, CheckCircle } from 'lucide-react';
+import { Mail, Send, CheckCircle } from 'lucide-react';
+import { toast } from '@/components/ui/use-toast';
+
 const Contact = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -15,6 +17,11 @@ const Contact = () => {
     const subject = encodeURIComponent(`Consultation Request from ${formData.name}`);
     const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`);
     window.location.href = `mailto:services@sovit.xyz?subject=${subject}&body=${body}`;
+    toast({
+      title: 'Opening email client...',
+      description: "If your email client didn't open, email us directly at services@sovit.xyz",
+      duration: 8000
+    });
   };
 
   const handleChange = (e) => {
@@ -91,34 +98,20 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Contact Methods */}
-            <div className="space-y-4">
-              <motion.div
-                whileHover={{ scale: 1.02 }}
-                className="glass rounded-lg p-6 flex items-center gap-4 cursor-pointer hover:shadow-bitcoin transition-all"
-              >
-                <div className="w-12 h-12 bg-bitcoin/10 border border-bitcoin rounded-lg flex items-center justify-center">
-                  <Mail className="text-bitcoin" size={24} />
-                </div>
-                <div>
-                  <p className="text-sm text-gray-400 font-mono">Email</p>
-                  <p className="text-white font-semibold">services@sovit.xyz</p>
-                </div>
-              </motion.div>
-
-              <motion.div
-                whileHover={{ scale: 1.02 }}
-                className="glass rounded-lg p-6 flex items-center gap-4 cursor-pointer hover:shadow-bitcoin transition-all"
-              >
-                <div className="w-12 h-12 bg-bitcoin/10 border border-bitcoin rounded-lg flex items-center justify-center">
-                  <MessageSquare className="text-bitcoin" size={24} />
-                </div>
-                <div>
-                  <p className="text-sm text-gray-400 font-mono">Chat</p>
-                  <p className="text-white font-semibold">Available 24/7</p>
-                </div>
-              </motion.div>
-            </div>
+            {/* Contact Method - Email */}
+            <motion.a
+              href="mailto:services@sovit.xyz"
+              whileHover={{ scale: 1.02 }}
+              className="glass rounded-lg p-6 flex items-center gap-4 hover:shadow-bitcoin transition-all block"
+            >
+              <div className="w-12 h-12 bg-bitcoin/10 border border-bitcoin rounded-lg flex items-center justify-center">
+                <Mail className="text-bitcoin" size={24} />
+              </div>
+              <div>
+                <p className="text-sm text-gray-400 font-mono">Email</p>
+                <p className="text-white font-semibold">services@sovit.xyz</p>
+              </div>
+            </motion.a>
           </motion.div>
 
           {/* Right Column - Contact Form */}

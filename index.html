@@ -2,10 +2,20 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<link rel="icon" type="image/png" href="/favicon.png" />
 		<meta name="generator" content="sovit.xyz" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>sovIT.xyz - Sovereign IT Services | Bitcoin-Native Solutions</title>
+
+		<!-- Canonical URL -->
+		<link rel="canonical" href="https://sovit.xyz/" />
+
+		<!-- Preconnect Hints -->
+		<link rel="preconnect" href="https://images.unsplash.com" />
+		<link rel="dns-prefetch" href="https://images.unsplash.com" />
+
+		<!-- Sitemap -->
+		<link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 
 		<!-- Open Graph -->
 		<meta property="og:title" content="sovIT.xyz - Sovereign IT Services | Bitcoin-Native Solutions" />
@@ -17,9 +27,44 @@
 		<meta http-equiv="onion-location" content="http://sovit7eqfkczjlcuwi5wqfjff4pv2fp7w5v26desexg2yc5oj36lriqd.onion" />
 
 		<!-- Twitter Card -->
-		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:card" content="summary_large_image" />
 		<meta name="twitter:title" content="sovIT.xyz - Sovereign IT Services | Bitcoin-Native Solutions" />
 		<meta name="twitter:description" content="Expert IT consulting focused on data ownership, security, and technological sovereignty. Bitcoin-native infrastructure, open-source solutions, and enterprise-grade systems." />
+
+		<!-- Structured Data -->
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "ProfessionalService",
+			"name": "sovIT.xyz - Sovereign IT Services",
+			"url": "https://sovit.xyz",
+			"description": "Expert IT consulting focused on data ownership, security, and technological sovereignty. Bitcoin-native infrastructure, open-source solutions, and enterprise-grade systems.",
+			"email": "services@sovit.xyz",
+			"serviceType": [
+				"Technical Support",
+				"Hardware Imaging",
+				"System Administration",
+				"Cloud Administration",
+				"Open Source System Integration",
+				"OpSec & Bitcoin Operations",
+				"Web Security Testing",
+				"Website Creation",
+				"Software Development",
+				"Home Cloud & Sovereign AI"
+			],
+			"sameAs": [
+				"https://github.com/sovitxyz"
+			],
+			"knowsAbout": [
+				"Bitcoin",
+				"Open Source",
+				"Data Sovereignty",
+				"IT Security",
+				"Linux Administration",
+				"Self-Hosted Infrastructure"
+			]
+		}
+		</script>
 	</head>
 	<body>
 		<div id="root"></div>
@@ -318,7 +363,22 @@
 					border: 1px solid rgba(247,147,26,0.5);
 				}
 				.njs-gh-link:hover { background: rgba(247,147,26,0.2); color: var(--btc); }
+
+				/* Skip Navigation */
+				.njs-skip-nav {
+					position: absolute; left: -9999px; top: auto;
+					width: 1px; height: 1px; overflow: hidden; z-index: 100;
+				}
+				.njs-skip-nav:focus {
+					position: fixed; top: 10px; left: 10px;
+					width: auto; height: auto; padding: 0.75rem 1.5rem;
+					background: var(--btc); color: #000;
+					font-family: monospace; font-weight: bold; font-size: 0.875rem;
+					border-radius: 0.5rem; z-index: 100; outline: 2px solid #fff;
+				}
 			</style>
+
+			<a href="#home" class="njs-skip-nav">Skip to main content</a>
 
 			<!-- ===== HEADER ===== -->
 			<header class="njs-header">
@@ -650,13 +710,7 @@
 									<div class="njs-contact-value"><a href="mailto:services@sovit.xyz">services@sovit.xyz</a></div>
 								</div>
 							</div>
-							<div class="njs-contact-box">
-								<div class="njs-contact-icon">&#x1F4AC;</div>
-								<div>
-									<div class="njs-contact-label">Chat</div>
-									<div class="njs-contact-value">Available 24/7</div>
-								</div>
-							</div>
+
 						</div>
 						<div>
 							<div class="njs-card" style="border-left:4px solid #F7931A; padding:2rem">
@@ -700,22 +754,11 @@
 								<li><a href="#contact">Contact</a></li>
 							</ul>
 						</div>
-						<div class="njs-footer-col">
-							<h4><span style="color:#F7931A">&gt;</span> Resources</h4>
-							<ul>
-								<li><a href="#">Documentation</a></li>
-								<li><a href="#">Blog</a></li>
-								<li><a href="#">FAQ</a></li>
-							</ul>
-						</div>
+
 					</div>
 					<div class="njs-footer-bottom">
 						<p>&copy; 2026 Sovereign IT Services. All rights reserved.</p>
-						<div class="njs-footer-links">
-							<a href="#">Privacy Policy</a>
-							<a href="#">Terms of Service</a>
-							<a href="#">Security</a>
-						</div>
+
 					</div>
 					<div class="njs-code-deco">
 						<span class="kw">while</span>(true) { <span class="fn">build</span>(<span class="str">"sovereign systems"</span>); }

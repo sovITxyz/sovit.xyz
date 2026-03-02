@@ -1,29 +1,27 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Github, Twitter, Linkedin, Bitcoin } from 'lucide-react';
+import { Github } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
-  const socialLinks = [
-    { icon: Github, href: 'https://github.com/sovitxyz', label: 'GitHub' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Bitcoin, href: '#', label: 'Bitcoin' }
-  ];
-
   const footerLinks = [
     {
       title: 'Services',
-      links: ['Cloud Solutions', 'Open-Source', 'Bitcoin Ops', 'Security']
+      links: [
+        { label: 'Cloud Solutions', href: '#services' },
+        { label: 'Open-Source', href: '#services' },
+        { label: 'Bitcoin Ops', href: '#services' },
+        { label: 'Security', href: '#services' }
+      ]
     },
     {
       title: 'Company',
-      links: ['About', 'Values', 'Careers', 'Contact']
-    },
-    {
-      title: 'Resources',
-      links: ['Documentation', 'Blog', 'Case Studies', 'FAQ']
+      links: [
+        { label: 'About', href: '#about' },
+        { label: 'Values', href: '#values' },
+        { label: 'Contact', href: '#contact' }
+      ]
     }
   ];
 
@@ -35,7 +33,7 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-12 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Brand Column */}
-          <div className="lg:col-span-1">
+          <div className="lg:col-span-2">
             <div className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 bg-bitcoin rounded flex items-center justify-center font-mono font-bold text-black text-xl">
                 ₿
@@ -49,17 +47,16 @@ const Footer = () => {
               Building sovereign technology solutions for a decentralized future.
             </p>
             <div className="flex gap-3">
-              {socialLinks.map((social, index) => (
-                <motion.a
-                  key={index}
-                  href={social.href}
-                  whileHover={{ scale: 1.1, y: -2 }}
-                  className="w-10 h-10 bg-gray-900 border border-bitcoin/30 rounded-lg flex items-center justify-center hover:bg-bitcoin/10 hover:border-bitcoin transition-all"
-                  aria-label={social.label}
-                >
-                  <social.icon size={18} className="text-bitcoin" />
-                </motion.a>
-              ))}
+              <motion.a
+                href="https://github.com/sovitxyz"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.1, y: -2 }}
+                className="w-10 h-10 bg-gray-900 border border-bitcoin/30 rounded-lg flex items-center justify-center hover:bg-bitcoin/10 hover:border-bitcoin transition-all"
+                aria-label="GitHub"
+              >
+                <Github size={18} className="text-bitcoin" />
+              </motion.a>
             </div>
           </div>
 
@@ -73,10 +70,10 @@ const Footer = () => {
                 {column.links.map((link, linkIndex) => (
                   <li key={linkIndex}>
                     <a
-                      href="#"
+                      href={link.href}
                       className="text-gray-400 text-sm hover:text-bitcoin transition-colors inline-block hover:translate-x-1 duration-200"
                     >
-                      {link}
+                      {link.label}
                     </a>
                   </li>
                 ))}
@@ -91,17 +88,6 @@ const Footer = () => {
             <p className="text-gray-500 text-sm font-mono">
               © {currentYear} Sovereign IT Services. All rights reserved.
             </p>
-            <div className="flex gap-6 text-sm">
-              <a href="#" className="text-gray-500 hover:text-bitcoin transition-colors">
-                Privacy Policy
-              </a>
-              <a href="#" className="text-gray-500 hover:text-bitcoin transition-colors">
-                Terms of Service
-              </a>
-              <a href="#" className="text-gray-500 hover:text-bitcoin transition-colors">
-                Security
-              </a>
-            </div>
           </div>
 
           {/* Code decoration */}
