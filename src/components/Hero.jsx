@@ -32,9 +32,12 @@ const Hero = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1506399558188-acca6f8cbf41"
-          alt="Technical background"
+          src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1920&q=80&auto=format"
+          alt="Server room infrastructure"
           className="w-full h-full object-cover"
+          width={1920}
+          height={1080}
+          loading="eager"
         />
         <div className="absolute inset-0 bg-black/80"></div>
         <div className="absolute inset-0 grid-pattern-large opacity-50"></div>

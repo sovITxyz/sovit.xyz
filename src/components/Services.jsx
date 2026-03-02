@@ -214,6 +214,7 @@ const Services = () => {
                     key={index}
                     variants={item}
                     whileHover={{ scale: 1.05, y: -5 }}
+                    onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                     className="glass rounded-lg p-6 border-technical hover:shadow-bitcoin-strong transition-all duration-300 group cursor-pointer"
                   >
                     <div className="flex items-start gap-4">
@@ -256,7 +257,7 @@ const Services = () => {
                     </div>
 
                     {/* Code decoration */}
-                    <div className="mt-4 pt-4 border-t border-gray-700 font-mono text-xs text-gray-600">
+                    <div className="mt-4 pt-4 border-t border-gray-700 font-mono text-xs text-gray-600 truncate">
                       <span className="text-bitcoin">execute</span>
                       <span className="text-gray-500">(</span>
                       <span className="text-accent-green">"{service.title.toLowerCase().replace(/ /g, '_')}"</span>

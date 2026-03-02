@@ -23,8 +23,9 @@ function App() {
       </Helmet>
 
       <div className="min-h-screen bg-gray-900 text-white">
+        <a href="#main-content" className="skip-nav">Skip to main content</a>
         <Header />
-        <main>
+        <main id="main-content">
           <Hero />
           <Services />
           <Bundles />

@@ -163,6 +163,34 @@
   }
 }
 
+/* Skip Navigation */
+.skip-nav {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.skip-nav:focus {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  width: auto;
+  height: auto;
+  padding: 0.75rem 1.5rem;
+  background: var(--bitcoin-orange);
+  color: #000;
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  font-size: 0.875rem;
+  border-radius: 0.5rem;
+  z-index: 100;
+  outline: 2px solid #fff;
+}
+
 /* Animation keyframes */
 @keyframes blink {
   0%, 50% { opacity: 1; }
