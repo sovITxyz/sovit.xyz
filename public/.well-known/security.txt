@@ -1,0 +1,7 @@
+# sovIT.xyz Security Contact
+# https://securitytxt.org/ (RFC 9116)
+
+Contact: mailto:services@sovit.xyz
+Preferred-Languages: en
+Canonical: https://www.sovit.xyz/.well-known/security.txt
+Expires: 2027-04-12T00:00:00.000Z

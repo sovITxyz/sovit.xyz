@@ -1,0 +1,208 @@
+# sovIT.xyz - Sovereign IT Services — Full Site Content
+
+> sovIT.xyz is a Bitcoin-native IT consulting firm specializing in data ownership, security, and technological sovereignty. Founded by Cameron, sovIT.xyz empowers individuals and organizations with open-source solutions, self-hosted infrastructure, and enterprise-grade systems for true technological independence.
+
+Website: https://www.sovit.xyz/
+Email: services@sovit.xyz
+Tor: http://sovit7eqfkczjlcuwi5wqfjff4pv2fp7w5v26desexg2yc5oj36lriqd.onion
+GitHub: https://github.com/sovitxyz
+License: AGPL-3.0
+
+---
+
+## Hero / Mission Statement
+
+sovIT.xyz — Sovereign IT Services
+
+Empowering individuals and organizations with data ownership, security, efficiency, and technological independence.
+
+Motto: "Sovereignty through technology"
+
+---
+
+## Services
+
+sovIT.xyz provides comprehensive technology solutions for the sovereign enterprise, organized in four categories:
+
+### Support & Consulting
+
+1. **Technical Support**
+   Responsive support for all your sovereign technology needs.
+   Technologies: Remote, On-site, Consulting
+
+2. **Hardware Imaging**
+   Secure device imaging with open-source software for laptops and phones.
+   Technologies: PXE Boot, Linux, GrapheneOS
+
+3. **Sovereign Hardware Recommendations**
+   Curated hardware guidance for networking, computing, phones, and security.
+   Technologies: Networking, Devices, Security
+
+4. **Advertisement Consulting**
+   Privacy-respecting advertising strategies and sovereign marketing solutions.
+   Technologies: Strategy, Analytics, Privacy
+
+### Infrastructure & Administration
+
+5. **System Administration**
+   Reliable management and maintenance of your server infrastructure.
+   Technologies: Linux, Ansible, Automation
+
+6. **Cloud Administration**
+   Sovereign cloud deployment, monitoring, and management.
+   Technologies: Kubernetes, Docker, Self-hosted
+
+7. **Open Source System Integration**
+   Seamless integration of open-source tools into your workflow.
+   Technologies: Linux, FOSS, APIs
+
+8. **ERP, ITSM & Collaboration**
+   Business management, asset tracking, and team collaboration platforms.
+   Technologies: ERPNext, GLPI, Nextcloud
+
+### Security & Bitcoin
+
+9. **OpSec & Bitcoin Operations**
+   Operational security hardening and secure Bitcoin infrastructure.
+   Technologies: Node Ops, Cold Storage, OpSec
+
+10. **Web Security Testing**
+    Penetration testing and vulnerability assessments for web applications and APIs.
+    Technologies: OWASP, Burp Suite, Reporting
+
+11. **Lightning Channel Recovery**
+    Expert recovery services for Lightning Network channels and funds.
+    Technologies: Lightning Network, LND, CLN
+
+### Development & Innovation
+
+12. **Open Source Website Creation**
+    Modern, performant websites built entirely on open-source stacks.
+    Technologies: React, Hugo, Static Sites
+    Portfolio: gcs.sv, whatarush.org, sovit.xyz, bitcoinbarbell.com
+
+13. **Software Development**
+    Custom application development with open-source frameworks and sovereign principles.
+    Technologies: Python, JavaScript, Go
+
+14. **Home Cloud & Sovereign AI**
+    Self-hosted cloud and local AI deployment for full data sovereignty.
+    Technologies: Ollama, Nextcloud, Home Lab
+
+15. **Technology R&D**
+    Research and development of emerging open-source technologies.
+    Technologies: Prototyping, Testing, Innovation
+
+---
+
+## Service Bundles
+
+### Sovereign Starter — Essentials
+Begin your journey to technological sovereignty.
+Includes:
+- Technical Support
+- Hardware Imaging
+- Sovereign Hardware Recommendations
+- Open Source Integration
+
+### Digital Fortress — Recommended
+Complete personal sovereignty with cloud and security.
+Includes:
+- Everything in Sovereign Starter
+- Home Cloud & Sovereign AI
+- OpSec & Bitcoin Operations
+- Web Security Testing
+
+### Full Sovereignty — Complete
+Run your entire digital life on sovereign infrastructure.
+Includes:
+- Everything in Digital Fortress
+- Cloud Administration
+- Website Creation
+- Software Development
+- ERP, ITSM & Collaboration
+
+---
+
+## Core Values
+
+### Data Ownership
+Your data belongs to you. We build systems that ensure complete control and sovereignty over your digital assets.
+
+### Security
+Enterprise-grade security built on proven cryptographic principles and zero-trust architecture.
+
+### Open-Source Principles
+Transparency, auditability, and freedom from vendor lock-in through open-source technologies.
+
+### Sovereignty
+True technological independence. Build systems that serve you, not external interests.
+
+---
+
+## Open Source Licensing
+
+sovIT.xyz defaults to the AGPL-3.0 license (GNU Affero General Public License v3).
+
+By default, sovIT.xyz open-sources everything we create under the AGPL-3.0 license. All non-confidential code, configurations, and tools we build for you are released openly — giving you full transparency and control.
+
+This means you have the freedom to use, modify, and deploy your own updates to the code we write. You own what you pay for. Any modifications must also remain open-source, ensuring the community benefits and the code stays auditable.
+
+Need a different arrangement? Custom license releases are available for an additional fee — allowing proprietary use or alternative licensing terms when required.
+
+Principles: Freedom, Transparency, Copyleft
+
+Source code: https://github.com/sovitxyz
+
+---
+
+## About Cameron (Founder)
+
+Cameron began gaming on PCs at a very young age. In elementary school, he made videos and simple animations in Microsoft Movie Maker with his brother. By 6th grade, at age 11, he started making websites using Zoomshare templates — simple game sites built by copying and pasting his favorite Flash games from other websites into the template. Around the same time, he got into competitive FPS gaming and built his first computer.
+
+At 13, he received a netbook from Santa and began experimenting with Kali Linux and an Alfa AWUS036NHA adapter, exploring wireless security and learning how WEP networks could be tested and cracked. Around the same time, he started coding in VB.NET and piecing together open-source code in C++. Cameron has always been passionate about all aspects of computing.
+
+In high school, he became the go-to person for computer help — repairing and imaging systems for family members, friends from church, classmates, and even teachers. These experiences helped him develop strong technical and troubleshooting skills.
+
+He later built the most powerful workstation/gaming computer possible (2017) and worked as an IT professional at Health First, gaining valuable experience in enterprise IT environments. Today, Cameron has left Health First to focus on his own projects and pursue his passion for finding efficient technical solutions, deploying and implementing open-source solutions, and serving others through sovereign, open-source technologies.
+
+### 2026 Portfolio
+- gcs.sv — https://gcs.sv
+- whatarush.org — https://whatarush.org
+- SovIT.xyz — https://sovit.xyz
+- bitcoinbarbell.com — https://bitcoinbarbell.com
+
+---
+
+## Contact
+
+Start your consultation: Email services@sovit.xyz
+
+Why work with sovIT.xyz:
+- Complete data ownership and control
+- No vendor lock-in, ever
+- Enterprise-grade security by default
+- Open-source transparency
+- Bitcoin-native operations
+
+---
+
+## Frequently Asked Questions
+
+**What services does sovIT.xyz offer?**
+sovIT.xyz offers 15 sovereign IT services across four categories: Support & Consulting, Infrastructure & Administration, Security & Bitcoin, and Development & Innovation. Services range from technical support and hardware imaging to Bitcoin node operations, web security testing, and sovereign AI deployment.
+
+**What are the service bundles?**
+Three bundles: Sovereign Starter (essentials for beginning your sovereignty journey), Digital Fortress (adds cloud and security), and Full Sovereignty (complete sovereign infrastructure including development and ERP).
+
+**How does sovIT.xyz handle licensing?**
+All work is open-sourced under AGPL-3.0 by default. Custom license releases are available for an additional fee.
+
+**Does sovIT.xyz accept Bitcoin?**
+Yes, sovIT.xyz is Bitcoin-native and specializes in Bitcoin infrastructure including node operations, cold storage, OpSec hardening, and Lightning Network channel recovery.
+
+**How can I contact sovIT.xyz?**
+Email services@sovit.xyz. The site is also accessible via Tor.
+
+**Who is behind sovIT.xyz?**
+Cameron, a lifelong computing enthusiast with professional enterprise IT experience, founded sovIT.xyz to focus on sovereign, open-source technology solutions.

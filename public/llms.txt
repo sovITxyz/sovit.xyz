@@ -1,2 +1,60 @@
-## Pages
-- [sovIT.xyz - Sovereign IT Services | Bitcoin-Native Solutions](/): sovIT.xyz - Expert IT consulting focused on data ownership, security, and technological sovereignty. Bitcoin-native infrastructure, open-source solutions, and enterprise-grade systems.
+# sovIT.xyz - Sovereign IT Services
+
+> sovIT.xyz is a Bitcoin-native IT consulting firm specializing in data ownership, security, and technological sovereignty. Founded by Cameron, it offers open-source solutions, self-hosted infrastructure, and enterprise-grade systems for individuals and organizations seeking technological independence.
+
+## Contact
+- Email: services@sovit.xyz
+- Web: https://www.sovit.xyz/
+- Tor: http://sovit7eqfkczjlcuwi5wqfjff4pv2fp7w5v26desexg2yc5oj36lriqd.onion
+- GitHub: https://github.com/sovitxyz
+
+## Services
+
+### Support & Consulting
+- Technical Support: Responsive support for all sovereign technology needs (Remote, On-site, Consulting)
+- Hardware Imaging: Secure device imaging with open-source software for laptops and phones (PXE Boot, Linux, GrapheneOS)
+- Sovereign Hardware Recommendations: Curated hardware guidance for networking, computing, phones, and security
+- Advertisement Consulting: Privacy-respecting advertising strategies and sovereign marketing solutions
+
+### Infrastructure & Administration
+- System Administration: Reliable management and maintenance of server infrastructure (Linux, Ansible, Automation)
+- Cloud Administration: Sovereign cloud deployment, monitoring, and management (Kubernetes, Docker, Self-hosted)
+- Open Source System Integration: Seamless integration of open-source tools into workflows (Linux, FOSS, APIs)
+- ERP, ITSM & Collaboration: Business management, asset tracking, and team collaboration platforms (ERPNext, GLPI, Nextcloud)
+
+### Security & Bitcoin
+- OpSec & Bitcoin Operations: Operational security hardening and secure Bitcoin infrastructure (Node Ops, Cold Storage, OpSec)
+- Web Security Testing: Penetration testing and vulnerability assessments for web applications and APIs (OWASP, Burp Suite, Reporting)
+- Lightning Channel Recovery: Expert recovery services for Lightning Network channels and funds (Lightning Network, LND, CLN)
+
+### Development & Innovation
+- Open Source Website Creation: Modern, performant websites built on open-source stacks (React, Hugo, Static Sites)
+- Software Development: Custom application development with open-source frameworks (Python, JavaScript, Go)
+- Home Cloud & Sovereign AI: Self-hosted cloud and local AI deployment for full data sovereignty (Ollama, Nextcloud, Home Lab)
+- Technology R&D: Research and development of emerging open-source technologies
+
+## Service Bundles
+- Sovereign Starter (Essentials): Technical Support, Hardware Imaging, Sovereign Hardware Recs, Open Source Integration
+- Digital Fortress (Recommended): Everything in Starter + Home Cloud & Sovereign AI, OpSec & Bitcoin Operations, Web Security Testing
+- Full Sovereignty (Complete): Everything in Fortress + Cloud Administration, Website Creation, Software Development, ERP/ITSM & Collaboration
+
+## Core Values
+- Data Ownership: Your data belongs to you. Systems that ensure complete control and sovereignty over digital assets.
+- Security: Enterprise-grade security built on proven cryptographic principles and zero-trust architecture.
+- Open-Source Principles: Transparency, auditability, and freedom from vendor lock-in through open-source technologies.
+- Sovereignty: True technological independence. Systems that serve you, not external interests.
+
+## Licensing
+All work is open-sourced under AGPL-3.0 by default. Custom license releases available for an additional fee.
+
+## About
+Cameron is the founder of sovIT.xyz. He has been passionate about computing since childhood — building PCs, exploring cybersecurity, coding, and repairing systems. He has professional enterprise IT experience and now focuses on sovereign, open-source technology solutions.
+
+## Portfolio
+- gcs.sv
+- whatarush.org
+- sovit.xyz
+- bitcoinbarbell.com
+
+## Further Reading
+- [Full site content for LLMs](/llms-full.txt)
