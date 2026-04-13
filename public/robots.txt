@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sovit.xyz/sitemap.xml
+# Sitemap
+Sitemap: https://www.sovit.xyz/sitemap.xml
+
+# AI / LLM content
+# See https://llmstxt.org/
+# llms.txt provides a structured overview; llms-full.txt provides complete site content
