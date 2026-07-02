@@ -218,3 +218,16 @@
 .animate-glow-pulse {
   animation: glow-pulse 2s ease-in-out infinite;
 }
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-blink,
+  .animate-float,
+  .animate-glow-pulse {
+    animation: none;
+  }
+}

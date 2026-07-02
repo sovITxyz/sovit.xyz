@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import { MotionConfig } from 'framer-motion';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Services from '@/components/Services';
@@ -13,15 +13,7 @@ import { Toaster } from '@/components/ui/toaster';
 
 function App() {
   return (
-    <>
-      <Helmet>
-        <title>sovIT.xyz - Sovereign IT Services | Bitcoin-Native IT Consulting</title>
-        <meta
-          name="description"
-          content="sovIT.xyz offers sovereign IT consulting: Bitcoin node operations, self-hosted cloud, Linux administration, open-source integration, web security testing, and hardware imaging. Data ownership and technological independence for individuals and organizations."
-        />
-      </Helmet>
-
+    <MotionConfig reducedMotion="user">
       <div className="min-h-screen bg-gray-900 text-white">
         <a href="#main-content" className="skip-nav">Skip to main content</a>
         <Header />
@@ -37,7 +29,7 @@ function App() {
         <Footer />
         <Toaster />
       </div>
-    </>
+    </MotionConfig>
   );
 }
 

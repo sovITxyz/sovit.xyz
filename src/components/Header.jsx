@@ -17,6 +17,7 @@ const Header = () => {
   const navItems = [
     { label: 'Home', href: '#home' },
     { label: 'Services', href: '#services' },
+    { label: 'Bundles', href: '#bundles' },
     { label: 'Values', href: '#values' },
     { label: 'About', href: '#about' },
     { label: 'Contact', href: '#contact' }
@@ -31,12 +32,14 @@ const Header = () => {
         isScrolled ? 'glass-strong shadow-bitcoin' : 'bg-transparent'
       }`}
     >
-      <nav className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <motion.div
+      <nav aria-label="Main navigation" className="container mx-auto px-4 py-4 flex items-center justify-between">
+        <motion.a
+          href="#home"
+          aria-label="sovIT.xyz — back to top"
           whileHover={{ scale: 1.05 }}
           className="flex items-center gap-2"
         >
-          <div className="w-8 h-8 bg-bitcoin rounded flex items-center justify-center font-mono font-bold text-black">
+          <div className="w-8 h-8 bg-bitcoin rounded flex items-center justify-center font-mono font-bold text-black" aria-hidden="true">
             ₿
           </div>
           <span className="font-mono text-xl font-bold">
@@ -44,7 +47,7 @@ const Header = () => {
             <span className="text-bitcoin">IT</span>
             <span className="text-white">.xyz</span>
           </span>
-        </motion.div>
+        </motion.a>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
@@ -65,14 +68,18 @@ const Header = () => {
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           className="md:hidden text-white"
+          aria-label={isMobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+          aria-expanded={isMobileMenuOpen}
+          aria-controls="mobile-menu"
         >
-          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          {isMobileMenuOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
         </button>
       </nav>
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <motion.div
+          id="mobile-menu"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}

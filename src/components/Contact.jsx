@@ -1,16 +1,37 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Mail, Send, CheckCircle } from 'lucide-react';
 import { toast } from '@/components/ui/use-toast';
+import { CONTACT_PREFILL_EVENT } from '@/lib/contact';
 
 const Contact = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const nameInputRef = useRef(null);
+  const lastPrefill = useRef('');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: ''
   });
+
+  useEffect(() => {
+    const handlePrefill = (event) => {
+      const topic = typeof event.detail?.topic === 'string' ? event.detail.topic : '';
+      if (!topic) return;
+      const prefillMessage = `Hi Cameron, I'm interested in ${topic}. `;
+      setFormData((prev) => {
+        // Never clobber a message the visitor has typed themselves
+        if (prev.message && prev.message !== lastPrefill.current) return prev;
+        lastPrefill.current = prefillMessage;
+        return { ...prev, message: prefillMessage };
+      });
+      nameInputRef.current?.focus({ preventScroll: true });
+    };
+
+    window.addEventListener(CONTACT_PREFILL_EVENT, handlePrefill);
+    return () => window.removeEventListener(CONTACT_PREFILL_EVENT, handlePrefill);
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -130,6 +151,7 @@ const Contact = () => {
                     type="text"
                     id="name"
                     name="name"
+                    ref={nameInputRef}
                     value={formData.name}
                     onChange={handleChange}
                     required
@@ -202,9 +224,9 @@ const Contact = () => {
             // Join organizations achieving true technological independence
           </p>
           <div className="flex justify-center gap-8 text-sm text-gray-500">
-            <span>🔒 Secure</span>
-            <span>🌐 Sovereign</span>
-            <span>₿ Bitcoin-Native</span>
+            <span><span aria-hidden="true">🔒</span> Secure</span>
+            <span><span aria-hidden="true">🌐</span> Sovereign</span>
+            <span><span aria-hidden="true">₿</span> Bitcoin-Native</span>
           </div>
         </motion.div>
       </div>
