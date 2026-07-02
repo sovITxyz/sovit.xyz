@@ -260,7 +260,13 @@ export default defineConfig({
 				'@babel/traverse',
 				'@babel/generator',
 				'@babel/types'
-			]
+			],
+			output: {
+				manualChunks: {
+					'vendor-react': ['react', 'react-dom'],
+					'vendor-motion': ['framer-motion']
+				}
+			}
 		}
 	}
 });

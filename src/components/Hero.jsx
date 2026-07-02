@@ -7,6 +7,11 @@ const Hero = () => {
   const fullText = '> Sovereignty through technology_';
 
   useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      setTerminalText(fullText);
+      return;
+    }
+
     let currentIndex = 0;
     const interval = setInterval(() => {
       if (currentIndex <= fullText.length) {
@@ -32,12 +37,18 @@ const Hero = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1920&q=80&auto=format"
+          src="/images/hero-server-room-1920.webp"
+          srcSet="/images/hero-server-room-960.webp 960w, /images/hero-server-room-1920.webp 1920w"
+          sizes="100vw"
           alt="Server room infrastructure"
           className="w-full h-full object-cover"
           width={1920}
-          height={1080}
+          height={1077}
           loading="eager"
+          // React 18 requires the lowercase DOM attribute; camelCase fetchPriority is React 19+
+          // eslint-disable-next-line react/no-unknown-property
+          fetchpriority="high"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-black/80"></div>
         <div className="absolute inset-0 grid-pattern-large opacity-50"></div>

@@ -12,7 +12,8 @@ const Footer = () => {
         { label: 'Cloud Solutions', href: '#services' },
         { label: 'Open-Source', href: '#services' },
         { label: 'Bitcoin Ops', href: '#services' },
-        { label: 'Security', href: '#services' }
+        { label: 'Security', href: '#services' },
+        { label: 'Bundles', href: '#bundles' }
       ]
     },
     {
@@ -20,6 +21,7 @@ const Footer = () => {
       links: [
         { label: 'About', href: '#about' },
         { label: 'Values', href: '#values' },
+        { label: 'Licensing', href: '#licensing' },
         { label: 'Contact', href: '#contact' }
       ]
     }

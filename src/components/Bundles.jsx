@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { CheckCircle } from 'lucide-react';
+import { prefillContact } from '@/lib/contact';
 
 const Bundles = () => {
   const ref = useRef(null);
@@ -141,6 +142,8 @@ const Bundles = () => {
                 {/* CTA */}
                 <a
                   href="#contact"
+                  onClick={() => prefillContact(`the "${bundle.name}" bundle`)}
+                  aria-label={`Contact for pricing on the ${bundle.name} bundle`}
                   className={`block text-center font-mono font-bold py-3 px-6 rounded-lg transition-all duration-300 ${
                     bundle.highlighted
                       ? 'bg-bitcoin text-black hover:bg-bitcoin-light shadow-bitcoin'

@@ -1,7 +1,6 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { useInView } from 'framer-motion';
-import { useRef } from 'react';
+import React, { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
+import { goToContact } from '@/lib/contact';
 import {
   Zap,
   FlaskConical,
@@ -214,8 +213,17 @@ const Services = () => {
                     key={index}
                     variants={item}
                     whileHover={{ scale: 1.05, y: -5 }}
-                    onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
-                    className="glass rounded-lg p-6 border-technical hover:shadow-bitcoin-strong transition-all duration-300 group cursor-pointer"
+                    role="button"
+                    tabIndex={0}
+                    aria-label={`Ask about ${service.title} — jumps to the contact form`}
+                    onClick={() => goToContact(`the "${service.title}" service`)}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        goToContact(`the "${service.title}" service`);
+                      }
+                    }}
+                    className="glass rounded-lg p-6 border-technical hover:shadow-bitcoin-strong transition-all duration-300 group cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F7931A]"
                   >
                     <div className="flex items-start gap-4">
                       <div className="w-12 h-12 bg-bitcoin/10 border border-bitcoin rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-bitcoin/20 transition-colors">
@@ -246,6 +254,7 @@ const Services = () => {
                                 href={site.url}
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                onClick={(e) => e.stopPropagation()}
                                 className="text-xs font-mono bg-bitcoin/10 text-bitcoin px-2 py-1 rounded border border-bitcoin/50 hover:bg-bitcoin/20 transition-colors"
                               >
                                 {site.name}
