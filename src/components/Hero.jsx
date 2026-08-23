@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Terminal, ChevronRight } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
 
 const Hero = () => {
   const [terminalText, setTerminalText] = useState('');
@@ -29,6 +29,10 @@ const Hero = () => {
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
   };
 
+  const scrollToServices = () => {
+    document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section
       id="home"
@@ -40,7 +44,7 @@ const Hero = () => {
           src="/images/hero-server-room-1920.webp"
           srcSet="/images/hero-server-room-960.webp 960w, /images/hero-server-room-1920.webp 1920w"
           sizes="100vw"
-          alt="Server room infrastructure"
+          alt=""
           className="w-full h-full object-cover"
           width={1920}
           height={1077}
@@ -67,7 +71,7 @@ const Hero = () => {
         }}
         className="absolute top-20 right-20 w-64 h-64 border border-bitcoin/20 rotate-45 hidden lg:block"
       />
-      
+
       <motion.div
         animate={{
           rotate: -360,
@@ -82,22 +86,26 @@ const Hero = () => {
       />
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 text-center">
+      <div className="relative z-10 container mx-auto px-4 text-center pt-28 pb-16">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="max-w-5xl mx-auto"
         >
-          {/* Terminal Icon */}
+          {/* Brand Badge */}
           <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ delay: 0.3, type: "spring" }}
             className="flex justify-center mb-8"
           >
-            <div className="w-16 h-16 bg-bitcoin/10 border border-bitcoin rounded-lg flex items-center justify-center shadow-bitcoin">
-              <Terminal className="text-bitcoin" size={32} />
+            <div className="glass rounded-full px-5 py-2 border border-bitcoin/30 flex items-center gap-3">
+              <span className="relative flex h-3 w-3" aria-hidden="true">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-bitcoin opacity-60"></span>
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-bitcoin"></span>
+              </span>
+              <span className="font-mono text-sm text-gray-200">Sovereign Technology SAS — AI Operating Experts</span>
             </div>
           </motion.div>
 
@@ -108,11 +116,9 @@ const Hero = () => {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight"
           >
-            <span className="text-white">sov</span>
-            <span className="text-bitcoin">IT</span>
-            <span className="text-white">.xyz</span>
+            <span className="text-white">Develop. Deploy. Run.</span>
             <br />
-            <span className="text-white text-3xl md:text-5xl lg:text-6xl">Sovereign IT Services</span>
+            <span className="text-bitcoin text-4xl md:text-6xl lg:text-7xl">Sovereign AI Systems.</span>
           </motion.h1>
 
           {/* Subheading */}
@@ -122,10 +128,9 @@ const Hero = () => {
             transition={{ delay: 0.6, duration: 0.8 }}
             className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto"
           >
-            Empowering individuals and organizations with <span className="text-bitcoin font-semibold">data ownership</span>,
-            <span className="text-bitcoin font-semibold"> security</span>,
-            <span className="text-bitcoin font-semibold"> efficiency</span>, and
-            <span className="text-bitcoin font-semibold"> technological independence</span>
+            We build and operate AI that you own — on <span className="text-bitcoin font-semibold">your infrastructure</span>,
+            under <span className="text-bitcoin font-semibold">your control</span>, with
+            <span className="text-bitcoin font-semibold"> your data</span>. No lock-in. No compromise.
           </motion.p>
 
           {/* Terminal Text Animation */}
@@ -146,11 +151,12 @@ const Hero = () => {
             </p>
           </motion.div>
 
-          {/* CTA Button */}
+          {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 0.8 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
             <motion.button
               onClick={scrollToContact}
@@ -158,20 +164,40 @@ const Hero = () => {
               whileTap={{ scale: 0.95 }}
               className="bg-bitcoin text-black font-mono font-bold px-8 py-4 rounded-lg text-lg hover:bg-bitcoin-light transition-all shadow-bitcoin-strong inline-flex items-center gap-2 group"
             >
-              Start Your Consultation
+              Start a Project
               <ChevronRight className="group-hover:translate-x-1 transition-transform" />
+            </motion.button>
+            <motion.button
+              onClick={scrollToServices}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-bitcoin/10 text-bitcoin border border-bitcoin/50 font-mono font-bold px-8 py-4 rounded-lg text-lg hover:bg-bitcoin/20 transition-all inline-flex items-center gap-2"
+            >
+              Explore Services
             </motion.button>
           </motion.div>
 
-          {/* Code Snippet Decoration */}
+          {/* Stats */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.2, duration: 0.8 }}
-            className="mt-16 font-mono text-xs text-gray-500 text-left max-w-md mx-auto"
+            className="mt-16 flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10 font-mono"
           >
-            <span className="text-bitcoin">const</span> future = <span className="text-accent-green">await</span> sovereignty.
-            <span className="text-accent-blue">deploy</span>();
+            <div className="text-center">
+              <p className="text-2xl md:text-3xl font-bold text-bitcoin">99.9%</p>
+              <p className="text-xs text-gray-400 mt-1">Uptime SLA</p>
+            </div>
+            <div className="hidden sm:block w-px h-10 bg-bitcoin/30" aria-hidden="true"></div>
+            <div className="text-center">
+              <p className="text-2xl md:text-3xl font-bold text-bitcoin">&lt;50ms</p>
+              <p className="text-xs text-gray-400 mt-1">Inference Latency</p>
+            </div>
+            <div className="hidden sm:block w-px h-10 bg-bitcoin/30" aria-hidden="true"></div>
+            <div className="text-center">
+              <p className="text-2xl md:text-3xl font-bold text-bitcoin">Zero</p>
+              <p className="text-xs text-gray-400 mt-1">Data Leakage</p>
+            </div>
           </motion.div>
         </motion.div>
       </div>

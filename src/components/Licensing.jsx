@@ -50,7 +50,7 @@ const Licensing = () => {
             {/* Content */}
             <div className="space-y-4 mb-8">
               <p className="text-gray-300 leading-relaxed">
-                By default, sovIT.xyz <span className="text-bitcoin font-semibold">open-sources everything we create</span> under
+                By default, Sovereign Technology <span className="text-bitcoin font-semibold">open-sources everything we create</span> under
                 the AGPL-3.0 license. All non-confidential code, configurations, and tools we build for you are released
                 openly — giving you full transparency and control.
               </p>

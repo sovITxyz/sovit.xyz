@@ -1,10 +1,35 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ArrowUpRight } from 'lucide-react';
+
+const LEGACY_HOSTS = ['sovit.xyz', 'www.sovit.xyz'];
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [showRebrandBanner, setShowRebrandBanner] = useState(false);
+
+  useEffect(() => {
+    const host = window.location.hostname;
+    let dismissed = false;
+    try {
+      dismissed = window.sessionStorage.getItem('rebrand-banner-dismissed') === '1';
+    } catch {
+      // storage unavailable (e.g. hardened Tor Browser) — show the banner
+    }
+    if ((LEGACY_HOSTS.includes(host) || host.endsWith('.onion')) && !dismissed) {
+      setShowRebrandBanner(true);
+    }
+  }, []);
+
+  const dismissBanner = () => {
+    setShowRebrandBanner(false);
+    try {
+      window.sessionStorage.setItem('rebrand-banner-dismissed', '1');
+    } catch {
+      // storage unavailable — banner simply reappears next load
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,8 +42,9 @@ const Header = () => {
   const navItems = [
     { label: 'Home', href: '#home' },
     { label: 'Services', href: '#services' },
-    { label: 'Bundles', href: '#bundles' },
-    { label: 'Values', href: '#values' },
+    { label: 'Platform', href: '#platform' },
+    { label: 'Process', href: '#process' },
+    { label: 'Pricing', href: '#pricing' },
     { label: 'About', href: '#about' },
     { label: 'Contact', href: '#contact' }
   ];
@@ -32,20 +58,42 @@ const Header = () => {
         isScrolled ? 'glass-strong shadow-bitcoin' : 'bg-transparent'
       }`}
     >
+      {showRebrandBanner && (
+        <div className="bg-bitcoin text-black" role="status">
+          <div className="container mx-auto px-4 py-2 flex items-center justify-center gap-2 text-center">
+            <p className="font-mono text-xs md:text-sm font-semibold">
+              sovIT.xyz is now <span className="font-bold">Sovereign Technology</span> — we&apos;ve rebranded.
+              <a
+                href="https://sovtech.pro"
+                className="inline-flex items-center gap-1 ml-2 underline underline-offset-2 hover:opacity-80 transition-opacity"
+              >
+                Visit sovtech.pro
+                <ArrowUpRight size={14} aria-hidden="true" />
+              </a>
+            </p>
+            <button
+              onClick={dismissBanner}
+              aria-label="Dismiss rebrand notice"
+              className="flex-shrink-0 p-1 hover:opacity-70 transition-opacity"
+            >
+              <X size={16} aria-hidden="true" />
+            </button>
+          </div>
+        </div>
+      )}
       <nav aria-label="Main navigation" className="container mx-auto px-4 py-4 flex items-center justify-between">
         <motion.a
           href="#home"
-          aria-label="sovIT.xyz — back to top"
+          aria-label="Sovereign Technology — back to top"
           whileHover={{ scale: 1.05 }}
           className="flex items-center gap-2"
         >
           <div className="w-8 h-8 bg-bitcoin rounded flex items-center justify-center font-mono font-bold text-black" aria-hidden="true">
-            ₿
+            ◆
           </div>
           <span className="font-mono text-xl font-bold">
-            <span className="text-white">sov</span>
-            <span className="text-bitcoin">IT</span>
-            <span className="text-white">.xyz</span>
+            <span className="text-white">Sovereign</span>
+            <span className="text-bitcoin">Tech</span>
           </span>
         </motion.a>
 

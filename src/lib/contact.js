@@ -1,8 +1,9 @@
-export const CONTACT_PREFILL_EVENT = 'sovit:contact-prefill';
+export const CONTACT_PREFILL_EVENT = 'sovtech:contact-prefill';
+export const CONTACT_EMAIL = 'services@sovtech.pro';
 
 /**
  * Dispatch a prefill request for the contact form without scrolling.
- * @param {string} topic - Short human-readable topic, e.g. 'the "Digital Fortress" bundle'.
+ * @param {string} topic - Short human-readable topic, e.g. 'the "AI Deployment" service'.
  */
 export function prefillContact(topic) {
   window.dispatchEvent(new CustomEvent(CONTACT_PREFILL_EVENT, { detail: { topic } }));

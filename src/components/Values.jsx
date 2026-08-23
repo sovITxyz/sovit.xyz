@@ -10,7 +10,7 @@ const Values = () => {
     {
       icon: Key,
       title: 'Data Ownership',
-      description: 'Your data belongs to you. We build systems that ensure complete control and sovereignty over your digital assets.',
+      description: 'Your data, your models, your rules. We build AI systems that guarantee complete control over your digital assets.',
       highlight: 'OWNERSHIP'
     },
     {
@@ -21,14 +21,14 @@ const Values = () => {
     },
     {
       icon: Unlock,
-      title: 'Open-Source Principles',
-      description: 'Transparency, auditability, and freedom from vendor lock-in through open-source technologies.',
+      title: 'Open Standards',
+      description: 'No lock-in. Open source at the core — transparency, auditability, and freedom of movement for your stack.',
       highlight: 'FREEDOM'
     },
     {
       icon: Award,
       title: 'Sovereignty',
-      description: 'True technological independence. Build systems that serve you, not external interests.',
+      description: 'True technological independence. AI that serves its owners — not external interests.',
       highlight: 'SOVEREIGNTY'
     }
   ];
@@ -87,8 +87,8 @@ const Values = () => {
               {/* Hexagonal Shape */}
               <div className="glass-strong rounded-lg p-8 hover:shadow-bitcoin-strong transition-all duration-300 relative overflow-hidden">
                 {/* Orange Accent Line */}
-                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-orange"></div>
-                <div className="absolute top-0 right-0 w-1 h-full bg-gradient-orange opacity-30"></div>
+                <div className="absolute top-0 left-0 w-full h-1 gradient-orange"></div>
+                <div className="absolute top-0 right-0 w-1 h-full gradient-orange opacity-30"></div>
                 
                 {/* Icon */}
                 <motion.div

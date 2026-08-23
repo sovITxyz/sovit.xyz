@@ -3,7 +3,9 @@ import { MotionConfig } from 'framer-motion';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Services from '@/components/Services';
-import Bundles from '@/components/Bundles';
+import Platform from '@/components/Platform';
+import Process from '@/components/Process';
+import Pricing from '@/components/Pricing';
 import Values from '@/components/Values';
 import Licensing from '@/components/Licensing';
 import About from '@/components/About';
@@ -20,7 +22,9 @@ function App() {
         <main id="main-content">
           <Hero />
           <Services />
-          <Bundles />
+          <Platform />
+          <Process />
+          <Pricing />
           <Values />
           <Licensing />
           <About />

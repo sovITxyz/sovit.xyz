@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { Mail, Send, CheckCircle } from 'lucide-react';
 import { toast } from '@/components/ui/use-toast';
-import { CONTACT_PREFILL_EVENT } from '@/lib/contact';
+import { CONTACT_PREFILL_EVENT, CONTACT_EMAIL } from '@/lib/contact';
 
 const Contact = () => {
   const ref = useRef(null);
@@ -19,7 +19,7 @@ const Contact = () => {
     const handlePrefill = (event) => {
       const topic = typeof event.detail?.topic === 'string' ? event.detail.topic : '';
       if (!topic) return;
-      const prefillMessage = `Hi Cameron, I'm interested in ${topic}. `;
+      const prefillMessage = `Hi Sovereign Technology team, I'm interested in ${topic}. `;
       setFormData((prev) => {
         // Never clobber a message the visitor has typed themselves
         if (prev.message && prev.message !== lastPrefill.current) return prev;
@@ -35,12 +35,12 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const subject = encodeURIComponent(`Consultation Request from ${formData.name}`);
+    const subject = encodeURIComponent(`Project Inquiry from ${formData.name}`);
     const body = encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`);
-    window.location.href = `mailto:services@sovit.xyz?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
     toast({
       title: 'Opening email client...',
-      description: "If your email client didn't open, email us directly at services@sovit.xyz",
+      description: `If your email client didn't open, email us directly at ${CONTACT_EMAIL}`,
       duration: 8000
     });
   };
@@ -78,10 +78,10 @@ const Contact = () => {
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             <span className="text-white">Start Your </span>
-            <span className="text-bitcoin">Consultation</span>
+            <span className="text-bitcoin">Project</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto font-mono">
-            // Ready to achieve technological sovereignty?
+            // Ready to run sovereign AI?
           </p>
         </motion.div>
 
@@ -99,11 +99,11 @@ const Contact = () => {
               </h3>
               <div className="space-y-4">
                 {[
-                  'Complete data ownership and control',
+                  'You own the models, data, and infrastructure',
                   'No vendor lock-in, ever',
-                  'Enterprise-grade security by default',
-                  'Open-source transparency',
-                  'Bitcoin-native operations'
+                  'Production-grade security by default',
+                  'Open-source transparency (AGPL-3.0)',
+                  '24/7 operations and monitoring'
                 ].map((benefit, index) => (
                   <motion.div
                     key={index}
@@ -121,7 +121,7 @@ const Contact = () => {
 
             {/* Contact Method - Email */}
             <motion.a
-              href="mailto:services@sovit.xyz"
+              href={`mailto:${CONTACT_EMAIL}`}
               whileHover={{ scale: 1.02 }}
               className="glass rounded-lg p-6 flex items-center gap-4 hover:shadow-bitcoin transition-all block"
             >
@@ -130,9 +130,13 @@ const Contact = () => {
               </div>
               <div>
                 <p className="text-sm text-gray-400 font-mono">Email</p>
-                <p className="text-white font-semibold">services@sovit.xyz</p>
+                <p className="text-white font-semibold">{CONTACT_EMAIL}</p>
               </div>
             </motion.a>
+
+            <p className="text-gray-500 text-sm font-mono">
+              Tell us about your project — we respond within 24 hours with a technical assessment and next steps.
+            </p>
           </motion.div>
 
           {/* Right Column - Contact Form */}
@@ -172,13 +176,13 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     className="w-full bg-gray-900 border border-bitcoin/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-bitcoin transition-colors"
-                    placeholder="your@email.com"
+                    placeholder="you@company.com"
                   />
                 </div>
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-mono text-gray-400 mb-2">
-                    <span className="text-bitcoin">&gt;</span> Message
+                    <span className="text-bitcoin">&gt;</span> Project Details
                   </label>
                   <textarea
                     id="message"
@@ -188,7 +192,7 @@ const Contact = () => {
                     required
                     rows={6}
                     className="w-full bg-gray-900 border border-bitcoin/30 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-bitcoin transition-colors resize-none"
-                    placeholder="Tell us about your project..."
+                    placeholder="Tell us about your AI project, infrastructure, and goals..."
                   />
                 </div>
 
@@ -199,14 +203,14 @@ const Contact = () => {
                   className="w-full bg-bitcoin text-black font-mono font-bold px-6 py-4 rounded-lg hover:bg-bitcoin-light transition-all shadow-bitcoin flex items-center justify-center gap-2 group"
                 >
                   <Send className="group-hover:translate-x-1 transition-transform" size={20} />
-                  Send Message
+                  Send Request
                 </motion.button>
               </div>
 
               {/* Code decoration */}
               <div className="mt-6 pt-6 border-t border-gray-700 font-mono text-xs text-gray-600">
-                <span className="text-bitcoin">await</span> consultation.
-                <span className="text-accent-blue">schedule</span>
+                <span className="text-bitcoin">await</span> project.
+                <span className="text-accent-blue">kickoff</span>
                 <span className="text-gray-500">()</span>;
               </div>
             </form>
@@ -226,7 +230,7 @@ const Contact = () => {
           <div className="flex justify-center gap-8 text-sm text-gray-500">
             <span><span aria-hidden="true">🔒</span> Secure</span>
             <span><span aria-hidden="true">🌐</span> Sovereign</span>
-            <span><span aria-hidden="true">₿</span> Bitcoin-Native</span>
+            <span><span aria-hidden="true">⚡</span> AI-Native</span>
           </div>
         </motion.div>
       </div>
