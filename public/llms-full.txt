@@ -2,7 +2,7 @@
 
 > Sovereign Technology SAS is an AI operations company registered in El Salvador. We develop, deploy, and run sovereign AI systems for enterprises — on your infrastructure, under your control, with your data. No lock-in. No compromise. Formerly sovIT.xyz, the Bitcoin-native IT consultancy.
 
-Website: https://sovtech.pro/
+Website: https://www.sovtech.pro/
 Email: services@sovtech.pro
 Tor: http://sovit7eqfkczjlcuwi5wqfjff4pv2fp7w5v26desexg2yc5oj36lriqd.onion
 GitHub: https://github.com/sovitxyz
@@ -135,7 +135,7 @@ He later built the most powerful workstation/gaming computer possible (2017) and
 
 ### 2026 Portfolio
 
-- sovtech.pro (https://sovtech.pro)
+- sovtech.pro (https://www.sovtech.pro)
 - gcs.sv (https://gcs.sv)
 - whatarush.org (https://whatarush.org)
 - bitcoinbarbell.com (https://bitcoinbarbell.com)
@@ -159,4 +159,4 @@ Tell us about your project — we respond within 24 hours with a technical asses
 
 © 2026 Sovereign Technology SAS. All rights reserved. Formerly sovIT.xyz.
 
-Additional catalog: full IT services & pricing (websites, managed IT, networks & smart spaces, sovereign hosting, appliance products, Bitcoin services) at https://sovtech.pro/services/
+Additional catalog: full IT services & pricing (websites, managed IT, networks & smart spaces, sovereign hosting, appliance products, Bitcoin services) at https://www.sovtech.pro/services/

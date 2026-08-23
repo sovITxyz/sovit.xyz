@@ -105,7 +105,7 @@ const Hero = () => {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-bitcoin opacity-60"></span>
                 <span className="relative inline-flex rounded-full h-3 w-3 bg-bitcoin"></span>
               </span>
-              <span className="font-mono text-sm text-gray-200">Sovereign Technology SAS — AI Operating Experts</span>
+              <span className="font-mono text-sm text-gray-200">Sovereign Technology SAS — AI &amp; Linux Infrastructure</span>
             </div>
           </motion.div>
 
@@ -118,7 +118,7 @@ const Hero = () => {
           >
             <span className="text-white">Develop. Deploy. Run.</span>
             <br />
-            <span className="text-bitcoin text-4xl md:text-6xl lg:text-7xl">Sovereign AI Systems.</span>
+            <span className="text-bitcoin text-4xl md:text-6xl lg:text-7xl">Sovereign AI &amp; Infrastructure.</span>
           </motion.h1>
 
           {/* Subheading */}
@@ -128,7 +128,8 @@ const Hero = () => {
             transition={{ delay: 0.6, duration: 0.8 }}
             className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto"
           >
-            We build and operate AI that you own — on <span className="text-bitcoin font-semibold">your infrastructure</span>,
+            We build and operate AI systems and Linux infrastructure that you own — on
+            <span className="text-bitcoin font-semibold"> your hardware</span>,
             under <span className="text-bitcoin font-semibold">your control</span>, with
             <span className="text-bitcoin font-semibold"> your data</span>. No lock-in. No compromise.
           </motion.p>
@@ -190,8 +191,8 @@ const Hero = () => {
             </div>
             <div className="hidden sm:block w-px h-10 bg-bitcoin/30" aria-hidden="true"></div>
             <div className="text-center">
-              <p className="text-2xl md:text-3xl font-bold text-bitcoin">&lt;50ms</p>
-              <p className="text-xs text-gray-400 mt-1">Inference Latency</p>
+              <p className="text-2xl md:text-3xl font-bold text-bitcoin">100%</p>
+              <p className="text-xs text-gray-400 mt-1">Open Source</p>
             </div>
             <div className="hidden sm:block w-px h-10 bg-bitcoin/30" aria-hidden="true"></div>
             <div className="text-center">

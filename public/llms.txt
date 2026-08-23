@@ -4,7 +4,7 @@
 
 ## Contact
 - Email: services@sovtech.pro
-- Web: https://sovtech.pro/
+- Web: https://www.sovtech.pro/
 - Tor: http://sovit7eqfkczjlcuwi5wqfjff4pv2fp7w5v26desexg2yc5oj36lriqd.onion
 - GitHub: https://github.com/sovitxyz
 
@@ -68,4 +68,4 @@ Sovereign Technology SAS grew out of sovIT.xyz, a Bitcoin-native IT consultancy.
 
 ## Further Reading
 - [Full site content for LLMs](/llms-full.txt)
-- [Full service catalog & pricing](https://sovtech.pro/services/) — websites, managed IT, networks & smart spaces, sovereign hosting, appliances, Bitcoin services
+- [Full service catalog & pricing](https://www.sovtech.pro/services/) — websites, managed IT, networks & smart spaces, sovereign hosting, appliances, Bitcoin services

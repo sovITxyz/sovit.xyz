@@ -3,6 +3,7 @@ import { MotionConfig } from 'framer-motion';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import Services from '@/components/Services';
+import Infrastructure from '@/components/Infrastructure';
 import Platform from '@/components/Platform';
 import Process from '@/components/Process';
 import Pricing from '@/components/Pricing';
@@ -22,6 +23,7 @@ function App() {
         <main id="main-content">
           <Hero />
           <Services />
+          <Infrastructure />
           <Platform />
           <Process />
           <Pricing />

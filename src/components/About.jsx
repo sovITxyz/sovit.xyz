@@ -121,7 +121,7 @@ const About = () => {
               </div>
               <div className="flex flex-wrap gap-3">
                 {[
-                  { name: 'sovtech.pro', url: 'https://sovtech.pro' },
+                  { name: 'sovtech.pro', url: 'https://www.sovtech.pro' },
                   { name: 'gcs.sv', url: 'https://gcs.sv' },
                   { name: 'whatarush.org', url: 'https://whatarush.org' },
                   { name: 'bitcoinbarbell.com', url: 'https://bitcoinbarbell.com' }

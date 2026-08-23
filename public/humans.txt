@@ -2,7 +2,7 @@
 Company: Sovereign Technology SAS (El Salvador)
 Founder: Cameron
 Contact: services@sovtech.pro
-Site: https://sovtech.pro/
+Site: https://www.sovtech.pro/
 GitHub: https://github.com/sovitxyz
 
 /* SITE */

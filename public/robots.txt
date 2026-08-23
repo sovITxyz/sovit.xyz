@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://sovtech.pro/sitemap.xml
+Sitemap: https://www.sovtech.pro/sitemap.xml
 
 # AI / LLM content
 # See https://llmstxt.org/

@@ -3,5 +3,5 @@
 
 Contact: mailto:services@sovtech.pro
 Preferred-Languages: en
-Canonical: https://sovtech.pro/.well-known/security.txt
+Canonical: https://www.sovtech.pro/.well-known/security.txt
 Expires: 2027-04-12T00:00:00.000Z

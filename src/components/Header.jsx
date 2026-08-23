@@ -39,11 +39,14 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // `secondary` items are hidden on medium screens so the two practice areas
+  // (AI Ops, Infrastructure) always fit without wrapping. All items show on mobile.
   const navItems = [
     { label: 'Home', href: '#home' },
-    { label: 'Services', href: '#services' },
-    { label: 'Platform', href: '#platform' },
-    { label: 'Process', href: '#process' },
+    { label: 'AI Ops', href: '#services' },
+    { label: 'Infrastructure', href: '#infrastructure' },
+    { label: 'Platform', href: '#platform', secondary: true },
+    { label: 'Process', href: '#process', secondary: true },
     { label: 'Pricing', href: '#pricing' },
     { label: 'About', href: '#about' },
     { label: 'Contact', href: '#contact' }
@@ -64,7 +67,7 @@ const Header = () => {
             <p className="font-mono text-xs md:text-sm font-semibold">
               sovIT.xyz is now <span className="font-bold">Sovereign Technology</span> — we&apos;ve rebranded.
               <a
-                href="https://sovtech.pro"
+                href="https://www.sovtech.pro"
                 className="inline-flex items-center gap-1 ml-2 underline underline-offset-2 hover:opacity-80 transition-opacity"
               >
                 Visit sovtech.pro
@@ -98,13 +101,15 @@ const Header = () => {
         </motion.a>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-5 lg:gap-8">
           {navItems.map((item, index) => (
             <motion.a
               key={index}
               href={item.href}
               whileHover={{ scale: 1.1 }}
-              className="font-mono text-sm text-gray-300 hover:text-bitcoin transition-colors relative group"
+              className={`font-mono text-sm text-gray-300 hover:text-bitcoin transition-colors relative group ${
+                item.secondary ? 'hidden lg:inline-block' : ''
+              }`}
             >
               {item.label}
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-bitcoin transition-all duration-300 group-hover:w-full"></span>
