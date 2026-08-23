@@ -17,6 +17,13 @@ module.exports = {
 		},
 		extend: {
 			colors: {
+				bitcoin: {
+					DEFAULT: '#F7931A',
+					light: '#FFA842',
+					dark: '#E67E00',
+				},
+				'accent-green': '#00FF41',
+				'accent-blue': '#00D4FF',
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',

@@ -55,19 +55,6 @@
 }
 
 @layer utilities {
-  /* Bitcoin Orange Utilities */
-  .text-bitcoin {
-    color: var(--bitcoin-orange);
-  }
-  
-  .bg-bitcoin {
-    background-color: var(--bitcoin-orange);
-  }
-  
-  .border-bitcoin {
-    border-color: var(--bitcoin-orange);
-  }
-  
   /* Gradients */
   .gradient-orange {
     background: linear-gradient(135deg, var(--bitcoin-orange-dark) 0%, var(--bitcoin-orange) 50%, var(--bitcoin-orange-light) 100%);
@@ -227,7 +214,8 @@
 
   .animate-blink,
   .animate-float,
-  .animate-glow-pulse {
+  .animate-glow-pulse,
+  .animate-ping {
     animation: none;
   }
 }
