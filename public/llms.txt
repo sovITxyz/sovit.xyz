@@ -7,6 +7,9 @@
 - Web: https://www.sovit.xyz/
 - Tor: http://sovit7eqfkczjlcuwi5wqfjff4pv2fp7w5v26desexg2yc5oj36lriqd.onion
 - GitHub: https://github.com/sovitxyz
+- GitLab: https://sovit.xyz/gitlab/
+- Git (Nostr/NIP-34): https://git.sovit.xyz
+- Git (Nostr/NIP-34): https://git.sovtech.pro
 
 ## Services
 
@@ -50,11 +53,6 @@ All work is open-sourced under AGPL-3.0 by default. Custom license releases avai
 ## About
 Cameron is the founder of sovIT.xyz. He has been passionate about computing since childhood — building PCs, exploring cybersecurity, coding, and repairing systems. He has professional enterprise IT experience and now focuses on sovereign, open-source technology solutions.
 
-## Portfolio
-- gcs.sv
-- whatarush.org
-- sovit.xyz
-- bitcoinbarbell.com
 
 ## Further Reading
 - [Full site content for LLMs](/llms-full.txt)

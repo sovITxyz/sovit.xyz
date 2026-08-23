@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Github } from 'lucide-react';
+import { Github, Gitlab, GitBranch } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -56,9 +56,41 @@ const Footer = () => {
                 whileHover={{ scale: 1.1, y: -2 }}
                 className="w-10 h-10 bg-gray-900 border border-bitcoin/30 rounded-lg flex items-center justify-center hover:bg-bitcoin/10 hover:border-bitcoin transition-all"
                 aria-label="GitHub"
+                title="GitHub"
               >
                 <Github size={18} className="text-bitcoin" />
               </motion.a>
+              <motion.a
+                href="https://sovit.xyz/gitlab/"
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.1, y: -2 }}
+                className="w-10 h-10 bg-gray-900 border border-bitcoin/30 rounded-lg flex items-center justify-center hover:bg-bitcoin/10 hover:border-bitcoin transition-all"
+                aria-label="GitLab"
+                title="GitLab"
+              >
+                <Gitlab size={18} className="text-bitcoin" />
+              </motion.a>
+            </div>
+            <div className="mt-3 flex flex-wrap items-center gap-x-2 gap-y-1 font-mono text-xs text-gray-500">
+              <GitBranch size={14} className="text-bitcoin" aria-hidden="true" />
+              <a
+                href="https://git.sovit.xyz"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-bitcoin transition-colors"
+              >
+                git.sovit.xyz
+              </a>
+              <span aria-hidden="true">·</span>
+              <a
+                href="https://git.sovtech.pro"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-bitcoin transition-colors"
+              >
+                git.sovtech.pro
+              </a>
             </div>
           </div>
 

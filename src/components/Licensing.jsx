@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { Scale, Github } from 'lucide-react';
+import { Scale, Github, Gitlab, GitBranch } from 'lucide-react';
 
 const Licensing = () => {
   const ref = useRef(null);
@@ -77,16 +77,45 @@ const Licensing = () => {
               ))}
             </div>
 
-            {/* GitHub link */}
-            <a
-              href="https://github.com/sovitxyz"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 font-mono text-sm bg-bitcoin/10 text-bitcoin px-4 py-2 rounded-lg border border-bitcoin/50 hover:bg-bitcoin/20 transition-colors"
-            >
-              <Github size={18} />
-              View Source on GitHub
-            </a>
+            {/* Source links */}
+            <div className="flex flex-wrap items-center gap-3">
+              <a
+                href="https://github.com/sovitxyz"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 font-mono text-sm bg-bitcoin/10 text-bitcoin px-4 py-2 rounded-lg border border-bitcoin/50 hover:bg-bitcoin/20 transition-colors"
+              >
+                <Github size={18} />
+                View Source on GitHub
+              </a>
+              <a
+                href="https://sovit.xyz/gitlab/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 font-mono text-sm text-bitcoin px-4 py-2 rounded-lg border border-gray-700 hover:border-bitcoin transition-colors"
+              >
+                <Gitlab size={18} />
+                GitLab
+              </a>
+              <a
+                href="https://git.sovit.xyz"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 font-mono text-sm text-bitcoin px-4 py-2 rounded-lg border border-gray-700 hover:border-bitcoin transition-colors"
+              >
+                <GitBranch size={18} />
+                git.sovit.xyz
+              </a>
+              <a
+                href="https://git.sovtech.pro"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 font-mono text-sm text-bitcoin px-4 py-2 rounded-lg border border-gray-700 hover:border-bitcoin transition-colors"
+              >
+                <GitBranch size={18} />
+                git.sovtech.pro
+              </a>
+            </div>
 
             {/* Decorative corner */}
             <div className="absolute bottom-0 right-0 w-16 h-16 border-b-2 border-r-2 border-bitcoin/20"></div>
