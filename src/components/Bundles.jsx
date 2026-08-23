@@ -269,7 +269,7 @@ const PlanCard = ({ plan }) => (
 );
 
 const RateGroup = ({ group }) => (
-  <div className="mb-10">
+  <div className="mb-10 break-inside-avoid">
     <h4 className="font-mono text-lg font-bold text-bitcoin mb-4">{group.title}</h4>
     <div className={`glass rounded-lg border ${TINT_BORDER} overflow-hidden`}>
       {group.rows.map(([name, price, desc], i) => (
@@ -353,7 +353,9 @@ const Bundles = () => {
         <div className="mt-20">
           <GroupHeading>Full Rate Card</GroupHeading>
         </div>
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-x-10">
+        {/* CSS columns rather than a grid: groups have very different row counts,
+            and a grid would align rows and leave large gaps under the short ones. */}
+        <div className="max-w-6xl mx-auto lg:columns-2 lg:gap-x-10">
           {rateGroups.map((group) => <RateGroup key={group.title} group={group} />)}
         </div>
 

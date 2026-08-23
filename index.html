@@ -490,8 +490,11 @@
 				.njs-plan-price { font-family: monospace; font-size: 1.6rem; font-weight: 700; color: var(--btc); margin: 0 0 0.75rem; }
 				.njs-plan-price small { font-size: 0.8rem; color: var(--text-dim); font-weight: 400; }
 				.njs-price-note { text-align: center; color: var(--text-dim); font-family: monospace; font-size: 0.85rem; margin: 1.25rem 0 0; }
-				.njs-rate-cols { display: grid; grid-template-columns: 1fr; gap: 0 2.5rem; margin-top: 0.5rem; }
-				@media (min-width: 900px) { .njs-rate-cols { grid-template-columns: 1fr 1fr; } }
+				/* CSS columns, not a grid: the groups have very different row counts and a
+				   grid would align rows, leaving large gaps under the short ones. */
+				.njs-rate-cols { margin-top: 0.5rem; }
+				@media (min-width: 900px) { .njs-rate-cols { column-count: 2; column-gap: 2.5rem; } }
+				.njs-rate-group { break-inside: avoid; -webkit-column-break-inside: avoid; }
 				.njs-rate-group { margin: 0 0 2rem; }
 				.njs-rate-group h4 { color: var(--btc); font-size: 1.05rem; margin: 0 0 0.75rem; }
 				.njs-rate-table { border: 1px solid rgba(247,147,26,0.3); border-radius: 8px; overflow: hidden; }
