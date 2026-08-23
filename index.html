@@ -424,7 +424,10 @@
 					background: linear-gradient(135deg, #E67E00, #F7931A, #FFA842);
 				}
 				.njs-price-highlighted { border: 2px solid var(--btc); box-shadow: 0 0 20px rgba(247,147,26,0.3); }
-				.njs-price-card h3 { font-size: 1.3rem; margin: 0.75rem 0 0.25rem; }
+				.njs-price-card h4 { font-family: 'Courier New', Courier, monospace; font-weight: 700; font-size: 1.3rem; margin: 0.75rem 0 0.25rem; }
+				.njs-price-group { font-family: 'Courier New', Courier, monospace; font-size: 1.5rem; margin: 0 0 1.5rem; }
+				.njs-price-group + .njs-pricing-grid { margin-bottom: 1rem; }
+				.njs-price-note { text-align: center; color: var(--text-dim); font-family: monospace; font-size: 0.875rem; margin: 1rem 0 3rem; }
 				.njs-price { font-family: monospace; font-size: 1.75rem; font-weight: bold; color: var(--btc); margin: 0 0 0.75rem; }
 				.njs-price small { font-size: 0.85rem; color: var(--text-muted); font-weight: normal; }
 				.njs-price-card > p { color: var(--text-dim); font-size: 0.9rem; margin: 0 0 1.25rem; }
@@ -537,7 +540,8 @@
 					</div>
 					<nav class="njs-nav">
 						<a href="#home">Home</a>
-						<a href="#services">Services</a>
+						<a href="#services">AI Ops</a>
+						<a href="#infrastructure">Infrastructure</a>
 						<a href="#platform">Platform</a>
 						<a href="#process">Process</a>
 						<a href="#pricing">Pricing</a>
@@ -550,12 +554,12 @@
 			<!-- ===== HERO ===== -->
 			<section id="home" class="njs-hero">
 				<div class="njs-wrap">
-					<span class="njs-hero-badge">Sovereign Technology SAS &mdash; AI Operating Experts</span>
+					<span class="njs-hero-badge">Sovereign Technology SAS &mdash; AI &amp; Linux Infrastructure</span>
 					<h1><span style="color:#fff">Develop. Deploy. Run.</span></h1>
-					<div class="njs-hero-sub" style="color:#F7931A">Sovereign AI Systems.</div>
+					<div class="njs-hero-sub" style="color:#F7931A">Sovereign AI &amp; Infrastructure.</div>
 					<p>
-						We build and operate AI that you own &mdash; on
-						<span style="color:#F7931A;font-weight:600">your infrastructure</span>, under
+						We build and operate AI systems and Linux infrastructure that you own &mdash; on
+						<span style="color:#F7931A;font-weight:600">your hardware</span>, under
 						<span style="color:#F7931A;font-weight:600">your control</span>, with
 						<span style="color:#F7931A;font-weight:600">your data</span>. No lock-in. No compromise.
 					</p>
@@ -571,7 +575,7 @@
 					<a href="#services" class="njs-btn njs-btn-secondary">Explore Services</a>
 					<div class="njs-stats">
 						<div class="njs-stat"><b>99.9%</b><span>Uptime SLA</span></div>
-						<div class="njs-stat"><b>&lt;50ms</b><span>Inference Latency</span></div>
+						<div class="njs-stat"><b>100%</b><span>Open Source</span></div>
 						<div class="njs-stat"><b>Zero</b><span>Data Leakage</span></div>
 					</div>
 				</div>
@@ -614,6 +618,38 @@
 							<h3>AI Strategy &amp; Audit</h3>
 							<p>We audit your operations, identify the highest-impact AI opportunities, and build the roadmap from pilot to production.</p>
 							<div class="njs-tags"><span class="njs-tag">Readiness Assessment</span><span class="njs-tag">ROI Modeling</span><span class="njs-tag">Technology Selection</span><span class="njs-tag">Roadmap</span></div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- ===== INFRASTRUCTURE & LINUX ===== -->
+			<section id="infrastructure" class="njs-section njs-section-dark">
+				<div class="njs-wrap">
+					<div class="njs-section-title">
+						<h2><span style="color:#fff">Infrastructure &amp; </span><span style="color:#F7931A">Linux</span></h2>
+						<p>From end-user workstations to production servers &mdash; open-source infrastructure built around you, not the other way around. Auditable. Reversible. Yours.</p>
+					</div>
+					<div class="njs-grid">
+						<div class="njs-card">
+							<h3>Custom Linux Deployments</h3>
+							<p>Desktops, laptops, and servers configured for your actual workflow. No bloat, no vendor lock-in, no telemetry you didn&rsquo;t ask for.</p>
+						</div>
+						<div class="njs-card">
+							<h3>OS Customization &amp; Provisioning</h3>
+							<p>Custom Linux images, preconfigured environments, and automated provisioning &mdash; every machine you deploy is ready on day one.</p>
+						</div>
+						<div class="njs-card">
+							<h3>Server Setup &amp; Migration</h3>
+							<p>From a single VPS to a full self-hosted stack: email, file sync, VPN, ERP. Move off rented cloud onto infrastructure you own.</p>
+						</div>
+						<div class="njs-card">
+							<h3>Managed Updates &amp; Deployments</h3>
+							<p>Patching, updates, and rollout management across your fleet &mdash; tested and reversible, so updates never take down your business.</p>
+						</div>
+						<div class="njs-card">
+							<h3>VPS Management</h3>
+							<p>Security patching, monitoring, verified backups, and incident response on any provider. You keep root, the account, and ownership.</p>
 						</div>
 					</div>
 				</div>
@@ -701,6 +737,7 @@
 						<h2><span style="color:#fff">Transparent </span><span style="color:#F7931A">Pricing</span></h2>
 						<p>// Published rates &mdash; no &quot;contact us for a quote&quot; games</p>
 					</div>
+					<h3 style="font-family:'Courier New',monospace;font-size:1.5rem;margin:0 0 1.5rem"><span style="color:#F7931A">//</span> AI Operations</h3>
 					<div class="njs-pricing-grid">
 						<div class="njs-price-card">
 							<span class="njs-badge">HOSTED</span>
