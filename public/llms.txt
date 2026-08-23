@@ -1,60 +1,71 @@
-# sovIT.xyz - Sovereign IT Services
+# Sovereign Technology SAS — AI Operating Experts
 
-> sovIT.xyz is a Bitcoin-native IT consulting firm specializing in data ownership, security, and technological sovereignty. Founded by Cameron, it offers open-source solutions, self-hosted infrastructure, and enterprise-grade systems for individuals and organizations seeking technological independence.
+> Sovereign Technology SAS is an AI operations company registered in El Salvador. We develop, deploy, and run sovereign AI systems — custom models and pipelines on infrastructure you own, operated 24/7. Formerly sovIT.xyz, the Bitcoin-native IT consultancy founded by Cameron. Your data. Your models. Your rules.
 
 ## Contact
-- Email: services@sovit.xyz
-- Web: https://www.sovit.xyz/
+- Email: services@sovtech.pro
+- Web: https://sovtech.pro/
 - Tor: http://sovit7eqfkczjlcuwi5wqfjff4pv2fp7w5v26desexg2yc5oj36lriqd.onion
 - GitHub: https://github.com/sovitxyz
 
 ## Services
 
-### Support & Consulting
-- Technical Support: Responsive support for all sovereign technology needs (Remote, On-site, Consulting)
-- Hardware Imaging: Secure device imaging with open-source software for laptops and phones (PXE Boot, Linux, GrapheneOS)
-- Sovereign Hardware Recommendations: Curated hardware guidance for networking, computing, phones, and security
-- Advertisement Consulting: Privacy-respecting advertising strategies and sovereign marketing solutions
+### AI Development
+Custom model training, fine-tuning, and prompt engineering — AI built for your domain, not generic chatbots. (Fine-Tuning, RAG Pipelines, Multi-Agent Systems, Domain Training)
 
-### Infrastructure & Administration
-- System Administration: Reliable management and maintenance of server infrastructure (Linux, Ansible, Automation)
-- Cloud Administration: Sovereign cloud deployment, monitoring, and management (Kubernetes, Docker, Self-hosted)
-- Open Source System Integration: Seamless integration of open-source tools into workflows (Linux, FOSS, APIs)
-- ERP, ITSM & Collaboration: Business management, asset tracking, and team collaboration platforms (ERPNext, GLPI, Nextcloud)
+### AI Deployment (core offering)
+Production-grade deployment on your infrastructure — bare metal, cloud, or hybrid. Containerized, orchestrated, and monitored from day one. (Kubernetes-Native, GPU Optimization, Auto-Scaling, Zero-Downtime Rollouts)
 
-### Security & Bitcoin
-- OpSec & Bitcoin Operations: Operational security hardening and secure Bitcoin infrastructure (Node Ops, Cold Storage, OpSec)
-- Web Security Testing: Penetration testing and vulnerability assessments for web applications and APIs (OWASP, Burp Suite, Reporting)
-- Lightning Channel Recovery: Expert recovery services for Lightning Network channels and funds (Lightning Network, LND, CLN)
+### AI Operations
+24/7 monitoring, incident response, and continuous optimization. (Real-Time Monitoring, Incident Response, Cost Optimization, Drift Detection)
 
-### Development & Innovation
-- Open Source Website Creation: Modern, performant websites built on open-source stacks (React, Hugo, Static Sites)
-- Software Development: Custom application development with open-source frameworks (Python, JavaScript, Go)
-- Home Cloud & Sovereign AI: Self-hosted cloud and local AI deployment for full data sovereignty (Ollama, Nextcloud, Home Lab)
-- Technology R&D: Research and development of emerging open-source technologies
+### Sovereign Infrastructure
+Data never leaves your perimeter. On-premises or private cloud with full encryption, audit logging, and compliance built in. (On-Prem & Private Cloud, E2E Encryption, Audit Trails, GDPR & SOC 2)
 
-## Service Bundles
-- Sovereign Starter (Essentials): Technical Support, Hardware Imaging, Sovereign Hardware Recs, Open Source Integration
-- Digital Fortress (Recommended): Everything in Starter + Home Cloud & Sovereign AI, OpSec & Bitcoin Operations, Web Security Testing
-- Full Sovereignty (Complete): Everything in Fortress + Cloud Administration, Website Creation, Software Development, ERP/ITSM & Collaboration
+### AI Integration
+Connect AI to existing systems — ERP, CRM, databases, APIs — without disrupting workflows. (API-First, ERP/CRM Connectors, Legacy Bridging, Event Pipelines)
+
+### AI Strategy & Audit
+Audit of operations, identification of highest-impact AI opportunities, and a roadmap from pilot to production. (Readiness Assessment, ROI Modeling, Technology Selection, Roadmap)
+
+## The Sovereign AI Stack
+- Application Layer: Multi-Agent Orchestrator, RAG Engine, API Gateway, Web UI
+- Inference Layer: vLLM / TGI, Model Router, Batch Scheduler, Cache Layer
+- Orchestration Layer: Kubernetes, Helm Charts, GPU Scheduler, Istio
+- Infrastructure Layer: NVIDIA A100/H100, Private Cloud, Bare Metal, Terraform
+
+## Process
+1. Discovery & Audit — analyze data, infrastructure, and objectives; build the business case
+2. Architecture & Design — model selection, infrastructure sizing, security model, integration points
+3. Build & Train — develop, fine-tune, and test with your team until the quality bar is met
+4. Deploy & Harden — production deployment with monitoring, security hardening, and compliance checks
+5. Operate & Optimize — 24/7 monitoring, incident response, and continuous improvement
+
+## Pricing (published rates)
+- Sovereign AI Hosting: $30–100/month by GPU allocation (hosted Ollama / Open WebUI tenancy)
+- Private AI Box: $2,000–5,000 setup + $50–150/month care plan (local LLM appliance for confidentiality-sensitive teams)
+- AI Operations Retainer: from $500/month (fully managed production AI stack)
+- Project engagements scoped individually; AI Strategy & Audit starts at $2,500
+- Every plan includes quarterly vulnerability scans; 5% discount for payment in Bitcoin (via BTCPay)
 
 ## Core Values
-- Data Ownership: Your data belongs to you. Systems that ensure complete control and sovereignty over digital assets.
-- Security: Enterprise-grade security built on proven cryptographic principles and zero-trust architecture.
-- Open-Source Principles: Transparency, auditability, and freedom from vendor lock-in through open-source technologies.
-- Sovereignty: True technological independence. Systems that serve you, not external interests.
+- Data Ownership: Your data, your models, your rules.
+- Security: Enterprise-grade security, proven cryptography, zero-trust architecture.
+- Open Standards: No lock-in. Open source at the core.
+- Sovereignty: AI that serves its owners — not external interests.
 
 ## Licensing
 All work is open-sourced under AGPL-3.0 by default. Custom license releases available for an additional fee.
 
 ## About
-Cameron is the founder of sovIT.xyz. He has been passionate about computing since childhood — building PCs, exploring cybersecurity, coding, and repairing systems. He has professional enterprise IT experience and now focuses on sovereign, open-source technology solutions.
+Sovereign Technology SAS grew out of sovIT.xyz, a Bitcoin-native IT consultancy. Founder Cameron has been building and securing systems since childhood — from early websites and wireless security research to enterprise IT at Health First — and now leads Sovereign Technology in deploying and operating sovereign, open-source AI systems across Latin America and beyond.
 
 ## Portfolio
+- sovtech.pro
 - gcs.sv
 - whatarush.org
-- sovit.xyz
 - bitcoinbarbell.com
 
 ## Further Reading
 - [Full site content for LLMs](/llms-full.txt)
+- [Full service catalog & pricing](https://sovtech.pro/services/) — websites, managed IT, networks & smart spaces, sovereign hosting, appliances, Bitcoin services

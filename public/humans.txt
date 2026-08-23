@@ -1,7 +1,8 @@
 /* TEAM */
+Company: Sovereign Technology SAS (El Salvador)
 Founder: Cameron
-Contact: services@sovit.xyz
-Site: https://www.sovit.xyz/
+Contact: services@sovtech.pro
+Site: https://sovtech.pro/
 GitHub: https://github.com/sovitxyz
 
 /* SITE */
@@ -9,3 +10,4 @@ Standards: HTML5, CSS3, ES2020
 Components: React, Vite, Tailwind CSS, Framer Motion
 License: AGPL-3.0
 Onion: http://sovit7eqfkczjlcuwi5wqfjff4pv2fp7w5v26desexg2yc5oj36lriqd.onion
+Formerly: sovIT.xyz (https://www.sovit.xyz)

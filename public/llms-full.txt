@@ -1,9 +1,9 @@
-# sovIT.xyz - Sovereign IT Services — Full Site Content
+# Sovereign Technology SAS — AI Operating Experts — Full Site Content
 
-> sovIT.xyz is a Bitcoin-native IT consulting firm specializing in data ownership, security, and technological sovereignty. Founded by Cameron, sovIT.xyz empowers individuals and organizations with open-source solutions, self-hosted infrastructure, and enterprise-grade systems for true technological independence.
+> Sovereign Technology SAS is an AI operations company registered in El Salvador. We develop, deploy, and run sovereign AI systems for enterprises — on your infrastructure, under your control, with your data. No lock-in. No compromise. Formerly sovIT.xyz, the Bitcoin-native IT consultancy.
 
-Website: https://www.sovit.xyz/
-Email: services@sovit.xyz
+Website: https://sovtech.pro/
+Email: services@sovtech.pro
 Tor: http://sovit7eqfkczjlcuwi5wqfjff4pv2fp7w5v26desexg2yc5oj36lriqd.onion
 GitHub: https://github.com/sovitxyz
 License: AGPL-3.0
@@ -12,151 +12,118 @@ License: AGPL-3.0
 
 ## Hero / Mission Statement
 
-sovIT.xyz — Sovereign IT Services
+Develop. Deploy. Run. Sovereign AI Systems.
 
-Empowering individuals and organizations with data ownership, security, efficiency, and technological independence.
+We build and operate AI that you own — on your infrastructure, under your control, with your data. No lock-in. No compromise.
 
 Motto: "Sovereignty through technology"
+
+Key metrics: 99.9% Uptime SLA — <50ms Inference Latency — Zero Data Leakage
 
 ---
 
 ## Services
 
-sovIT.xyz provides comprehensive technology solutions for the sovereign enterprise, organized in four categories:
+Sovereign Technology provides full-spectrum AI operations — from model selection to production operations, every layer of the AI stack:
 
-### Support & Consulting
+1. **AI Development**
+   Custom model training, fine-tuning, and prompt engineering — AI built for your domain, not generic chatbots.
+   Technologies: Fine-Tuning, RAG Pipelines, Multi-Agent Systems, Domain Training
 
-1. **Technical Support**
-   Responsive support for all your sovereign technology needs.
-   Technologies: Remote, On-site, Consulting
+2. **AI Deployment** (core offering)
+   Production-grade deployment on your infrastructure — bare metal, cloud, or hybrid. Containerized, orchestrated, and monitored from day one.
+   Technologies: Kubernetes-Native, GPU Optimization, Auto-Scaling, Zero-Downtime Rollouts
 
-2. **Hardware Imaging**
-   Secure device imaging with open-source software for laptops and phones.
-   Technologies: PXE Boot, Linux, GrapheneOS
+3. **AI Operations**
+   24/7 monitoring, incident response, and continuous optimization. Your AI runs at peak performance — always.
+   Technologies: Real-Time Monitoring, Incident Response, Cost Optimization, Drift Detection
 
-3. **Sovereign Hardware Recommendations**
-   Curated hardware guidance for networking, computing, phones, and security.
-   Technologies: Networking, Devices, Security
+4. **Sovereign Infrastructure**
+   Your data never leaves your perimeter. On-premises or private cloud — with full encryption, audit logging, and compliance built in.
+   Technologies: On-Prem & Private Cloud, E2E Encryption, Audit Trails, GDPR & SOC 2
 
-4. **Advertisement Consulting**
-   Privacy-respecting advertising strategies and sovereign marketing solutions.
-   Technologies: Strategy, Analytics, Privacy
+5. **AI Integration**
+   Connect AI to your existing systems — ERP, CRM, databases, APIs. Seamless integration without disrupting workflows.
+   Technologies: API-First, ERP/CRM Connectors, Legacy Bridging, Event Pipelines
 
-### Infrastructure & Administration
-
-5. **System Administration**
-   Reliable management and maintenance of your server infrastructure.
-   Technologies: Linux, Ansible, Automation
-
-6. **Cloud Administration**
-   Sovereign cloud deployment, monitoring, and management.
-   Technologies: Kubernetes, Docker, Self-hosted
-
-7. **Open Source System Integration**
-   Seamless integration of open-source tools into your workflow.
-   Technologies: Linux, FOSS, APIs
-
-8. **ERP, ITSM & Collaboration**
-   Business management, asset tracking, and team collaboration platforms.
-   Technologies: ERPNext, GLPI, Nextcloud
-
-### Security & Bitcoin
-
-9. **OpSec & Bitcoin Operations**
-   Operational security hardening and secure Bitcoin infrastructure.
-   Technologies: Node Ops, Cold Storage, OpSec
-
-10. **Web Security Testing**
-    Penetration testing and vulnerability assessments for web applications and APIs.
-    Technologies: OWASP, Burp Suite, Reporting
-
-11. **Lightning Channel Recovery**
-    Expert recovery services for Lightning Network channels and funds.
-    Technologies: Lightning Network, LND, CLN
-
-### Development & Innovation
-
-12. **Open Source Website Creation**
-    Modern, performant websites built entirely on open-source stacks.
-    Technologies: React, Hugo, Static Sites
-    Portfolio: gcs.sv, whatarush.org, sovit.xyz, bitcoinbarbell.com
-
-13. **Software Development**
-    Custom application development with open-source frameworks and sovereign principles.
-    Technologies: Python, JavaScript, Go
-
-14. **Home Cloud & Sovereign AI**
-    Self-hosted cloud and local AI deployment for full data sovereignty.
-    Technologies: Ollama, Nextcloud, Home Lab
-
-15. **Technology R&D**
-    Research and development of emerging open-source technologies.
-    Technologies: Prototyping, Testing, Innovation
+6. **AI Strategy & Audit**
+   We audit your operations, identify the highest-impact AI opportunities, and build the roadmap from pilot to production.
+   Technologies: Readiness Assessment, ROI Modeling, Technology Selection, Roadmap
 
 ---
 
-## Service Bundles
+## The Sovereign AI Stack
 
-### Sovereign Starter — Essentials
-Begin your journey to technological sovereignty.
-Includes:
-- Technical Support
-- Hardware Imaging
-- Sovereign Hardware Recommendations
-- Open Source Integration
+A battle-tested infrastructure stack designed for sovereignty, performance, and reliability:
 
-### Digital Fortress — Recommended
-Complete personal sovereignty with cloud and security.
-Includes:
-- Everything in Sovereign Starter
-- Home Cloud & Sovereign AI
-- OpSec & Bitcoin Operations
-- Web Security Testing
+- **Application Layer:** Multi-Agent Orchestrator, RAG Engine, API Gateway, Web UI
+- **Inference Layer:** vLLM / TGI, Model Router, Batch Scheduler, Cache Layer
+- **Orchestration Layer:** Kubernetes, Helm Charts, GPU Scheduler, Istio
+- **Infrastructure Layer:** NVIDIA A100/H100, Private Cloud, Bare Metal, Terraform
 
-### Full Sovereignty — Complete
-Run your entire digital life on sovereign infrastructure.
-Includes:
-- Everything in Digital Fortress
-- Cloud Administration
-- Website Creation
-- Software Development
-- ERP, ITSM & Collaboration
+---
+
+## Process: From Idea to Production in Weeks
+
+1. **Discovery & Audit** — We analyze your data, infrastructure, and business objectives. We identify the highest-impact AI use cases and build the business case.
+2. **Architecture & Design** — We design the sovereign AI architecture — model selection, infrastructure sizing, security model, and integration points. You review and approve.
+3. **Build & Train** — We develop, fine-tune, and test. Every component is built for your domain. We iterate with your team until the quality bar is met.
+4. **Deploy & Harden** — Production deployment with monitoring, alerting, and auto-scaling. Security hardening, load testing, and compliance checks. Go-live ready.
+5. **Operate & Optimize** — We run it. 24/7 monitoring, incident response, performance tuning, and continuous improvement. Your AI gets better every month.
+
+---
+
+## Pricing
+
+Published rates — no "contact us for a quote" games:
+
+- **Sovereign AI Hosting** — $30–100/month by GPU allocation
+  Hosted open-source AI stack (Ollama / Open WebUI) on our infrastructure. Dedicated tenancy with isolated resources, offsite encrypted backups, uptime monitoring, and quarterly vulnerability scans.
+
+- **Private AI Box** — $2,000–5,000 setup + $50–150/month care plan
+  Local LLM appliance for confidentiality-sensitive teams (law firms, clinics, finance). Hardware and model stack installed on-premises; your data never leaves the building. Secure remote management tunnel and quarterly vulnerability scans included.
+
+- **AI Operations Retainer** — from $500/month
+  Fully managed AI production stack: 24/7 monitoring and incident response, performance and cost optimization, model drift detection, and quarterly vulnerability scans.
+
+Project engagements (development, deployment, integration) are scoped individually. AI Strategy & Audit engagements start at $2,500.
+
+Bitcoin-native pricing: 5% discount for payment in Bitcoin (sats via BTCPay).
 
 ---
 
 ## Core Values
 
-### Data Ownership
-Your data belongs to you. We build systems that ensure complete control and sovereignty over your digital assets.
-
-### Security
-Enterprise-grade security built on proven cryptographic principles and zero-trust architecture.
-
-### Open-Source Principles
-Transparency, auditability, and freedom from vendor lock-in through open-source technologies.
-
-### Sovereignty
-True technological independence. Build systems that serve you, not external interests.
+- **Data Ownership** — Your data, your models, your rules. We build AI systems that guarantee complete control over your digital assets.
+- **Security** — Enterprise-grade security built on proven cryptographic principles and zero-trust architecture.
+- **Open Standards** — No lock-in. Open source at the core — transparency, auditability, and freedom of movement for your stack.
+- **Sovereignty** — True technological independence. AI that serves its owners — not external interests.
 
 ---
 
 ## Open Source Licensing
 
-sovIT.xyz defaults to the AGPL-3.0 license (GNU Affero General Public License v3).
+By default, Sovereign Technology open-sources everything we create under the AGPL-3.0 license (GNU Affero General Public License v3). All non-confidential code, configurations, and tools we build for you are released openly — giving you full transparency and control.
 
-By default, sovIT.xyz open-sources everything we create under the AGPL-3.0 license. All non-confidential code, configurations, and tools we build for you are released openly — giving you full transparency and control.
+You have the freedom to use, modify, and deploy your own updates to the code we write. You own what you pay for. Any modifications must also remain open-source, ensuring the community benefits and the code stays auditable.
 
-This means you have the freedom to use, modify, and deploy your own updates to the code we write. You own what you pay for. Any modifications must also remain open-source, ensuring the community benefits and the code stays auditable.
+Custom license releases are available for an additional fee — allowing proprietary use or alternative licensing terms when required.
 
-Need a different arrangement? Custom license releases are available for an additional fee — allowing proprietary use or alternative licensing terms when required.
-
-Principles: Freedom, Transparency, Copyleft
-
-Source code: https://github.com/sovitxyz
+Source: https://github.com/sovitxyz
 
 ---
 
-## About Cameron (Founder)
+## About
+
+### Sovereign Technology SAS
+
+Sovereign Technology SAS is an AI operations company registered in El Salvador. We are AI infrastructure engineers, ML practitioners, and systems architects who believe AI should serve its owners — not the other way around.
+
+The company grew out of sovIT.xyz, a Bitcoin-native IT consultancy known for sovereign, open-source infrastructure. That engineering DNA runs through everything we build: self-hosted, auditable, and free of lock-in. Today we develop, deploy, and operate sovereign AI systems for organizations across Latin America and beyond.
+
+Operating principles: Sovereignty First (your data, your models, your rules) — Production Grade (not prototypes, production systems) — Open Standards (no lock-in, open source at the core).
+
+### Cameron — Founder
 
 Cameron began gaming on PCs at a very young age. In elementary school, he made videos and simple animations in Microsoft Movie Maker with his brother. By 6th grade, at age 11, he started making websites using Zoomshare templates — simple game sites built by copying and pasting his favorite Flash games from other websites into the template. Around the same time, he got into competitive FPS gaming and built his first computer.
 
@@ -164,45 +131,32 @@ At 13, he received a netbook from Santa and began experimenting with Kali Linux 
 
 In high school, he became the go-to person for computer help — repairing and imaging systems for family members, friends from church, classmates, and even teachers. These experiences helped him develop strong technical and troubleshooting skills.
 
-He later built the most powerful workstation/gaming computer possible (2017) and worked as an IT professional at Health First, gaining valuable experience in enterprise IT environments. Today, Cameron has left Health First to focus on his own projects and pursue his passion for finding efficient technical solutions, deploying and implementing open-source solutions, and serving others through sovereign, open-source technologies.
+He later built the most powerful workstation/gaming computer possible (2017) and worked as an IT professional at Health First, gaining valuable experience in enterprise IT environments. Today, Cameron leads Sovereign Technology — deploying and operating sovereign, open-source AI systems and serving others through technology they truly own.
 
 ### 2026 Portfolio
-- gcs.sv — https://gcs.sv
-- whatarush.org — https://whatarush.org
-- SovIT.xyz — https://sovit.xyz
-- bitcoinbarbell.com — https://bitcoinbarbell.com
+
+- sovtech.pro (https://sovtech.pro)
+- gcs.sv (https://gcs.sv)
+- whatarush.org (https://whatarush.org)
+- bitcoinbarbell.com (https://bitcoinbarbell.com)
 
 ---
 
 ## Contact
 
-Start your consultation: Email services@sovit.xyz
+Start your project: email services@sovtech.pro.
 
-Why work with sovIT.xyz:
-- Complete data ownership and control
+Why work with us:
+- You own the models, data, and infrastructure
 - No vendor lock-in, ever
-- Enterprise-grade security by default
-- Open-source transparency
-- Bitcoin-native operations
+- Production-grade security by default
+- Open-source transparency (AGPL-3.0)
+- 24/7 operations and monitoring
+
+Tell us about your project — we respond within 24 hours with a technical assessment and next steps.
 
 ---
 
-## Frequently Asked Questions
+© 2026 Sovereign Technology SAS. All rights reserved. Formerly sovIT.xyz.
 
-**What services does sovIT.xyz offer?**
-sovIT.xyz offers 15 sovereign IT services across four categories: Support & Consulting, Infrastructure & Administration, Security & Bitcoin, and Development & Innovation. Services range from technical support and hardware imaging to Bitcoin node operations, web security testing, and sovereign AI deployment.
-
-**What are the service bundles?**
-Three bundles: Sovereign Starter (essentials for beginning your sovereignty journey), Digital Fortress (adds cloud and security), and Full Sovereignty (complete sovereign infrastructure including development and ERP).
-
-**How does sovIT.xyz handle licensing?**
-All work is open-sourced under AGPL-3.0 by default. Custom license releases are available for an additional fee.
-
-**Does sovIT.xyz accept Bitcoin?**
-Yes, sovIT.xyz is Bitcoin-native and specializes in Bitcoin infrastructure including node operations, cold storage, OpSec hardening, and Lightning Network channel recovery.
-
-**How can I contact sovIT.xyz?**
-Email services@sovit.xyz. The site is also accessible via Tor.
-
-**Who is behind sovIT.xyz?**
-Cameron, a lifelong computing enthusiast with professional enterprise IT experience, founded sovIT.xyz to focus on sovereign, open-source technology solutions.
+Additional catalog: full IT services & pricing (websites, managed IT, networks & smart spaces, sovereign hosting, appliance products, Bitcoin services) at https://sovtech.pro/services/

@@ -1,7 +1,7 @@
-# sovIT.xyz Security Contact
+# Sovereign Technology Security Contact
 # https://securitytxt.org/ (RFC 9116)
 
-Contact: mailto:services@sovit.xyz
+Contact: mailto:services@sovtech.pro
 Preferred-Languages: en
-Canonical: https://www.sovit.xyz/.well-known/security.txt
+Canonical: https://sovtech.pro/.well-known/security.txt
 Expires: 2027-04-12T00:00:00.000Z
