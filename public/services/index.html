@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/png" href="/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Service Catalog & Pricing — Sovereign Technology SAS</title>
+		<meta name="description" content="Full service catalog and published pricing from Sovereign Technology SAS: websites, managed IT, security testing, networks & smart spaces, sovereign hosting, appliance products, and Bitcoin services. Transparent rates, AGPL-3.0 code, 5% Bitcoin discount." />
+		<link rel="canonical" href="https://sovtech.pro/services/" />
+		<meta property="og:title" content="Service Catalog & Pricing — Sovereign Technology SAS" />
+		<meta property="og:description" content="Transparent published pricing across websites, managed IT, networks, sovereign hosting, appliances, and Bitcoin services." />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://sovtech.pro/services/" />
+		<meta property="og:site_name" content="Sovereign Technology SAS" />
+		<meta name="theme-color" content="#F7931A" />
+		<style>
+			:root {
+				--btc: #F7931A;
+				--btc-light: #FFA842;
+				--bg-dark: #0A0A0A;
+				--bg-mid: #1A1A1A;
+				--text: #FFFFFF;
+				--text-dim: #8A8A8A;
+				--text-muted: #9ca3af;
+				--green: #00FF41;
+				--blue: #00D4FF;
+				--border-dim: rgba(247,147,26,0.3);
+			}
+			* { box-sizing: border-box; }
+			body {
+				margin: 0; padding: 0;
+				background: var(--bg-dark); color: var(--text);
+				font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+				-webkit-font-smoothing: antialiased;
+			}
+			h1, h2, h3, h4 { font-family: 'Courier New', Courier, monospace; font-weight: 700; }
+			a { color: var(--btc); text-decoration: none; }
+			a:hover { color: var(--btc-light); }
+			a:focus-visible { outline: 2px solid var(--btc); outline-offset: 2px; border-radius: 4px; }
+			.wrap { max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; }
+
+			/* Header */
+			.cat-header {
+				position: sticky; top: 0; z-index: 50;
+				background: rgba(10,10,10,0.95);
+				border-bottom: 1px solid var(--border-dim);
+				padding: 1rem 0;
+			}
+			.cat-header-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+			.cat-logo { display: flex; align-items: center; gap: 0.5rem; }
+			.cat-logo-icon {
+				width: 2rem; height: 2rem; background: var(--btc); border-radius: 4px;
+				display: flex; align-items: center; justify-content: center;
+				font-family: monospace; font-weight: bold; color: #000;
+			}
+			.cat-logo-text { font-family: monospace; font-size: 1.25rem; font-weight: bold; color: #fff; }
+			.cat-logo-text span { color: var(--btc); }
+			.cat-nav { display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
+			.cat-nav a { font-family: monospace; font-size: 0.875rem; color: var(--text-muted); }
+			.cat-nav a:hover { color: var(--btc); }
+			.cat-nav .cat-cta {
+				background: var(--btc); color: #000; font-weight: bold;
+				padding: 0.5rem 1rem; border-radius: 6px;
+			}
+			.cat-nav .cat-cta:hover { background: var(--btc-light); color: #000; }
+
+			/* Page title */
+			.cat-title { text-align: center; padding: 4rem 0 3rem; border-bottom: 1px solid var(--border-dim); }
+			.cat-title h1 { font-size: clamp(2rem, 5vw, 3.5rem); margin: 0 0 0.75rem; }
+			.cat-title h1 span { color: var(--btc); }
+			.cat-title p { font-family: monospace; color: var(--text-muted); margin: 0 0 1rem; }
+			.cat-title .cat-back { font-family: monospace; font-size: 0.85rem; }
+
+			/* Sections */
+			.cat-section { padding: 3.5rem 0 1rem; }
+			.cat-section-head { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem; }
+			.cat-section-head h2 { font-size: clamp(1.4rem, 3vw, 2rem); margin: 0; white-space: nowrap; }
+			.cat-section-head h2 span { color: var(--btc); }
+			.cat-section-line { flex: 1; height: 1px; background: linear-gradient(to right, var(--border-dim), transparent); }
+			.cat-section-desc { color: var(--text-dim); font-size: 0.95rem; margin: 0 0 1.5rem; max-width: 60ch; }
+			.cat-subhead { font-size: 0.95rem; margin: 2rem 0 0.75rem; color: #fff; letter-spacing: 0.02em; }
+			.cat-subhead small { color: var(--text-muted); font-weight: 400; text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.08em; margin-left: 0.5rem; }
+
+			/* Price tables */
+			.cat-table { border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; overflow: hidden; margin-bottom: 1.5rem; }
+			.cat-row {
+				display: flex; justify-content: space-between; align-items: baseline; gap: 1rem;
+				padding: 0.9rem 1.25rem; background: var(--bg-mid);
+				border-bottom: 1px solid rgba(255,255,255,0.06);
+			}
+			.cat-row:nth-child(even) { background: rgba(26,26,26,0.6); }
+			.cat-row:last-child { border-bottom: none; }
+			.cat-row-name { font-weight: 600; }
+			.cat-row-desc { display: block; font-weight: 400; color: var(--text-dim); font-size: 0.85rem; margin-top: 0.15rem; }
+			.cat-row-price { font-family: monospace; color: var(--btc); font-weight: bold; white-space: nowrap; text-align: right; }
+			.cat-row-price small { color: var(--text-muted); font-weight: normal; }
+
+			/* Callouts */
+			.cat-note {
+				background: rgba(247,147,26,0.06); border: 1px solid var(--border-dim);
+				border-left: 4px solid var(--btc);
+				border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1.5rem;
+				color: var(--text-muted); font-size: 0.9rem;
+			}
+			.cat-note b { color: var(--btc); font-family: monospace; }
+
+			/* Footer CTA */
+			.cat-cta-block { text-align: center; padding: 4rem 0; }
+			.cat-cta-block h2 { font-size: clamp(1.6rem, 4vw, 2.5rem); margin: 0 0 1rem; }
+			.cat-cta-block h2 span { color: var(--btc); }
+			.cat-cta-block p { color: var(--text-dim); margin: 0 auto 2rem; max-width: 55ch; }
+			.cat-btn {
+				display: inline-block; background: var(--btc); color: #000;
+				font-family: monospace; font-weight: bold; font-size: 1.05rem;
+				padding: 1rem 2rem; border-radius: 8px;
+				box-shadow: 0 0 20px rgba(247,147,26,0.3);
+			}
+			.cat-btn:hover { background: var(--btc-light); color: #000; }
+
+			.cat-footer { border-top: 1px solid var(--border-dim); padding: 2rem 0; }
+			.cat-footer p { font-family: monospace; font-size: 0.8rem; color: var(--text-muted); margin: 0.25rem 0; text-align: center; }
+
+			@media (max-width: 640px) {
+				.cat-row { flex-direction: column; align-items: flex-start; gap: 0.25rem; }
+				.cat-row-price { text-align: left; }
+				.cat-section-head h2 { white-space: normal; }
+			}
+		</style>
+	</head>
+	<body>
+		<header class="cat-header">
+			<div class="wrap cat-header-inner">
+				<a href="/" class="cat-logo" aria-label="Sovereign Technology — home">
+					<div class="cat-logo-icon" aria-hidden="true">◆</div>
+					<div class="cat-logo-text">Sovereign<span>Tech</span></div>
+				</a>
+				<nav class="cat-nav" aria-label="Catalog navigation">
+					<a href="/">Home</a>
+					<a href="/#pricing">AI Plans</a>
+					<a href="mailto:services@sovtech.pro" class="cat-cta">Get a Quote</a>
+				</nav>
+			</div>
+		</header>
+
+		<main>
+			<div class="cat-title wrap">
+				<h1>Service Catalog &amp; <span>Pricing</span></h1>
+				<p>// Published rates across every practice — transparency is the brand</p>
+				<a class="cat-back" href="/">← sovtech.pro home (AI operations)</a>
+			</div>
+
+			<!-- ============ INFRASTRUCTURE (LEAD) ============ -->
+			<section class="cat-section wrap" aria-labelledby="infrastructure">
+				<div class="cat-section-head">
+					<h2 id="infrastructure"><span>//</span> Infrastructure &amp; Linux</h2>
+					<div class="cat-section-line"></div>
+				</div>
+				<p class="cat-section-desc">From end-user workstations to production servers — open-source infrastructure built around you, not the other way around. Auditable. Reversible. Yours.</p>
+				<div class="cat-table">
+					<div class="cat-row">
+						<span class="cat-row-name">Custom Linux Deployments<span class="cat-row-desc">Desktops, laptops, and servers configured for your actual workflow. No bloat, no vendor lock-in, no telemetry you didn't ask for. Hardened for security, tuned for performance, or streamlined for non-technical users.</span></span>
+					</div>
+					<div class="cat-row">
+						<span class="cat-row-name">OS Customization &amp; Provisioning<span class="cat-row-desc">Custom Linux images, preconfigured environments, and automated provisioning tailored to your needs — every machine you deploy is ready on day one.</span></span>
+					</div>
+					<div class="cat-row">
+						<span class="cat-row-name">Server Setup &amp; Migration<span class="cat-row-desc">From a single VPS to a full self-hosted stack: email, file sync, VPN, ERP, and more. Move off rented cloud services onto infrastructure you own and control.</span></span>
+					</div>
+					<div class="cat-row">
+						<span class="cat-row-name">Managed Updates &amp; Deployments<span class="cat-row-desc">Systems only stay secure if they stay maintained. Patching, updates, and rollout management across your fleet, with tested, reversible deployments — so updates never take down your business.</span></span>
+					</div>
+					<div class="cat-row">
+						<span class="cat-row-name">VPS Management<span class="cat-row-desc">Security patching, monitoring, verified backups, and incident response for the servers that run your business — on any provider you choose. You keep root, you keep the account, you keep ownership.</span></span>
+					</div>
+				</div>
+
+				<h3 class="cat-subhead">Projects &amp; Consulting <small>one-time</small></h3>
+				<div class="cat-table">
+					<div class="cat-row">
+						<span class="cat-row-name">Hourly consulting / ad-hoc work</span>
+						<span class="cat-row-price">from $65<small>/hr</small></span>
+					</div>
+					<div class="cat-row">
+						<span class="cat-row-name">Linux workstation setup &amp; customization</span>
+						<span class="cat-row-price">from $95<small>/machine</small></span>
+					</div>
+					<div class="cat-row">
+						<span class="cat-row-name">Custom OS image + automated provisioning</span>
+						<span class="cat-row-price">from $750</span>
+					</div>
+					<div class="cat-row">
+						<span class="cat-row-name">Single-service server deployment<span class="cat-row-desc">Mail, files, VPN…</span></span>
+						<span class="cat-row-price">from $600</span>
+					</div>
+					<div class="cat-row">
+						<span class="cat-row-name">Full infrastructure migration</span>
+						<span class="cat-row-price">Custom quote</span>
+					</div>
+				</div>
+
+				<h3 class="cat-subhead">Managed Services <small>monthly</small></h3>
+				<div class="cat-table">
+					<div class="cat-row">
+						<span class="cat-row-name">Managed workstation</span>
+						<span class="cat-row-price">from $45<small>/mo</small></span>
+					</div>
+					<div class="cat-row">
+						<span class="cat-row-name">Managed on-premises server</span>
+						<span class="cat-row-price">from $125<small>/mo</small></span>
+					</div>
+					<div class="cat-row">
+						<span class="cat-row-name">VPS Management — Essential<span class="cat-row-desc">Patching, monitoring, verified backups, monthly report</span></span>
+						<span class="cat-row-price">from $60<small>/mo</small></span>
+					</div>
+					<div class="cat-row">
+						<span class="cat-row-name">VPS Management — Full<span class="cat-row-desc">Essential + incident response, application stack management, tuning, restores</span></span>
+						<span class="cat-row-price">from $125<small>/mo</small></span>
+					</div>
+					<div class="cat-row">
+						<span class="cat-row-name">Minimum monthly engagement</span>
+						<span class="cat-row-price">$250<small>/mo</small></span>
+					</div>
+				</div>
+				<div class="cat-note">
+					All prices are starting points in USD; final quotes depend on scope. One-time onboarding fee equal to one month's service fee on managed plans. <b>VPS hosting is billed directly by your provider — you always own the account and credentials. No hostage infrastructure.</b> Multi-server application stacks (database, reverse proxy, workers, etc.) are quoted as infrastructure management — contact for a quote.
+				</div>
+			</section>
+
+			<!-- ============ WEBSITES ============ -->
+			<section class="cat-section wrap" aria-labelledby="websites">
+				<div class="cat-section-head">
+					<h2 id="websites"><span>//</span> Websites</h2>
+					<div class="cat-section-line"></div>
+				</div>
+				<p class="cat-section-desc">Open-source stacks only — you own the code (AGPL-3.0), the content, and the hosting. Every build pairs with a care plan.</p>
+				<div class="cat-table">
+					<div class="cat-row">
+						<span class="cat-row-name">Launch<span class="cat-row-desc">Static site (Hugo / AI-builder assisted), ~5 pages</span></span>
+						<span class="cat-row-price">$1,500–3,000</span>
+					</div>
+					<div class="cat-row">
+						<span class="cat-row-name">Business<span class="cat-row-desc">Custom design, CMS, forms</span></span>
+						<span class="cat-row-price">$4,000–8,000</span>
+					</div>
+					<div class="cat-row">
+						<span class="cat-row-name">E-commerce / Custom App<span class="cat-row-desc">Full custom application builds</span></span>
+						<span class="cat-row-price">$8,000–15,000+</span>
+					</div>
+				</div>
+				<div class="cat-table">
+					<div class="cat-row">
+						<span class="cat-row-name">Care Plan — Basic<span class="cat-row-desc">Updates, backups, uptime monitoring</span></span>
+						<span class="cat-row-price">$75<small>/mo</small></span>
+					</div>
+					<div class="cat-row">
+						<span class="cat-row-name">Care Plan — Standard<span class="cat-row-desc">Basic + 1 hr/mo content edits</span></span>
+						<span class="cat-row-price">$150<small>/mo</small></span>
+					</div>
+					<div class="cat-row">
+						<span class="cat-row-name">Care Plan — Priority<span class="cat-row-desc">Standard + priority support, monthly SEO/analytics report</span></span>
+						<span class="cat-row-price">$300<small>/mo</small></span>
+					</div>
+				</div>
+				<div class="cat-note">
+					<b>Every care plan includes a quarterly vulnerability scan</b> — pentest-grade eyes on your site four times a year, bundled in. AI website builder (bolt.sovit.xyz): $19–29/mo self-serve, <b>free with any care plan</b>.
+				</div>
+			</section>
+
+			<!-- ============ MANAGED IT & SECURITY ============ -->
+			<section class="cat-section wrap" aria-labelledby="managed-it">
+				<div class="cat-section-head">
+					<h2 id="managed-it"><span>//</span> Managed IT &amp; Security</h2>
+					<div class="cat-section-line"></div>
+				</div>
+				<div class="cat-table">
+					<div class="cat-row">
+						<span class="cat-row-name">ERPNext Implementation<span class="cat-row-desc">Including data migration and staff training</span></span>
+						<span class="cat-row-price">$3,000–10,000+</span>
+					</div>
+					<div class="cat-row">
+						<span class="cat-row-name">Web Security Testing<span class="cat-row-desc">Fixed-price web app / API assessment with full report</span></span>
+						<span class="cat-row-price">$4,000–10,000</span>
+					</div>
+					<div class="cat-row">
+						<span class="cat-row-name">Security Review (entry)<span class="cat-row-desc">Scan + config audit + report — explicitly not a full pentest</span></span>
+						<span class="cat-row-price">$1,500–2,500</span>
+					</div>
+				</div>
+				<div class="cat-note">
+					Hourly consulting, managed workstations, and managed server plans are listed under <a href="#infrastructure">Infrastructure &amp; Linux</a> above.
+				</div>
+			</section>
+
+			<!-- ============ NETWORKS & SMART SPACES ============ -->
+			<section class="cat-section wrap" aria-labelledby="networks">
+				<div class="cat-section-head">
+					<h2 id="networks"><span>//</span> Networks &amp; Smart Spaces</h2>
+					<div class="cat-section-line"></div>
+				</div>
+				<p class="cat-section-desc">Local-first smart spaces: your data never leaves the building. On-site labor priced for El Salvador; remote design worldwide.</p>
+				<div class="cat-table">
+					<div class="cat-row">
+						<span class="cat-row-name">Site Survey<span class="cat-row-desc">Credited toward the install if you proceed</span></span>
+						<span class="cat-row-price">$300–500 <small>home</small> / $500–1,500 <small>commercial</small></span>
+					</div>
+					<div class="cat-row">
+						<span class="cat-row-name">Access Point Install<span class="cat-row-desc">VLAN / guest / controller config included</span></span>
+						<span class="cat-row-price">$250–450 <small>per AP</small></span>
+					</div>
+					<div class="cat-row">
+						<span class="cat-row-name">Cabling<span class="cat-row-desc">Residential / commercial runs</span></span>
+						<span class="cat-row-price">$125–175 / $175–300 <small>per run</small></span>
+					</div>
+					<div class="cat-row">
+						<span class="cat-row-name">Home WiFi Overhaul<span class="cat-row-desc">Plus hardware (UniFi etc. at 10–15% markup)</span></span>
+						<span class="cat-row-price">$350–750</span>
+					</div>
+					<div class="cat-row">
+						<span class="cat-row-name">Network Care Plan<span class="cat-row-desc">Monitoring, firmware, config backups</span></span>
+						<span class="cat-row-price">$49–149<small>/mo</small></span>
+					</div>
+				</div>
+				<div class="cat-table">
+					<div class="cat-row">
+						<span class="cat-row-name">Smart Home — Starter<span class="cat-row-desc">Hub + lighting/climate, plus hardware</span></span>
+						<span class="cat-row-price">$600–1,200</span>
+					</div>
+					<div class="cat-row">
+						<span class="cat-row-name">Smart Home — Whole-Home<span class="cat-row-desc">Dealer-grade result without dealer pricing, plus hardware</span></span>
+						<span class="cat-row-price">$2,500–8,000</span>
+					</div>
+					<div class="cat-row">
+						<span class="cat-row-name">Design Consult<span class="cat-row-desc">Automation architecture and planning</span></span>
+						<span class="cat-row-price">$125<small>/hr</small></span>
+					</div>
+					<div class="cat-row">
+						<span class="cat-row-name">Managed Home Assistant — Access<span class="cat-row-desc">Secure remote access + offsite encrypted backups</span></span>
+						<span class="cat-row-price">$15<small>/mo</small></span>
+					</div>
+					<div class="cat-row">
+						<span class="cat-row-name">Managed Home Assistant — Full Care<span class="cat-row-desc">Updates, automation fixes, remote support</span></span>
+						<span class="cat-row-price">$49–79<small>/mo</small></span>
+					</div>
+				</div>
+			</section>
+
+			<!-- ============ SOVEREIGN HOSTING ============ -->
+			<section class="cat-section wrap" aria-labelledby="hosting">
+				<div class="cat-section-head">
+					<h2 id="hosting"><span>//</span> Sovereign Hosting</h2>
+					<div class="cat-section-line"></div>
+				</div>
+				<p class="cat-section-desc">Managed open-source applications on our infrastructure. You're paying for the human: management, support, and migration — never just compute. Setup/migration $150–500 per app.</p>
+				<div class="cat-table">
+					<div class="cat-row">
+						<span class="cat-row-name">Personal Cloud<span class="cat-row-desc">Nextcloud + Vaultwarden + Immich</span></span>
+						<span class="cat-row-price">$12–18<small>/user/mo</small></span>
+					</div>
+					<div class="cat-row">
+						<span class="cat-row-name">Business Stack<span class="cat-row-desc">Nextcloud, Vaultwarden, Jitsi or Matrix, Plane, Mautic, Cal.com, Documenso, CRM — annual prepay discount</span></span>
+						<span class="cat-row-price">$19–29<small>/user/mo</small></span>
+					</div>
+					<div class="cat-row">
+						<span class="cat-row-name">A La Carte Instance<span class="cat-row-desc">Dedicated instance, priced by resource weight</span></span>
+						<span class="cat-row-price">$25–100<small>/mo</small></span>
+					</div>
+					<div class="cat-row">
+						<span class="cat-row-name">Hosted BTCPay Server<span class="cat-row-desc">Non-custodial — your own wallet/node, per merchant</span></span>
+						<span class="cat-row-price">$15–30<small>/mo</small></span>
+					</div>
+					<div class="cat-row">
+						<span class="cat-row-name">Managed Lightning Node<span class="cat-row-desc">Sub-enterprise managed Lightning, liquidity guidance included</span></span>
+						<span class="cat-row-price">$25–50<small>/mo</small></span>
+					</div>
+					<div class="cat-row">
+						<span class="cat-row-name">Hosted AI (Ollama / Open WebUI)<span class="cat-row-desc">Priced by GPU allocation — see AI plans on the homepage</span></span>
+						<span class="cat-row-price">$30–100<small>/mo</small></span>
+					</div>
+				</div>
+			</section>
+
+			<!-- ============ APPLIANCES ============ -->
+			<section class="cat-section wrap" aria-labelledby="appliances">
+				<div class="cat-section-head">
+					<h2 id="appliances"><span>//</span> Appliance Products</h2>
+					<div class="cat-section-line"></div>
+				</div>
+				<p class="cat-section-desc">A box in your space plus a subscription from us — the appliance does its job locally while we handle updates, monitoring, and offsite backups.</p>
+				<div class="cat-table">
+					<div class="cat-row">
+						<span class="cat-row-name">Sovereign Network Box<span class="cat-row-desc">OPNsense/OpenWrt + AdGuard Home, remote-managed firewall/DNS</span></span>
+						<span class="cat-row-price">setup + $15–39<small>/mo</small></span>
+					</div>
+					<div class="cat-row">
+						<span class="cat-row-name">Privacy Camera / NVR<span class="cat-row-desc">Frigate box, local AI detection, offsite clip backup</span></span>
+						<span class="cat-row-price">setup + $19–49<small>/mo</small></span>
+					</div>
+					<div class="cat-row">
+						<span class="cat-row-name">Backup Appliance<span class="cat-row-desc">Local NAS + encrypted offsite — 3-2-1 backups as a service</span></span>
+						<span class="cat-row-price">$10–30<small>/mo</small></span>
+					</div>
+					<div class="cat-row">
+						<span class="cat-row-name">Bitcoin Node Box<span class="cat-row-desc">Start9 setup + monitoring — folds into Bitcoin Sovereign retainer</span></span>
+						<span class="cat-row-price">custom</span>
+					</div>
+					<div class="cat-row">
+						<span class="cat-row-name">Private AI Box<span class="cat-row-desc">Local LLM appliance for confidentiality-sensitive teams</span></span>
+						<span class="cat-row-price">$2,000–5,000 + $50–150<small>/mo</small></span>
+					</div>
+				</div>
+			</section>
+
+			<!-- ============ BITCOIN ============ -->
+			<section class="cat-section wrap" aria-labelledby="bitcoin">
+				<div class="cat-section-head">
+					<h2 id="bitcoin"><span>//</span> Bitcoin Services</h2>
+					<div class="cat-section-line"></div>
+				</div>
+				<p class="cat-section-desc">Bitcoin-native since day one — node operations, custody architecture, and Lightning expertise.</p>
+				<div class="cat-table">
+					<div class="cat-row">
+						<span class="cat-row-name">Bitcoin Sovereign Retainer<span class="cat-row-desc">Managed node + Lightning + periodic OpSec review</span></span>
+						<span class="cat-row-price">$199–399<small>/mo</small></span>
+					</div>
+					<div class="cat-row">
+						<span class="cat-row-name">Lightning Channel Recovery<span class="cat-row-desc">Diagnostic + success fee (capped)</span></span>
+						<span class="cat-row-price">$250–500 + 5–10%</span>
+					</div>
+					<div class="cat-row">
+						<span class="cat-row-name">One-Time Setups<span class="cat-row-desc">Node, cold storage, wallet architecture</span></span>
+						<span class="cat-row-price">$500–1,500</span>
+					</div>
+					<div class="cat-row">
+						<span class="cat-row-name">Inheritance Planning<span class="cat-row-desc">Multisig + documentation + heir drills</span></span>
+						<span class="cat-row-price">$750–2,500</span>
+					</div>
+					<div class="cat-row">
+						<span class="cat-row-name">Merchant Onboarding<span class="cat-row-desc">BTCPay + POS + staff training (El Salvador specialists)</span></span>
+						<span class="cat-row-price">custom</span>
+					</div>
+				</div>
+			</section>
+
+			<!-- ============ CONSULTS ============ -->
+			<section class="cat-section wrap" aria-labelledby="consults">
+				<div class="cat-section-head">
+					<h2 id="consults"><span>//</span> Productized Consults</h2>
+					<div class="cat-section-line"></div>
+				</div>
+				<div class="cat-table">
+					<div class="cat-row">
+						<span class="cat-row-name">De-Google Migration<span class="cat-row-desc">Google/iCloud → Nextcloud/Immich — feeds straight into Personal Cloud</span></span>
+						<span class="cat-row-price">$500–1,500</span>
+					</div>
+					<div class="cat-row">
+						<span class="cat-row-name">Sovereign Phone<span class="cat-row-desc">GrapheneOS setup (+ optional support plan)</span></span>
+						<span class="cat-row-price">$200–400</span>
+					</div>
+					<div class="cat-row">
+						<span class="cat-row-name">Family CTO Retainer<span class="cat-row-desc">All household devices and accounts covered</span></span>
+						<span class="cat-row-price">$50–150<small>/mo</small></span>
+					</div>
+					<div class="cat-row">
+						<span class="cat-row-name">Workshops<span class="cat-row-desc">Self-hosting 101, Bitcoin custody — paid sessions, group rates</span></span>
+						<span class="cat-row-price">custom</span>
+					</div>
+					<div class="cat-row">
+						<span class="cat-row-name">White-Label Hosting<span class="cat-row-desc">For other consultants and MSPs</span></span>
+						<span class="cat-row-price">custom</span>
+					</div>
+				</div>
+			</section>
+
+			<!-- ============ CTA ============ -->
+			<div class="cat-cta-block wrap">
+				<h2>Ready to own your <span>infrastructure</span>?</h2>
+				<p>Get in touch to scope your project. We respond within 24 hours with a technical assessment and next steps. All custom code is AGPL-3.0 open source by default.</p>
+				<a class="cat-btn" href="mailto:services@sovtech.pro?subject=Service%20Inquiry">Email services@sovtech.pro</a>
+			</div>
+		</main>
+
+		<footer class="cat-footer">
+			<div class="wrap">
+				<p>© 2026 Sovereign Technology SAS. All rights reserved. — Formerly sovIT.xyz</p>
+				<p>Pay in Bitcoin: 5% discount via BTCPay · Every care plan includes quarterly vulnerability scans</p>
+			</div>
+		</footer>
+	</body>
+</html>
