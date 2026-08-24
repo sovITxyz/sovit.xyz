@@ -89,30 +89,51 @@
 			],
 			"hasOfferCatalog": {
 				"@type": "OfferCatalog",
-				"name": "Service Bundles",
+				"name": "Packages & Pricing",
 				"itemListElement": [
 					{
 						"@type": "Offer",
-						"name": "Sovereign Starter",
-						"description": "Begin your journey to technological sovereignty: Technical Support, Hardware Imaging, Sovereign Hardware Recommendations, Open Source Integration",
-						"category": "Essentials"
+						"name": "Sovereign AI Hosting",
+						"description": "Hosted open-source AI stack (Ollama / Open WebUI) on our infrastructure, priced by GPU allocation. $30-100/month.",
+						"category": "Hosted"
 					},
 					{
 						"@type": "Offer",
-						"name": "Digital Fortress",
-						"description": "Complete personal sovereignty with cloud and security: includes Starter plus Home Cloud & Sovereign AI, OpSec & Bitcoin Operations, Web Security Testing",
-						"category": "Recommended"
+						"name": "Private AI Box",
+						"description": "Local LLM appliance for confidentiality-sensitive teams. $2,000-5,000 setup plus $50-150/month care plan.",
+						"category": "On-Premises"
 					},
 					{
 						"@type": "Offer",
-						"name": "Full Sovereignty",
-						"description": "Run your entire digital life on sovereign infrastructure: includes Fortress plus Cloud Administration, Website Creation, Software Development, ERP/ITSM & Collaboration",
-						"category": "Complete"
+						"name": "AI Operations Retainer",
+						"description": "Fully managed AI production stack: 24/7 monitoring, incident response, and optimization. From $500/month.",
+						"category": "Managed"
+					},
+					{
+						"@type": "Offer",
+						"name": "Managed Workstation",
+						"description": "Linux desktops and laptops kept patched, backed up, and supported. From $45/month; setup and customization from $95 per machine.",
+						"category": "Infrastructure"
+					},
+					{
+						"@type": "Offer",
+						"name": "Managed Server",
+						"description": "On-premises servers running your self-hosted stack, maintained end to end with patching, monitoring, verified backups, and incident response. From $125/month.",
+						"category": "Infrastructure"
+					},
+					{
+						"@type": "Offer",
+						"name": "VPS Management",
+						"description": "Managed VPS on any provider — you keep root and the account. Essential $60/month; Full $125/month adds incident response and tuning.",
+						"category": "Infrastructure"
 					}
 				]
 			},
 			"sameAs": [
-				"https://github.com/sovitxyz"
+				"https://github.com/sovitxyz",
+				"https://sovit.xyz/gitlab/",
+				"https://git.sovit.xyz",
+				"https://git.sovtech.pro"
 			],
 			"knowsAbout": [
 				"Bitcoin", "Lightning Network", "Open Source Software", "Data Sovereignty",
@@ -156,10 +177,10 @@
 				},
 				{
 					"@type": "Question",
-					"name": "What are sovIT.xyz's service bundles?",
+					"name": "How much do sovIT.xyz's services cost?",
 					"acceptedAnswer": {
 						"@type": "Answer",
-						"text": "sovIT.xyz offers three service bundles: Sovereign Starter (Technical Support, Hardware Imaging, Hardware Recs, Open Source Integration), Digital Fortress (adds Home Cloud & Sovereign AI, OpSec & Bitcoin Ops, Web Security Testing), and Full Sovereignty (adds Cloud Admin, Website Creation, Software Dev, ERP/ITSM & Collaboration)."
+						"text": "Published rates. AI: Sovereign AI Hosting $30-100/month by GPU allocation, Private AI Box $2,000-5,000 setup plus a $50-150/month care plan, AI Operations Retainer from $500/month. Infrastructure: Managed Workstation from $45/month, Managed Server from $125/month, VPS Management $60-125/month. Hourly consulting from $65/hr with a $250/month minimum engagement. Websites run $1,500-15,000+ with care plans $75-300/month; sovereign hosting $12-29/user/month; Bitcoin Sovereign Retainer $199-399/month. Payments in Bitcoin receive a 5% discount via BTCPay."
 					}
 				},
 				{
@@ -299,14 +320,6 @@
 					padding: 0.25rem 0.5rem; border-radius: 4px;
 					border: 1px solid var(--border-dim);
 				}
-				.njs-portfolio { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.5rem; }
-				.njs-portfolio a {
-					font-family: monospace; font-size: 0.75rem;
-					background: rgba(247,147,26,0.1); color: var(--btc);
-					padding: 0.25rem 0.5rem; border-radius: 4px;
-					border: 1px solid rgba(247,147,26,0.5);
-				}
-				.njs-portfolio a:hover { background: rgba(247,147,26,0.2); }
 
 				/* Values Grid */
 				.njs-values-grid {
@@ -340,8 +353,6 @@
 				}
 				.njs-about-card h3 { font-size: 1.5rem; margin: 0 0 1.5rem; }
 				.njs-about-card p { color: var(--text-dim); line-height: 1.8; margin: 0 0 1.25rem; }
-				.njs-about-portfolio { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.1); }
-				.njs-about-portfolio h4 { font-family: monospace; font-size: 0.875rem; margin: 0 0 0.75rem; }
 
 				/* Contact */
 				.njs-contact-grid {
@@ -467,6 +478,25 @@
 					border: 1px solid rgba(247,147,26,0.5);
 				}
 				.njs-bundle-cta-secondary:hover { background: rgba(247,147,26,0.2); color: var(--btc); }
+				/* Packages & pricing */
+				.njs-price-group { font-family: monospace; font-size: 1.4rem; font-weight: 700; margin: 2.75rem 0 1.25rem; }
+				.njs-plan-price { font-family: monospace; font-size: 1.6rem; font-weight: 700; color: var(--btc); margin: 0 0 0.75rem; }
+				.njs-plan-price small { font-size: 0.8rem; color: var(--text-dim); font-weight: 400; }
+				.njs-price-note { text-align: center; color: var(--text-dim); font-family: monospace; font-size: 0.85rem; margin: 1.25rem 0 0; }
+				/* CSS columns, not a grid: the groups have very different row counts and a
+				   grid would align rows, leaving large gaps under the short ones. */
+				.njs-rate-cols { margin-top: 0.5rem; }
+				@media (min-width: 900px) { .njs-rate-cols { column-count: 2; column-gap: 2.5rem; } }
+				.njs-rate-group { break-inside: avoid; -webkit-column-break-inside: avoid; }
+				.njs-rate-group { margin: 0 0 2rem; }
+				.njs-rate-group h4 { color: var(--btc); font-size: 1.05rem; margin: 0 0 0.75rem; }
+				.njs-rate-table { border: 1px solid rgba(247,147,26,0.3); border-radius: 8px; overflow: hidden; }
+				.njs-rate-row { display: flex; justify-content: space-between; align-items: baseline; gap: 1.5rem; padding: 0.85rem 1.1rem; border-top: 1px solid #374151; }
+				.njs-rate-row:first-child { border-top: none; }
+				.njs-rate-name { font-family: monospace; font-size: 0.85rem; font-weight: 700; color: #fff; }
+				.njs-rate-desc { display: block; color: var(--text-dim); font-size: 0.75rem; font-weight: 400; margin-top: 0.25rem; }
+				.njs-rate-price { font-family: monospace; font-size: 0.85rem; font-weight: 700; color: var(--btc); white-space: nowrap; text-align: right; }
+				.njs-rate-note { color: var(--text-dim); font-size: 0.75rem; margin: 0.6rem 0 0; line-height: 1.5; }
 
 				/* License Card */
 				.njs-license-card {
@@ -647,12 +677,6 @@
 							<h3>Open Source Website Creation</h3>
 							<p>Modern, performant websites built entirely on open-source stacks</p>
 							<div class="njs-tags"><span class="njs-tag">React</span><span class="njs-tag">Hugo</span><span class="njs-tag">Static Sites</span></div>
-							<div class="njs-portfolio">
-								<a href="https://gcs.sv" target="_blank" rel="noopener noreferrer">gcs.sv</a>
-								<a href="https://whatarush.org" target="_blank" rel="noopener noreferrer">whatarush.org</a>
-								<a href="https://sovit.xyz" target="_blank" rel="noopener noreferrer">SovIT.xyz</a>
-								<a href="https://bitcoinbarbell.com" target="_blank" rel="noopener noreferrer">bitcoinbarbell.com</a>
-							</div>
 						</div>
 						<div class="njs-card">
 							<h3>Software Development</h3>
@@ -677,51 +701,194 @@
 			<section id="bundles" class="njs-section njs-section-mid">
 				<div class="njs-wrap">
 					<div class="njs-section-title">
-						<h2><span style="color:#fff">Service </span><span style="color:#F7931A">Bundles</span></h2>
-						<p>// Curated packages for individual sovereignty</p>
+						<h2><span style="color:#fff">Packages &amp; </span><span style="color:#F7931A">Pricing</span></h2>
+						<p>// Published rates &mdash; no &quot;contact us for a quote&quot; games</p>
 					</div>
+
+					<h3 class="njs-price-group"><span style="color:#F7931A">//</span> AI Operations</h3>
 					<div class="njs-bundles-grid">
 						<div class="njs-bundle-card">
-							<span class="njs-badge">ESSENTIALS</span>
-							<h3>Sovereign Starter</h3>
-							<p>Begin your journey to technological sovereignty</p>
+							<span class="njs-badge">HOSTED</span>
+							<h3>Sovereign AI Hosting</h3>
+							<p class="njs-plan-price">$30–100<small>/mo</small></p>
+							<p>Hosted open-source AI stack (Ollama / Open WebUI) on our infrastructure, priced by GPU allocation.</p>
 							<ul class="njs-bundle-list">
-								<li>Technical Support</li>
-								<li>Hardware Imaging</li>
-								<li>Sovereign Hardware Recs</li>
-								<li>Open Source Integration</li>
+								<li>Dedicated tenancy, isolated resources</li>
+								<li>Offsite encrypted backups</li>
+								<li>Uptime monitoring included</li>
+								<li>Quarterly vulnerability scan</li>
 							</ul>
-							<a href="#contact" class="njs-bundle-cta njs-bundle-cta-secondary">Contact for Pricing</a>
+							<a href="#contact" class="njs-bundle-cta njs-bundle-cta-secondary">Get Started</a>
 						</div>
 						<div class="njs-bundle-card njs-bundle-highlighted">
-							<span class="njs-badge">RECOMMENDED</span>
-							<h3>Digital Fortress</h3>
-							<p>Complete personal sovereignty with cloud and security</p>
+							<span class="njs-badge">ON-PREM</span>
+							<h3>Private AI Box</h3>
+							<p class="njs-plan-price">$2,000–5,000<small> setup</small></p>
+							<p>Local LLM appliance for confidentiality-sensitive teams — law firms, clinics, finance. Your data never leaves the building.</p>
 							<ul class="njs-bundle-list">
-								<li>Everything in Starter</li>
-								<li>Home Cloud &amp; Sovereign AI</li>
-								<li>OpSec &amp; Bitcoin Operations</li>
-								<li>Web Security Testing</li>
+								<li>Hardware + model stack, installed</li>
+								<li>Secure remote management tunnel</li>
+								<li>Care plan $50–150/mo</li>
+								<li>Quarterly vulnerability scan</li>
 							</ul>
-							<a href="#contact" class="njs-bundle-cta njs-bundle-cta-primary">Contact for Pricing</a>
+							<a href="#contact" class="njs-bundle-cta njs-bundle-cta-primary">Get Started</a>
 						</div>
 						<div class="njs-bundle-card">
-							<span class="njs-badge">COMPLETE</span>
-							<h3>Full Sovereignty</h3>
-							<p>Run your entire digital life on sovereign infrastructure</p>
+							<span class="njs-badge">MANAGED</span>
+							<h3>AI Operations Retainer</h3>
+							<p class="njs-plan-price">from $500<small>/mo</small></p>
+							<p>We run your AI production stack end to end — monitoring, incident response, and continuous optimization.</p>
 							<ul class="njs-bundle-list">
-								<li>Everything in Fortress</li>
-								<li>Cloud Administration</li>
-								<li>Website Creation</li>
-								<li>Software Development</li>
-								<li>ERP, ITSM &amp; Collaboration</li>
+								<li>24/7 monitoring &amp; incident response</li>
+								<li>Performance &amp; cost optimization</li>
+								<li>Model drift detection</li>
+								<li>Quarterly vulnerability scan</li>
 							</ul>
-							<a href="#contact" class="njs-bundle-cta njs-bundle-cta-secondary">Contact for Pricing</a>
+							<a href="#contact" class="njs-bundle-cta njs-bundle-cta-secondary">Get Started</a>
 						</div>
 					</div>
-					<div class="njs-code-deco" style="margin-top:2.5rem">
-						<span class="kw">const</span> plan = bundles.<span class="fn">select</span>(<span class="str">"sovereignty_level"</span>);
+					<p class="njs-price-note">AI project engagements (development, deployment, integration) are scoped individually &mdash; AI Strategy &amp; Audit starts at $2,500.</p>
+
+					<h3 class="njs-price-group"><span style="color:#F7931A">//</span> Infrastructure &amp; Linux</h3>
+					<div class="njs-bundles-grid">
+						<div class="njs-bundle-card">
+							<span class="njs-badge">ENDPOINT</span>
+							<h3>Managed Workstation</h3>
+							<p class="njs-plan-price">from $45<small>/mo</small></p>
+							<p>Linux desktops and laptops kept patched, backed up, and working — configured for your actual workflow.</p>
+							<ul class="njs-bundle-list">
+								<li>Security patching &amp; updates</li>
+								<li>Backup configuration &amp; monitoring</li>
+								<li>Remote support</li>
+								<li>Setup &amp; customization from $95/machine</li>
+							</ul>
+							<a href="#contact" class="njs-bundle-cta njs-bundle-cta-secondary">Get Started</a>
+						</div>
+						<div class="njs-bundle-card njs-bundle-highlighted">
+							<span class="njs-badge">ON-PREM</span>
+							<h3>Managed Server</h3>
+							<p class="njs-plan-price">from $125<small>/mo</small></p>
+							<p>On-premises servers running your self-hosted stack — mail, file sync, VPN, ERP — maintained end to end.</p>
+							<ul class="njs-bundle-list">
+								<li>Patching, monitoring, verified backups</li>
+								<li>Incident response</li>
+								<li>Tested, reversible deployments</li>
+								<li>Single-service deployment from $600</li>
+							</ul>
+							<a href="#contact" class="njs-bundle-cta njs-bundle-cta-primary">Get Started</a>
+						</div>
+						<div class="njs-bundle-card">
+							<span class="njs-badge">ANY PROVIDER</span>
+							<h3>VPS Management</h3>
+							<p class="njs-plan-price">$60–125<small>/mo</small></p>
+							<p>We manage the servers that run your business, on whichever provider you choose. You keep root, the account, and ownership.</p>
+							<ul class="njs-bundle-list">
+								<li>Essential $60/mo — patching, monitoring, backups</li>
+								<li>Full $125/mo — adds incident response &amp; tuning</li>
+								<li>No hostage infrastructure, ever</li>
+								<li>Monthly report</li>
+							</ul>
+							<a href="#contact" class="njs-bundle-cta njs-bundle-cta-secondary">Get Started</a>
+						</div>
 					</div>
+
+					<h3 class="njs-price-group"><span style="color:#F7931A">//</span> Full Rate Card</h3>
+					<div class="njs-rate-cols">
+						<div class="njs-rate-group">
+							<h4>Infrastructure — Projects &amp; Consulting</h4>
+							<div class="njs-rate-table">
+								<div class="njs-rate-row"><span class="njs-rate-name">Hourly consulting / ad-hoc work</span><span class="njs-rate-price">from $65/hr</span></div>
+								<div class="njs-rate-row"><span class="njs-rate-name">Linux workstation setup &amp; customization</span><span class="njs-rate-price">from $95/machine</span></div>
+								<div class="njs-rate-row"><span class="njs-rate-name">Custom OS image + automated provisioning</span><span class="njs-rate-price">from $750</span></div>
+								<div class="njs-rate-row"><span class="njs-rate-name">Single-service server deployment<span class="njs-rate-desc">Mail, files, VPN…</span></span><span class="njs-rate-price">from $600</span></div>
+								<div class="njs-rate-row"><span class="njs-rate-name">Full infrastructure migration</span><span class="njs-rate-price">Custom quote</span></div>
+							</div>
+							<p class="njs-rate-note">One-time engagements. Minimum monthly engagement on managed plans is $250/mo, with a one-time onboarding fee equal to one month of service.</p>
+						</div>
+						<div class="njs-rate-group">
+							<h4>Websites</h4>
+							<div class="njs-rate-table">
+								<div class="njs-rate-row"><span class="njs-rate-name">Launch<span class="njs-rate-desc">Static site, ~5 pages</span></span><span class="njs-rate-price">$1,500–3,000</span></div>
+								<div class="njs-rate-row"><span class="njs-rate-name">Business<span class="njs-rate-desc">Custom design, CMS, forms</span></span><span class="njs-rate-price">$4,000–8,000</span></div>
+								<div class="njs-rate-row"><span class="njs-rate-name">E-commerce / Custom App<span class="njs-rate-desc">Full custom application builds</span></span><span class="njs-rate-price">$8,000–15,000+</span></div>
+								<div class="njs-rate-row"><span class="njs-rate-name">Care Plan — Basic<span class="njs-rate-desc">Updates, backups, uptime monitoring</span></span><span class="njs-rate-price">$75/mo</span></div>
+								<div class="njs-rate-row"><span class="njs-rate-name">Care Plan — Standard<span class="njs-rate-desc">Basic + 1 hr/mo content edits</span></span><span class="njs-rate-price">$150/mo</span></div>
+								<div class="njs-rate-row"><span class="njs-rate-name">Care Plan — Priority<span class="njs-rate-desc">Standard + priority support, monthly report</span></span><span class="njs-rate-price">$300/mo</span></div>
+							</div>
+							<p class="njs-rate-note">Open-source stacks only — you own the code (AGPL-3.0), the content, and the hosting. Every care plan includes a quarterly vulnerability scan.</p>
+						</div>
+						<div class="njs-rate-group">
+							<h4>Managed IT &amp; Security</h4>
+							<div class="njs-rate-table">
+								<div class="njs-rate-row"><span class="njs-rate-name">ERPNext Implementation<span class="njs-rate-desc">Including data migration and staff training</span></span><span class="njs-rate-price">$3,000–10,000+</span></div>
+								<div class="njs-rate-row"><span class="njs-rate-name">Web Security Testing<span class="njs-rate-desc">Fixed-price web app / API assessment with full report</span></span><span class="njs-rate-price">$4,000–10,000</span></div>
+								<div class="njs-rate-row"><span class="njs-rate-name">Security Review (entry)<span class="njs-rate-desc">Scan + config audit + report — not a full pentest</span></span><span class="njs-rate-price">$1,500–2,500</span></div>
+							</div>
+						</div>
+						<div class="njs-rate-group">
+							<h4>Networks &amp; Smart Spaces</h4>
+							<div class="njs-rate-table">
+								<div class="njs-rate-row"><span class="njs-rate-name">Site Survey<span class="njs-rate-desc">Credited toward the install if you proceed</span></span><span class="njs-rate-price">$300–500 home / $500–1,500 commercial</span></div>
+								<div class="njs-rate-row"><span class="njs-rate-name">Access Point Install<span class="njs-rate-desc">VLAN / guest / controller config included</span></span><span class="njs-rate-price">$250–450 per AP</span></div>
+								<div class="njs-rate-row"><span class="njs-rate-name">Cabling<span class="njs-rate-desc">Residential / commercial runs</span></span><span class="njs-rate-price">$125–175 / $175–300 per run</span></div>
+								<div class="njs-rate-row"><span class="njs-rate-name">Home WiFi Overhaul</span><span class="njs-rate-price">$350–750</span></div>
+								<div class="njs-rate-row"><span class="njs-rate-name">Network Care Plan<span class="njs-rate-desc">Monitoring, firmware, config backups</span></span><span class="njs-rate-price">$49–149/mo</span></div>
+								<div class="njs-rate-row"><span class="njs-rate-name">Smart Home — Starter<span class="njs-rate-desc">Hub + lighting/climate, plus hardware</span></span><span class="njs-rate-price">$600–1,200</span></div>
+								<div class="njs-rate-row"><span class="njs-rate-name">Smart Home — Whole-Home<span class="njs-rate-desc">Dealer-grade result without dealer pricing</span></span><span class="njs-rate-price">$2,500–8,000</span></div>
+								<div class="njs-rate-row"><span class="njs-rate-name">Design Consult<span class="njs-rate-desc">Automation architecture and planning</span></span><span class="njs-rate-price">$125/hr</span></div>
+								<div class="njs-rate-row"><span class="njs-rate-name">Managed Home Assistant — Access<span class="njs-rate-desc">Secure remote access + offsite encrypted backups</span></span><span class="njs-rate-price">$15/mo</span></div>
+								<div class="njs-rate-row"><span class="njs-rate-name">Managed Home Assistant — Full Care<span class="njs-rate-desc">Updates, automation fixes, remote support</span></span><span class="njs-rate-price">$49–79/mo</span></div>
+							</div>
+							<p class="njs-rate-note">Local-first: your data never leaves the building. On-site labor priced for El Salvador; remote design worldwide. Hardware at 10–15% markup.</p>
+						</div>
+						<div class="njs-rate-group">
+							<h4>Sovereign Hosting</h4>
+							<div class="njs-rate-table">
+								<div class="njs-rate-row"><span class="njs-rate-name">Personal Cloud<span class="njs-rate-desc">Nextcloud + Vaultwarden + Immich</span></span><span class="njs-rate-price">$12–18/user/mo</span></div>
+								<div class="njs-rate-row"><span class="njs-rate-name">Business Stack<span class="njs-rate-desc">Nextcloud, Vaultwarden, Jitsi or Matrix, Plane, Mautic, Cal.com, Documenso, CRM</span></span><span class="njs-rate-price">$19–29/user/mo</span></div>
+								<div class="njs-rate-row"><span class="njs-rate-name">A La Carte Instance<span class="njs-rate-desc">Dedicated instance, priced by resource weight</span></span><span class="njs-rate-price">$25–100/mo</span></div>
+								<div class="njs-rate-row"><span class="njs-rate-name">Hosted BTCPay Server<span class="njs-rate-desc">Non-custodial — your own wallet/node, per merchant</span></span><span class="njs-rate-price">$15–30/mo</span></div>
+								<div class="njs-rate-row"><span class="njs-rate-name">Managed Lightning Node<span class="njs-rate-desc">Liquidity guidance included</span></span><span class="njs-rate-price">$25–50/mo</span></div>
+								<div class="njs-rate-row"><span class="njs-rate-name">Hosted AI (Ollama / Open WebUI)<span class="njs-rate-desc">Priced by GPU allocation</span></span><span class="njs-rate-price">$30–100/mo</span></div>
+							</div>
+							<p class="njs-rate-note">Managed open-source applications on our infrastructure. You&#x27;re paying for the human: management, support, and migration — never just compute. Setup/migration $150–500 per app.</p>
+						</div>
+						<div class="njs-rate-group">
+							<h4>Appliance Products</h4>
+							<div class="njs-rate-table">
+								<div class="njs-rate-row"><span class="njs-rate-name">Sovereign Network Box<span class="njs-rate-desc">OPNsense/OpenWrt + AdGuard Home, remote-managed firewall/DNS</span></span><span class="njs-rate-price">setup + $15–39/mo</span></div>
+								<div class="njs-rate-row"><span class="njs-rate-name">Privacy Camera / NVR<span class="njs-rate-desc">Frigate box, local AI detection, offsite clip backup</span></span><span class="njs-rate-price">setup + $19–49/mo</span></div>
+								<div class="njs-rate-row"><span class="njs-rate-name">Backup Appliance<span class="njs-rate-desc">Local NAS + encrypted offsite — 3-2-1 backups as a service</span></span><span class="njs-rate-price">$10–30/mo</span></div>
+								<div class="njs-rate-row"><span class="njs-rate-name">Bitcoin Node Box<span class="njs-rate-desc">Start9 setup + monitoring</span></span><span class="njs-rate-price">custom</span></div>
+								<div class="njs-rate-row"><span class="njs-rate-name">Private AI Box<span class="njs-rate-desc">Local LLM appliance for confidentiality-sensitive teams</span></span><span class="njs-rate-price">$2,000–5,000 + $50–150/mo</span></div>
+							</div>
+							<p class="njs-rate-note">A box in your space plus a subscription from us — the appliance does its job locally while we handle updates, monitoring, and offsite backups.</p>
+						</div>
+						<div class="njs-rate-group">
+							<h4>Bitcoin Services</h4>
+							<div class="njs-rate-table">
+								<div class="njs-rate-row"><span class="njs-rate-name">Bitcoin Sovereign Retainer<span class="njs-rate-desc">Managed node + Lightning + periodic OpSec review</span></span><span class="njs-rate-price">$199–399/mo</span></div>
+								<div class="njs-rate-row"><span class="njs-rate-name">Lightning Channel Recovery<span class="njs-rate-desc">Diagnostic + success fee (capped)</span></span><span class="njs-rate-price">$250–500 + 5–10%</span></div>
+								<div class="njs-rate-row"><span class="njs-rate-name">One-Time Setups<span class="njs-rate-desc">Node, cold storage, wallet architecture</span></span><span class="njs-rate-price">$500–1,500</span></div>
+								<div class="njs-rate-row"><span class="njs-rate-name">Inheritance Planning<span class="njs-rate-desc">Multisig + documentation + heir drills</span></span><span class="njs-rate-price">$750–2,500</span></div>
+								<div class="njs-rate-row"><span class="njs-rate-name">Merchant Onboarding<span class="njs-rate-desc">BTCPay + POS + staff training (El Salvador specialists)</span></span><span class="njs-rate-price">custom</span></div>
+							</div>
+							<p class="njs-rate-note">Bitcoin-native since day one — node operations, custody architecture, and Lightning expertise.</p>
+						</div>
+						<div class="njs-rate-group">
+							<h4>Productized Consults</h4>
+							<div class="njs-rate-table">
+								<div class="njs-rate-row"><span class="njs-rate-name">De-Google Migration<span class="njs-rate-desc">Google/iCloud → Nextcloud/Immich</span></span><span class="njs-rate-price">$500–1,500</span></div>
+								<div class="njs-rate-row"><span class="njs-rate-name">Sovereign Phone<span class="njs-rate-desc">GrapheneOS setup (+ optional support plan)</span></span><span class="njs-rate-price">$200–400</span></div>
+								<div class="njs-rate-row"><span class="njs-rate-name">Family CTO Retainer<span class="njs-rate-desc">All household devices and accounts covered</span></span><span class="njs-rate-price">$50–150/mo</span></div>
+								<div class="njs-rate-row"><span class="njs-rate-name">Workshops<span class="njs-rate-desc">Self-hosting 101, Bitcoin custody — group rates</span></span><span class="njs-rate-price">custom</span></div>
+								<div class="njs-rate-row"><span class="njs-rate-name">White-Label Hosting<span class="njs-rate-desc">For other consultants and MSPs</span></span><span class="njs-rate-price">custom</span></div>
+							</div>
+						</div>
+					</div>
+
+					<p class="njs-price-note">All prices are starting points in USD; final quotes depend on scope. VPS hosting is billed directly by your provider &mdash; you always own the account and credentials.</p>
+					<p class="njs-price-note">Pay in Bitcoin: 5% discount via BTCPay &middot; Every care plan includes a quarterly vulnerability scan</p>
 				</div>
 			</section>
 
@@ -776,6 +943,9 @@
 							<span class="njs-badge">COPYLEFT</span>
 						</div>
 						<a href="https://github.com/sovitxyz" target="_blank" rel="noopener noreferrer" class="njs-gh-link">&#x1F4BB; View Source on GitHub</a>
+						<a href="https://sovit.xyz/gitlab/" target="_blank" rel="noopener noreferrer" class="njs-gh-link">GitLab</a>
+						<a href="https://git.sovit.xyz" target="_blank" rel="noopener noreferrer" class="njs-gh-link">git.sovit.xyz</a>
+						<a href="https://git.sovtech.pro" target="_blank" rel="noopener noreferrer" class="njs-gh-link">git.sovtech.pro</a>
 					</div>
 					<div class="njs-code-deco" style="margin-top:2.5rem">
 						<span class="kw">return</span> license.<span class="fn">verify</span>(<span class="str">"AGPL-3.0"</span>) === <span class="str">true</span>;
@@ -796,15 +966,6 @@
 						<p>At 13, he received a netbook from Santa and began experimenting with Kali Linux and an Alfa AWUS036NHA adapter, exploring wireless security and learning how WEP networks could be tested and cracked. Around the same time, he started coding in VB.NET and piecing together open-source code in C++. Cameron has always been passionate about all aspects of computing.</p>
 						<p>In high school, he became the go-to person for computer help — repairing and imaging systems for family members, friends from church, classmates, and even teachers. These experiences helped him develop strong technical and troubleshooting skills.</p>
 						<p>He later built the most powerful workstation/gaming computer possible (2017) and worked as an IT professional at Health First, gaining valuable experience in enterprise IT environments. Today, Cameron has left Health First to focus on his own projects and pursue his passion for finding efficient technical solutions, deploying and implementing open-source solutions, and serving others through sovereign, open-source technologies.</p>
-						<div class="njs-about-portfolio">
-							<h4>2026 Portfolio</h4>
-							<div class="njs-portfolio">
-								<a href="https://gcs.sv" target="_blank" rel="noopener noreferrer">gcs.sv</a>
-								<a href="https://whatarush.org" target="_blank" rel="noopener noreferrer">whatarush.org</a>
-								<a href="https://sovit.xyz" target="_blank" rel="noopener noreferrer">SovIT.xyz</a>
-								<a href="https://bitcoinbarbell.com" target="_blank" rel="noopener noreferrer">bitcoinbarbell.com</a>
-							</div>
-						</div>
 					</div>
 				</div>
 			</section>

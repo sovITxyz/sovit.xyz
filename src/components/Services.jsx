@@ -116,13 +116,7 @@ const Services = () => {
           icon: Globe,
           title: 'Open Source Website Creation',
           description: 'Modern, performant websites built entirely on open-source stacks',
-          tech: 'React, Hugo, Static Sites',
-          portfolio: [
-            { name: 'gcs.sv', url: 'https://gcs.sv' },
-            { name: 'whatarush.org', url: 'https://whatarush.org' },
-            { name: 'SovIT.xyz', url: 'https://sovit.xyz' },
-            { name: 'bitcoinbarbell.com', url: 'https://bitcoinbarbell.com' }
-          ]
+          tech: 'React, Hugo, Static Sites'
         },
         {
           icon: Code,
@@ -246,22 +240,6 @@ const Services = () => {
                             </span>
                           ))}
                         </div>
-                        {service.portfolio && (
-                          <div className="flex flex-wrap gap-2 mt-3">
-                            {service.portfolio.map((site, i) => (
-                              <a
-                                key={i}
-                                href={site.url}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                onClick={(e) => e.stopPropagation()}
-                                className="text-xs font-mono bg-bitcoin/10 text-bitcoin px-2 py-1 rounded border border-bitcoin/50 hover:bg-bitcoin/20 transition-colors"
-                              >
-                                {site.name}
-                              </a>
-                            ))}
-                          </div>
-                        )}
                       </div>
                     </div>
 

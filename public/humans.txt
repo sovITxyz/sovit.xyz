@@ -3,6 +3,9 @@ Founder: Cameron
 Contact: services@sovit.xyz
 Site: https://www.sovit.xyz/
 GitHub: https://github.com/sovitxyz
+GitLab: https://sovit.xyz/gitlab/
+Git (Nostr/NIP-34): https://git.sovit.xyz
+Git (Nostr/NIP-34): https://git.sovtech.pro
 
 /* SITE */
 Standards: HTML5, CSS3, ES2020

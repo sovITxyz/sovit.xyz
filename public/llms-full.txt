@@ -6,6 +6,9 @@ Website: https://www.sovit.xyz/
 Email: services@sovit.xyz
 Tor: http://sovit7eqfkczjlcuwi5wqfjff4pv2fp7w5v26desexg2yc5oj36lriqd.onion
 GitHub: https://github.com/sovitxyz
+GitLab: https://sovit.xyz/gitlab/
+Git (Nostr/NIP-34): https://git.sovit.xyz
+Git (Nostr/NIP-34): https://git.sovtech.pro
 License: AGPL-3.0
 
 ---
@@ -79,7 +82,6 @@ sovIT.xyz provides comprehensive technology solutions for the sovereign enterpri
 12. **Open Source Website Creation**
     Modern, performant websites built entirely on open-source stacks.
     Technologies: React, Hugo, Static Sites
-    Portfolio: gcs.sv, whatarush.org, sovit.xyz, bitcoinbarbell.com
 
 13. **Software Development**
     Custom application development with open-source frameworks and sovereign principles.
@@ -153,6 +155,7 @@ Need a different arrangement? Custom license releases are available for an addit
 Principles: Freedom, Transparency, Copyleft
 
 Source code: https://github.com/sovitxyz
+Mirrors: https://sovit.xyz/gitlab/ · https://git.sovit.xyz · https://git.sovtech.pro
 
 ---
 
@@ -166,11 +169,6 @@ In high school, he became the go-to person for computer help — repairing and i
 
 He later built the most powerful workstation/gaming computer possible (2017) and worked as an IT professional at Health First, gaining valuable experience in enterprise IT environments. Today, Cameron has left Health First to focus on his own projects and pursue his passion for finding efficient technical solutions, deploying and implementing open-source solutions, and serving others through sovereign, open-source technologies.
 
-### 2026 Portfolio
-- gcs.sv — https://gcs.sv
-- whatarush.org — https://whatarush.org
-- SovIT.xyz — https://sovit.xyz
-- bitcoinbarbell.com — https://bitcoinbarbell.com
 
 ---
 

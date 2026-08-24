@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { User, Globe } from 'lucide-react';
+import { User } from 'lucide-react';
 
 const About = () => {
   const ref = useRef(null);
@@ -54,31 +54,6 @@ const About = () => {
             <p>
               He later built the most powerful workstation/gaming computer possible (2017) and worked as an IT professional at Health First, gaining valuable experience in enterprise IT environments. Today, Cameron has left Health First to focus on his own projects and pursue his passion for finding efficient technical solutions, deploying and implementing open-source solutions, and serving others through sovereign, open-source technologies.
             </p>
-          </div>
-
-          <div className="mt-8 pt-6 border-t border-gray-700">
-            <div className="flex items-center gap-3 mb-4">
-              <Globe className="text-bitcoin" size={18} />
-              <h4 className="text-white font-mono font-semibold text-sm">2026 Portfolio</h4>
-            </div>
-            <div className="flex flex-wrap gap-3">
-              {[
-                { name: 'gcs.sv', url: 'https://gcs.sv' },
-                { name: 'whatarush.org', url: 'https://whatarush.org' },
-                { name: 'SovIT.xyz', url: 'https://sovit.xyz' },
-                { name: 'bitcoinbarbell.com', url: 'https://bitcoinbarbell.com' }
-              ].map((site, i) => (
-                <a
-                  key={i}
-                  href={site.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm font-mono bg-bitcoin/10 text-bitcoin px-3 py-1.5 rounded border border-bitcoin/50 hover:bg-bitcoin/20 transition-colors"
-                >
-                  {site.name}
-                </a>
-              ))}
-            </div>
           </div>
 
           <div className="mt-6 pt-6 border-t border-gray-700 font-mono text-xs text-gray-600">
